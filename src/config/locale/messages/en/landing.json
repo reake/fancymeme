@@ -27,6 +27,36 @@
           "icon": "DollarSign"
         },
         {
+          "title": "Meme",
+          "icon": "RiEmotionLaughLine",
+          "children": [
+            {
+              "title": "AI Meme Generator",
+              "description": "Create viral memes with AI",
+              "url": "/meme-generator",
+              "icon": "RiMagicLine"
+            },
+            {
+              "title": "Meme Templates",
+              "description": "60+ popular meme templates",
+              "url": "/templates",
+              "icon": "RiLayoutGridLine"
+            },
+            {
+              "title": "Meme Editor",
+              "description": "Edit memes with templates",
+              "url": "/meme-editor",
+              "icon": "RiEdit2Line"
+            },
+            {
+              "title": "Meme Community",
+              "description": "Browse and share memes",
+              "url": "/meme",
+              "icon": "RiGalleryLine"
+            }
+          ]
+        },
+        {
           "title": "AI",
           "icon": "RiRobot2Line",
           "children": [
