@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "AI Meme 生成器 - 一键创建爆款表情包",
+    "description": "使用 AI 生成搞笑表情包。选择风格，描述想法，几秒内创建可分享的内容。"
+  },
+  "page": {
+    "title": "AI Meme 生成器",
+    "description": "用 AI 创建病毒式传播的表情包。只需描述你的想法，让 AI 为你生成完美的 Meme。"
+  },
+  "generator": {
+    "title": "AI Meme 生成器",
+    "form": {
+      "provider": "AI 提供商",
+      "select_provider": "选择提供商",
+      "model": "模型",
+      "select_model": "选择模型",
+      "style": "Meme 风格",
+      "prompt": "描述你的 Meme",
+      "prompt_placeholder": "例如：一只惊讶的猫看着黄瓜，搞笑反应表情包",
+      "prompt_too_long": "描述过长"
+    },
+    "styles": {
+      "classic": "经典 Meme",
+      "modern": "现代风格",
+      "reaction": "反应表情包",
+      "surreal": "超现实/荒诞"
+    },
+    "status": {
+      "pending": "等待 AI 启动...",
+      "processing": "正在创建你的 Meme...",
+      "success": "Meme 创建成功！",
+      "failed": "生成失败"
+    },
+    "loading": "加载中...",
+    "checking_account": "检查账户...",
+    "generate": "生成 Meme",
+    "generating": "生成中...",
+    "sign_in_to_generate": "登录后生成",
+    "credits_cost": "消耗：{credits} 积分",
+    "credits_remaining": "剩余：{credits} 积分",
+    "buy_credits": "购买积分",
+    "progress": "进度",
+    "generated_memes": "生成的 Meme",
+    "ready_to_generate": "正在创建你的 Meme...",
+    "no_memes_generated": "还没有生成 Meme。在上方描述你的想法！",
+    "download": "下载",
+    "save_to_community": "分享到社区",
+    "success": {
+      "generated": "Meme 生成成功！",
+      "downloaded": "Meme 已下载！",
+      "saved": "Meme 已保存到社区！"
+    },
+    "error": {
+      "timeout": "生成超时，请重试。",
+      "no_result": "没有生成 Meme，请重试。",
+      "failed": "生成失败",
+      "query_failed": "查询状态失败",
+      "generate_failed": "生成 Meme 失败",
+      "download_failed": "下载 Meme 失败",
+      "save_failed": "保存 Meme 失败",
+      "insufficient_credits": "积分不足，请充值。",
+      "empty_prompt": "请描述你的 Meme 想法",
+      "invalid_config": "提供商或模型未配置"
+    }
+  },
+  "community": {
+    "title": "Meme 社区",
+    "description": "浏览和分享最搞笑的 AI 生成表情包",
+    "filters": {
+      "latest": "最新",
+      "trending": "热门",
+      "most_liked": "最多点赞"
+    },
+    "empty": "还没有 Meme。成为第一个创建者！",
+    "load_more": "加载更多"
+  },
+  "card": {
+    "by": "作者",
+    "likes": "{count} 赞",
+    "comments": "{count} 评论",
+    "share": "分享",
+    "like": "点赞",
+    "unlike": "取消点赞",
+    "comment": "评论",
+    "view": "查看",
+    "delete": "删除",
+    "confirm_delete": "确定要删除这个 Meme 吗？"
+  }
+}

@@ -1,5 +1,9 @@
 AGENTS.md - 全局配置模板
 
+本文件是本项目中所有 AI / 工程协作规则的总入口，其它规则类文档（agents-2.md、userRules.md）仅作为补充说明；如有冲突，以本文件为准。
+
+> 本文件基于 `docs/agents.core-template.md` 扩展，包含 ScreenshotsTo 项目特定规则；如将本仓库作为新项目骨架，请优先以 core 模板为起点并按项目调整。
+
 This file provides guidance to Codex when working with code in this repository.
 
 系统提示词
@@ -34,7 +38,7 @@ This file provides guidance to Codex when working with code in this repository.
 
 1. 只允许使用中文回答 - 所有思考、分析、解释和回答都必须使用中文
 2. 中文优先 - 优先使用中文术语、表达方式和命名规范
-3. 中文注释 - 生成的代码注释和文档都应使用中文
+3. 英文注释 - 生成的代码注释一律使用英文（详见 userRules.md），文档和终端输出统一使用中文
 4. 中文思维 - 思考过程和逻辑分析都使用中文进行
 
 🎓 交互深度要求

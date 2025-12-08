@@ -116,8 +116,17 @@ AI 供应商。集成 OpenRouter、Fal、Replicate、Kie
 
 - 页面（pages）
 
-在 content/pages 目录写内容动态创建页面，比如常用的网站协议页面 /privacy-policy 和/terms-of-service
+在 content/pages 目录写内容动态创建页面，比如常用的网站协议页面 /privacy 和 /terms
 
 ---
 
 除系统架构和功能设计外，框架 还支持多种部署方式，可以一键部署到 vercel/ cloudflare workers，也支持 docker 镜像构建，可以使用 k8s、dokploy+vps 等部署方案
+
+7. SEO 技术基线（框架内置能力）
+
+- 元信息统一：全局 `getMetadata` 封装 title/description/keywords/OG/Twitter/canonical/hreflang/jsonLd，可按 locale 与路由动态生成；分页/参数页 canonical 去重
+- 渲染策略：公开页默认 SSR/SSG 输出完整正文和 schema，避免前端异步加载；404/500/实验页支持 noindex
+- 资源与性能：`next/image` 占位+懒加载，首屏图指定宽高与 priority；`next/script` 默认 defer/afterInteractive，只有关键脚本允许 priority；静态资源压缩与缓存策略预设；Core Web Vitals 目标 LCP<2.5s、CLS<0.1、INP<200ms
+- 多语言：内置 next-intl，自动输出 hreflang + x-default；多语言 sitemap 组合生成
+- 数据资产：sitemap 自动更新新路由，robots.txt 包含 sitemap；可选 llms.txt 方便 AI 抓取
+- 埋点：预置 GA/Clarity/Plausible/OpenPanel 等扩展接口，支持上传/CTA/滚动/停留等事件埋点，方便与 GSC 数据联动

@@ -539,3 +539,144 @@ export const chatMessage = pgTable(
     index('idx_chat_message_user_id').on(table.userId, table.status),
   ]
 );
+
+// ==================== Meme System ====================
+
+export const memeTemplate = pgTable(
+  'meme_template',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    name: text('name').notNull(),
+    slug: text('slug').unique().notNull(),
+    imageUrl: text('image_url').notNull(),
+    thumbnailUrl: text('thumbnail_url'),
+    textAreas: text('text_areas').notNull(), // JSON: [{x,y,width,height,defaultText,fontSize,fontColor}]
+    category: text('category'), // funny, reaction, trending, animals, etc.
+    tags: text('tags'), // JSON: ["dog", "surprised", "funny"]
+    source: text('source').notNull().default('user'), // system, user, ai
+    usageCount: integer('usage_count').default(0).notNull(),
+    status: text('status').notNull(), // active, pending, deleted
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .defaultNow()
+      .$onUpdate(() => new Date())
+      .notNull(),
+    deletedAt: timestamp('deleted_at'),
+  },
+  (table) => [
+    index('idx_meme_template_category_status').on(table.category, table.status),
+    index('idx_meme_template_usage').on(table.usageCount),
+    index('idx_meme_template_user').on(table.userId),
+  ]
+);
+
+export const meme = pgTable(
+  'meme',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    templateId: text('template_id').references(() => memeTemplate.id, {
+      onDelete: 'set null',
+    }),
+    title: text('title'),
+    imageUrl: text('image_url').notNull(),
+    thumbnailUrl: text('thumbnail_url'),
+    prompt: text('prompt'), // AI generation prompt
+    textContent: text('text_content'), // JSON: texts overlaid on the meme
+    generationType: text('generation_type').notNull(), // ai, template, upload
+    aiTaskId: text('ai_task_id').references(() => aiTask.id, {
+      onDelete: 'set null',
+    }),
+    isPublic: boolean('is_public').default(true).notNull(),
+    viewCount: integer('view_count').default(0).notNull(),
+    likeCount: integer('like_count').default(0).notNull(),
+    commentCount: integer('comment_count').default(0).notNull(),
+    shareCount: integer('share_count').default(0).notNull(),
+    status: text('status').notNull(), // active, pending, deleted
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .defaultNow()
+      .$onUpdate(() => new Date())
+      .notNull(),
+    deletedAt: timestamp('deleted_at'),
+  },
+  (table) => [
+    index('idx_meme_user_status').on(table.userId, table.status),
+    index('idx_meme_public_created').on(table.isPublic, table.createdAt),
+    index('idx_meme_trending').on(table.likeCount, table.createdAt),
+    index('idx_meme_template').on(table.templateId),
+  ]
+);
+
+export const memeLike = pgTable(
+  'meme_like',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    memeId: text('meme_id')
+      .notNull()
+      .references(() => meme.id, { onDelete: 'cascade' }),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => [
+    index('idx_meme_like_user_meme').on(table.userId, table.memeId),
+    index('idx_meme_like_meme').on(table.memeId),
+  ]
+);
+
+export const memeComment = pgTable(
+  'meme_comment',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    memeId: text('meme_id')
+      .notNull()
+      .references(() => meme.id, { onDelete: 'cascade' }),
+    parentId: text('parent_id'), // for reply support
+    content: text('content').notNull(),
+    likeCount: integer('like_count').default(0).notNull(),
+    status: text('status').notNull(), // active, deleted
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .defaultNow()
+      .$onUpdate(() => new Date())
+      .notNull(),
+    deletedAt: timestamp('deleted_at'),
+  },
+  (table) => [
+    index('idx_meme_comment_meme_status').on(
+      table.memeId,
+      table.status,
+      table.createdAt
+    ),
+    index('idx_meme_comment_user').on(table.userId),
+    index('idx_meme_comment_parent').on(table.parentId),
+  ]
+);
+
+export const memeFavorite = pgTable(
+  'meme_favorite',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    memeId: text('meme_id')
+      .notNull()
+      .references(() => meme.id, { onDelete: 'cascade' }),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => [
+    index('idx_meme_favorite_user_meme').on(table.userId, table.memeId),
+    index('idx_meme_favorite_user').on(table.userId),
+  ]
+);

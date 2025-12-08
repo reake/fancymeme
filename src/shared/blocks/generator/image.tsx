@@ -38,12 +38,14 @@ import {
 import { Tabs, TabsList, TabsTrigger } from '@/shared/components/ui/tabs';
 import { Textarea } from '@/shared/components/ui/textarea';
 import { useAppContext } from '@/shared/contexts/app';
+import { cn } from '@/shared/lib/utils';
 
 interface ImageGeneratorProps {
   allowMultipleImages?: boolean;
   maxImages?: number;
   maxSizeMB?: number;
   srOnlyTitle?: string;
+  className?: string;
 }
 
 interface GeneratedImage {
@@ -60,6 +62,7 @@ interface BackendTask {
   provider: string;
   model: string;
   prompt: string | null;
+  taskInfo: string | null;
   taskResult: string | null;
 }
 
@@ -71,14 +74,8 @@ const MAX_PROMPT_LENGTH = 2000;
 
 const MODEL_OPTIONS = [
   {
-    value: 'black-forest-labs/flux-schnell',
-    label: 'FLUX Schnell',
-    provider: 'replicate',
-    scenes: ['text-to-image'],
-  },
-  {
-    value: 'google/nano-banana',
-    label: 'Nano Banana',
+    value: 'google/nano-banana-pro',
+    label: 'Nano Banana Pro',
     provider: 'replicate',
     scenes: ['text-to-image', 'image-to-image'],
   },
@@ -89,9 +86,45 @@ const MODEL_OPTIONS = [
     scenes: ['text-to-image', 'image-to-image'],
   },
   {
+    value: 'fal-ai/nano-banana-pro',
+    label: 'Nano Banana Pro',
+    provider: 'fal',
+    scenes: ['text-to-image'],
+  },
+  {
+    value: 'fal-ai/nano-banana-pro/edit',
+    label: 'Nano Banana Pro',
+    provider: 'fal',
+    scenes: ['image-to-image'],
+  },
+  {
+    value: 'fal-ai/bytedance/seedream/v4/edit',
+    label: 'Seedream 4',
+    provider: 'fal',
+    scenes: ['image-to-image'],
+  },
+  {
+    value: 'fal-ai/z-image/turbo',
+    label: 'Z-Image Turbo',
+    provider: 'fal',
+    scenes: ['text-to-image'],
+  },
+  {
+    value: 'fal-ai/flux-2-flex',
+    label: 'Flux 2 Flex',
+    provider: 'fal',
+    scenes: ['text-to-image'],
+  },
+  {
     value: 'gemini-3-pro-image-preview',
     label: 'Gemini 3 Pro Image Preview',
     provider: 'gemini',
+    scenes: ['text-to-image', 'image-to-image'],
+  },
+  {
+    value: 'nano-banana-pro',
+    label: 'Nano Banana Pro',
+    provider: 'kie',
     scenes: ['text-to-image', 'image-to-image'],
   },
 ];
@@ -102,8 +135,16 @@ const PROVIDER_OPTIONS = [
     label: 'Replicate',
   },
   {
+    value: 'fal',
+    label: 'Fal',
+  },
+  {
     value: 'gemini',
     label: 'Gemini',
+  },
+  {
+    value: 'kie',
+    label: 'Kie',
   },
 ];
 
@@ -166,6 +207,7 @@ export function ImageGenerator({
   maxImages = 9,
   maxSizeMB = 5,
   srOnlyTitle,
+  className,
 }: ImageGeneratorProps) {
   const t = useTranslations('ai.image.generator');
 
@@ -321,7 +363,7 @@ export function ImageGenerator({
         const currentStatus = task.status as AITaskStatus;
         setTaskStatus(currentStatus);
 
-        const parsedResult = parseTaskResult(task.taskResult);
+        const parsedResult = parseTaskResult(task.taskInfo);
         const imageUrls = extractImageUrls(parsedResult);
 
         if (currentStatus === AITaskStatus.PENDING) {
@@ -370,9 +412,7 @@ export function ImageGenerator({
 
         if (currentStatus === AITaskStatus.FAILED) {
           const errorMessage =
-            parsedResult?.error ||
-            parsedResult?.failure_reason ||
-            'Generate image failed';
+            parsedResult?.errorMessage || 'Generate image failed';
           toast.error(errorMessage);
           resetTaskState();
 
@@ -541,7 +581,10 @@ export function ImageGenerator({
 
     try {
       setDownloadingImageId(image.id);
-      const resp = await fetch(image.url);
+      // fetch image via proxy
+      const resp = await fetch(
+        `/api/proxy/file?url=${encodeURIComponent(image.url)}`
+      );
       if (!resp.ok) {
         throw new Error('Failed to fetch image');
       }
@@ -565,7 +608,7 @@ export function ImageGenerator({
   };
 
   return (
-    <section className="py-16 md:py-24">
+    <section className={cn('py-16 md:py-24', className)}>
       <div className="container">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
@@ -577,10 +620,7 @@ export function ImageGenerator({
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6 pb-8">
-                <Tabs
-                  value={activeTab}
-                  onValueChange={handleTabChange}
-                >
+                <Tabs value={activeTab} onValueChange={handleTabChange}>
                   <TabsList className="bg-primary/10 grid w-full grid-cols-2">
                     <TabsTrigger value="text-to-image">
                       {t('tabs.text-to-image')}
@@ -594,7 +634,10 @@ export function ImageGenerator({
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label>{t('form.provider')}</Label>
-                    <Select value={provider} onValueChange={handleProviderChange}>
+                    <Select
+                      value={provider}
+                      onValueChange={handleProviderChange}
+                    >
                       <SelectTrigger className="w-full">
                         <SelectValue placeholder={t('form.select_provider')} />
                       </SelectTrigger>
@@ -779,7 +822,7 @@ export function ImageGenerator({
                   <div
                     className={
                       generatedImages.length === 1
-                        ? 'grid gap-6 grid-cols-1'
+                        ? 'grid grid-cols-1 gap-6'
                         : 'grid gap-6 sm:grid-cols-2'
                     }
                   >
@@ -797,7 +840,7 @@ export function ImageGenerator({
                             alt={image.prompt || 'Generated image'}
                             className={
                               generatedImages.length === 1
-                                ? 'w-full h-auto'
+                                ? 'h-auto w-full'
                                 : 'h-full w-full object-cover'
                             }
                           />

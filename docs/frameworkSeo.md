@@ -26,6 +26,15 @@
 
 也就是网站的加载速度，响应式适配，静态资源压缩等指标。这类问题主要靠框架来处理，有很多的优化方案。
 
+8. 上线前检查清单
+
+- canonical：每个页面有唯一 canonical，分页/参数页指向主 URL，避免自相竞争
+- robots 与 noindex：默认公开页允许抓取；404/500、实验页、重复内容页使用 noindex；robots.txt 列出 sitemap
+- sitemap：新增子页面自动写入 sitemap，并定期 ping search console；多语言页提供 hreflang 组合
+- GSC：新页面发布后用网址检测提交索引，监控覆盖率与核心 Web Vitals 报告
+- 内链与面包屑：主能力页之间互链，面包屑 schema 帮助抓取
+- 图片与懒加载：首屏图固定宽高、可用 priority，其余图片懒加载且带 alt/文件名关键词
+
 除了以上几点，通过 SEO 拿到搜索排名，还有几个关键的指标和措施👇
 
 1. 停留时长

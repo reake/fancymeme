@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "AI Meme Generator - Create Viral Memes Instantly",
+    "description": "Generate hilarious memes with AI. Choose your style, describe your idea, and create shareable content in seconds."
+  },
+  "page": {
+    "title": "AI Meme Generator",
+    "description": "Create viral memes with the power of AI. Just describe your idea and let our AI generate the perfect meme for you."
+  },
+  "generator": {
+    "title": "AI Meme Generator",
+    "form": {
+      "provider": "AI Provider",
+      "select_provider": "Select provider",
+      "model": "Model",
+      "select_model": "Select model",
+      "style": "Meme Style",
+      "prompt": "Describe your meme",
+      "prompt_placeholder": "e.g., A surprised cat looking at a cucumber, funny reaction meme",
+      "prompt_too_long": "Prompt is too long"
+    },
+    "styles": {
+      "classic": "Classic Meme",
+      "modern": "Modern Style",
+      "reaction": "Reaction Meme",
+      "surreal": "Surreal/Absurdist"
+    },
+    "status": {
+      "pending": "Waiting for AI to start...",
+      "processing": "Creating your meme...",
+      "success": "Meme created!",
+      "failed": "Generation failed"
+    },
+    "loading": "Loading...",
+    "checking_account": "Checking account...",
+    "generate": "Generate Meme",
+    "generating": "Generating...",
+    "sign_in_to_generate": "Sign in to Generate",
+    "credits_cost": "Cost: {credits} credits",
+    "credits_remaining": "Remaining: {credits} credits",
+    "buy_credits": "Buy Credits",
+    "progress": "Progress",
+    "generated_memes": "Generated Memes",
+    "ready_to_generate": "Your meme is being created...",
+    "no_memes_generated": "No memes generated yet. Describe your idea above!",
+    "download": "Download",
+    "save_to_community": "Share to Community",
+    "success": {
+      "generated": "Meme generated successfully!",
+      "downloaded": "Meme downloaded!",
+      "saved": "Meme saved to community!"
+    },
+    "error": {
+      "timeout": "Generation timed out. Please try again.",
+      "no_result": "No meme was generated. Please retry.",
+      "failed": "Generation failed",
+      "query_failed": "Failed to check status",
+      "generate_failed": "Failed to generate meme",
+      "download_failed": "Failed to download meme",
+      "save_failed": "Failed to save meme",
+      "insufficient_credits": "Insufficient credits. Please top up.",
+      "empty_prompt": "Please describe your meme idea",
+      "invalid_config": "Provider or model not configured"
+    }
+  },
+  "community": {
+    "title": "Meme Community",
+    "description": "Browse and share the funniest AI-generated memes",
+    "filters": {
+      "latest": "Latest",
+      "trending": "Trending",
+      "most_liked": "Most Liked"
+    },
+    "empty": "No memes yet. Be the first to create one!",
+    "load_more": "Load More"
+  },
+  "card": {
+    "by": "by",
+    "likes": "{count} likes",
+    "comments": "{count} comments",
+    "share": "Share",
+    "like": "Like",
+    "unlike": "Unlike",
+    "comment": "Comment",
+    "view": "View",
+    "delete": "Delete",
+    "confirm_delete": "Are you sure you want to delete this meme?"
+  }
+}
