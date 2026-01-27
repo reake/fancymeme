@@ -2,6 +2,14 @@ import React from 'react';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { MDXComponents } from 'mdx/types';
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/shared/components/ui/accordion';
+import { cn } from '@/shared/lib/utils';
+
 // Custom link component with nofollow for external links
 const CustomLink = ({
   href,
@@ -17,6 +25,7 @@ const CustomLink = ({
         href={href}
         target="_blank"
         rel="nofollow noopener noreferrer"
+        className="text-primary"
         {...props}
       >
         {children}
@@ -53,6 +62,7 @@ export function withNoFollow(
           href={href}
           target="_blank"
           rel="nofollow noopener noreferrer"
+          className="text-primary"
           {...props}
         >
           {children}
@@ -73,6 +83,35 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
   const mergedComponents = {
     ...defaultMdxComponents,
     a: CustomLink,
+    img: (props: React.ComponentProps<'img'>) => {
+      const { src } = props;
+      // If src is an object (imported image), use its src property
+      const imageSrc =
+        typeof src === 'object' && src !== null && 'src' in src
+          ? (src as any).src
+          : src;
+
+      return (
+        <img
+          {...props}
+          src={imageSrc}
+          className={cn('rounded-lg border', props.className)}
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
+      );
+    },
+    Video: ({ className, ...props }: React.ComponentProps<'video'>) => (
+      <video
+        className={cn('rounded-md border', className)}
+        controls
+        loop
+        {...props}
+      />
+    ),
+    Accordion,
+    AccordionItem,
+    AccordionTrigger,
+    AccordionContent,
     ...components,
   };
 
@@ -88,8 +127,4 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return mergedComponents;
 }
 
-export function useMDXComponents(components: MDXComponents): MDXComponents {
-  return {
-    ...components,
-  };
-}
+export const useMDXComponents = getMDXComponents;

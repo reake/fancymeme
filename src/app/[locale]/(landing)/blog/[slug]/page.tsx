@@ -6,13 +6,15 @@ import { Empty } from '@/shared/blocks/common';
 import { getPost } from '@/shared/models/post';
 import { DynamicPage } from '@/shared/types/blocks/landing';
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const t = await getTranslations('blog.metadata');
+  const t = await getTranslations('pages.blog.metadata');
 
   const canonicalUrl =
     locale !== envConfigs.locale

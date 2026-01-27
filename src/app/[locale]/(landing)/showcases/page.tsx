@@ -4,8 +4,10 @@ import { getThemePage } from '@/core/theme';
 import { getMetadata } from '@/shared/lib/seo';
 import { DynamicPage } from '@/shared/types/blocks/landing';
 
+export const revalidate = 3600;
+
 export const generateMetadata = getMetadata({
-  metadataKey: 'showcases.metadata',
+  metadataKey: 'pages.showcases.metadata',
   canonicalUrl: '/showcases',
 });
 
@@ -17,16 +19,15 @@ export default async function ShowcasesPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // load landing data
-  const tl = await getTranslations('landing');
-
-  // load showcases data
-  const t = await getTranslations('showcases');
+  // get page data
+  const t = await getTranslations('pages.showcases');
 
   const page: DynamicPage = {
+    title: t.raw('page.title'),
     sections: {
-      showcases: t.raw('showcases'),
-      cta: tl.raw('cta'),
+      showcases: {
+        ...t.raw('page.sections.showcases'),
+      },
     },
   };
 

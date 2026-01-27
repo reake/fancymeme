@@ -9,9 +9,9 @@ import {
   PaymentStatus,
   PaymentType,
 } from '@/extensions/payment/types';
+import { getSnowId, getUuid } from '@/shared/lib/hash';
 import { Configs, getAllConfigs } from '@/shared/models/config';
 
-import { getSnowId, getUuid } from '../lib/hash';
 import {
   calculateCreditExpirationTime,
   CreditStatus,
@@ -87,6 +87,7 @@ export function getPaymentServiceWithConfigs(configs: Configs) {
       new PayPalProvider({
         clientId: configs.paypal_client_id,
         clientSecret: configs.paypal_client_secret,
+        webhookId: configs.paypal_webhook_id,
         environment:
           configs.paypal_environment === 'production'
             ? 'production'
@@ -107,11 +108,14 @@ let paymentService: PaymentManager | null = null;
 /**
  * get payment service instance
  */
-export async function getPaymentService(): Promise<PaymentManager> {
-  if (true) {
-    const configs = await getAllConfigs();
-    paymentService = getPaymentServiceWithConfigs(configs);
+export async function getPaymentService(
+  configs?: Configs
+): Promise<PaymentManager> {
+  if (!configs) {
+    configs = await getAllConfigs();
   }
+  paymentService = getPaymentServiceWithConfigs(configs);
+
   return paymentService;
 }
 
@@ -128,6 +132,18 @@ export async function handleCheckoutSuccess({
   const orderNo = order.orderNo;
   if (!orderNo) {
     throw new Error('invalid order');
+  }
+
+  // Idempotency check: if order is already paid, skip processing
+  if (order.status === OrderStatus.PAID) {
+    console.log(`Order ${orderNo} is already paid, skipping`);
+    return;
+  }
+
+  // Only process orders in CREATED or PENDING status
+  if (order.status !== OrderStatus.CREATED && order.status !== OrderStatus.PENDING) {
+    console.log(`Order ${orderNo} status is ${order.status}, not processing`);
+    return;
   }
 
   if (order.paymentType === PaymentType.SUBSCRIPTION) {

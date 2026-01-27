@@ -5,6 +5,8 @@ import { getThemePage } from '@/core/theme';
 import { envConfigs } from '@/config';
 import { getLocalPage } from '@/shared/models/post';
 
+export const revalidate = 3600;
+
 // dynamic page metadata
 export async function generateMetadata({
   params,
@@ -24,6 +26,11 @@ export async function generateMetadata({
   // static page slug
   const staticPageSlug =
     typeof slug === 'string' ? slug : (slug as string[]).join('/') || '';
+
+  // filter invalid slug
+  if (staticPageSlug.includes('.')) {
+    return;
+  }
 
   // build canonical url
   canonicalUrl =
@@ -102,6 +109,11 @@ export default async function DynamicPage({
   const staticPageSlug =
     typeof slug === 'string' ? slug : (slug as string[]).join('/') || '';
 
+  // filter invalid slug
+  if (staticPageSlug.includes('.')) {
+    return notFound();
+  }
+
   // get static page content
   const staticPage = await getLocalPage({ slug: staticPageSlug, locale });
 
@@ -122,12 +134,17 @@ export default async function DynamicPage({
 
   const messageKey = `pages.${dynamicPageSlug}`;
 
-  const t = await getTranslations({ locale, namespace: messageKey });
+  try {
+    const t = await getTranslations({ locale, namespace: messageKey });
 
-  // return dynamic page
-  if (t.has('page')) {
-    const Page = await getThemePage('dynamic-page');
-    return <Page locale={locale} page={t.raw('page')} />;
+    // return dynamic page
+    if (t.has('page')) {
+      const Page = await getThemePage('dynamic-page');
+      return <Page locale={locale} page={t.raw('page')} />;
+    }
+  } catch (error) {
+    // ignore error if translation not found
+    return notFound();
   }
 
   // 3. page not found

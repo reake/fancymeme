@@ -5,6 +5,8 @@ import { VideoGenerator } from '@/shared/blocks/generator';
 import { getMetadata } from '@/shared/lib/seo';
 import { DynamicPage } from '@/shared/types/blocks/landing';
 
+export const revalidate = 3600;
+
 export const generateMetadata = getMetadata({
   metadataKey: 'ai.video.metadata',
   canonicalUrl: '/ai-video-generator',
@@ -21,9 +23,6 @@ export default async function AiVideoGeneratorPage({
   // get ai video data
   const t = await getTranslations('ai.video');
 
-  // get landing page data
-  const tl = await getTranslations('landing');
-
   // build page sections
   const page: DynamicPage = {
     sections: {
@@ -38,8 +37,6 @@ export default async function AiVideoGeneratorPage({
       generator: {
         component: <VideoGenerator srOnlyTitle={t.raw('generator.title')} />,
       },
-      faq: tl.raw('faq'),
-      cta: tl.raw('cta'),
     },
   };
 

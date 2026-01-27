@@ -20,6 +20,7 @@ export const localeMessagesPaths = [
   'landing',
   'showcases',
   'blog',
+  'updates',
   'pricing',
   'meme',
   'settings/sidebar',
@@ -49,4 +50,9 @@ export const localeMessagesPaths = [
   'activity/sidebar',
   'activity/ai-tasks',
   'activity/chats',
+  'pages/index',
+  'pages/pricing',
+  'pages/showcases',
+  'pages/blog',
+  'pages/updates',
 ];

@@ -1,80 +1,19 @@
 # ShipAny Template Two
 
-## Preview
-
-[https://cf-two.shipany.site/](https://cf-two.shipany.site/)
-
-## 由于多次发生仓库被提交脏代码，给其他同学带来不便，现将仓库写权限关闭，仓库成员仅可读！
-
-## Doc
-
-[✨ShipanyTwo官方文档（作者已更新完）](https://www.shipany.ai/zh/docs)
-
-[✨ShipanyTwo按照官方文档一步步走过程记录](https://github.com/boomer1678/shipany-template/issues/2)
-
-[✨ShipanyTwo更新日志](https://github.com/boomer1678/shipany-template/issues/3)
-
-[✨ShipAnyTwo架构要点总结](https://github.com/boomer1678/shipany-template/issues/1)
-
-[✨ShipAnyTwo常见问题](https://github.com/boomer1678/shipany-template/issues/7)
-
-## Video
-
-[✨ShipanyTwo实战课程：AI壁纸生成器开发视频教学(2025-12-03)](https://github.com/boomer1678/shipany-template/issues/6)
-
-[✨ShipanyTwo实战课程：从零搭建了一个一站式 AI 生成平台(2025-11-26)](https://github.com/boomer1678/shipany-template/issues/9)
-
-## Branch
-
-- `main`: two main branch
-- `cloudfare`: two cloudfare branch
-- `one/main`: one main branch (2025-08-06(v2.6.0))
-- `one/cloudfare`: one cloudfare branch 
-
-
 ## Getting Started
 
-1. Clone code and install
+read [ShipAny Document](https://shipany.ai/docs/quick-start) to start your AI SaaS project.
 
-```shell
-git clone git@github.com:boomer1678/shipany-template.git -b dev my-shipany-project
-cd my-shipany-project
-pnpm install
-```
+## Buy Templates
 
-2. Set local development env
+check [ShipAny Templates](https://shipany.ai/templates) to buy Business Templates.
 
-create `.env` file under root dir
+## Feedback
 
-```shell
-cp .env.example .env
-```
+submit your feedbacks on [Github Issues](https://github.com/shipanyai/shipany-template-two/issues)
 
-update env with DATABASE_URL and AUTH_SECRET
+## LICENSE
 
-`DATABASE_URL` may like:
+!!! Please do not publicly release ShipAny's Code. Illegal use will be prosecuted
 
-```shell
-postgresql://user:password@host:port/db
-```
-
-`AUTH_SECRET` can be generated:
-
-- [Generate Auth Secret](https://www.better-auth.com/docs/installation)
-
-3. Create database tables with orm migrate
-
-```shell
-pnpm db:generate
-pnpm db:migrate
-```
-
-4. Start dev server
-
-```shell
-pnpm dev
-```
-
-5. Deploy to vercel
-
-push code to github and deploy to Vercel.
+[ShipAny LICENSE](./LICENSE)

@@ -16,11 +16,12 @@ import {
   TaxonomyType,
 } from '@/shared/models/taxonomy';
 import {
-  Blog as BlogType,
   Category as CategoryType,
   Post as PostType,
 } from '@/shared/types/blocks/blog';
 import { DynamicPage } from '@/shared/types/blocks/landing';
+
+export const revalidate = 3600;
 
 export async function generateMetadata({
   params,
@@ -28,7 +29,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const t = await getTranslations('blog.metadata');
+  const t = await getTranslations('pages.blog.metadata');
 
   return {
     title: `${slug} | ${t('title')}`,
@@ -53,7 +54,7 @@ export default async function CategoryBlogPage({
   setRequestLocale(locale);
 
   // load blog data
-  const t = await getTranslations('blog');
+  const t = await getTranslations('pages.blog');
 
   const { page: pageNum, pageSize } = await searchParams;
   const page = pageNum || 1;
@@ -101,7 +102,7 @@ export default async function CategoryBlogPage({
   categories.unshift({
     id: 'all',
     slug: 'all',
-    title: t('page.all'),
+    title: t('messages.all'),
     url: `/blog`,
   });
 
@@ -117,21 +118,16 @@ export default async function CategoryBlogPage({
     url: `/blog/${post.slug}`,
   }));
 
-  // build blog
-  const blog: BlogType = {
-    ...t.raw('blog'),
-    categories,
-    currentCategory,
-    posts,
-  };
-
   // build page sections
   const _page: DynamicPage = {
+    title: t('page.title'),
     sections: {
       blog: {
-        block: 'blog',
+        ...t.raw('page.sections.blog'),
         data: {
-          blog,
+          categories,
+          currentCategory,
+          posts,
         },
       },
     },

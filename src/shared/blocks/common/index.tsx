@@ -6,6 +6,7 @@ export * from './brand-logo';
 
 export * from './locale-detector';
 export * from './locale-selector';
+export * from './top-banner';
 
 export * from './theme-toggler';
 
@@ -26,3 +27,5 @@ export * from './mdx-content';
 export * from '../sign/sign-user';
 
 export * from './audio-player';
+
+export * from './error-boundary';
