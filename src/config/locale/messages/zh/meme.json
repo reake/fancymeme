@@ -100,6 +100,7 @@
     "semantic_search_error": "搜索失败，已使用本地结果。",
     "semantic_search_min_chars": "请输入至少 3 个字符",
     "edit": "编辑",
+    "view_details": "查看详情",
     "metadata": {
       "title": "Meme 模板库 - 热门表情包模板",
       "description": "浏览 60+ 热门 Meme 模板，包括 Drake、男友偷看等经典模板。立即开始制作你的表情包！"

@@ -1,7 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { getThemePage } from '@/core/theme';
-import { HeroMemeInput } from '@/shared/blocks/meme/hero-meme-input';
 import { TextToMeme } from '@/shared/blocks/meme/text-to-meme';
 import { getMetadata } from '@/shared/lib/seo';
 import { DynamicPage } from '@/shared/types/blocks/landing';
@@ -33,11 +32,23 @@ export default async function LandingPage({
           src: '/imgs/bg/tree.jpg',
           alt: 'meme generator background',
         },
-        // Custom component for the hero input
-        custom_component: <HeroMemeInput className="mt-8" />,
+        buttons: [
+          {
+            title: t.raw('textToMeme.generate'),
+            url: '#generator',
+            icon: 'Sparkles',
+          },
+          {
+            title: t.raw('templates.title'),
+            url: '/templates',
+            variant: 'outline',
+            icon: 'Image',
+          },
+        ],
       },
       textToMeme: {
-        component: <TextToMeme showTitle={true} />,
+        id: 'generator',
+        component: <TextToMeme showTitle={false} />,
       },
       features: {
         id: 'features',
@@ -90,7 +101,7 @@ export default async function LandingPage({
         buttons: [
           {
             title: 'Start Creating',
-            url: '/meme-generator',
+            url: '#generator',
             icon: 'Sparkles',
           },
           {
