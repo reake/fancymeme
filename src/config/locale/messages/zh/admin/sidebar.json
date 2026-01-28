@@ -87,6 +87,11 @@
           "title": "AI 对话",
           "url": "/admin/chats",
           "icon": "MessageCircle"
+        },
+        {
+          "title": "模因模板",
+          "url": "/admin/meme-templates",
+          "icon": "Image"
         }
       ]
     }

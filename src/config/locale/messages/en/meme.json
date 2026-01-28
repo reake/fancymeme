@@ -90,12 +90,64 @@
     "title": "Meme Templates",
     "description": "Browse our collection of popular meme templates. Click any template to start editing and create your own viral memes.",
     "search_placeholder": "Search templates...",
+    "semantic_search_placeholder": "Describe what you want to express... e.g. \"feeling frustrated\" or \"celebrating a win\"",
+    "ai_search": "AI Search",
     "showing_templates": "Showing {count} templates",
+    "showing_ai_results": "Showing AI-matched results",
+    "show_all": "Show all templates",
     "no_results": "No templates found. Try a different search term.",
+    "no_semantic_results": "No matching templates found. Try different keywords.",
+    "semantic_search_error": "Search failed. Using local results.",
+    "semantic_search_min_chars": "Please enter at least 3 characters",
     "edit": "Edit",
     "metadata": {
       "title": "Meme Templates - Popular Meme Generator Templates",
       "description": "Browse 60+ popular meme templates including Drake, Distracted Boyfriend, and more. Start creating your own memes now!"
+    }
+  },
+  "textToMeme": {
+    "title": "Turn Any Text Into a Meme",
+    "subtitle": "Just describe what you want - our AI picks the perfect template and writes the captions",
+    "placeholder": "Describe your meme idea... e.g., 'when you finally finish a project' or 'programmers vs normal people'",
+    "generate": "Generate Memes",
+    "generating": "Creating your memes...",
+    "try_it_free": "Try it free - no signup required",
+    "results_title": "Your Memes",
+    "no_results": "Describe your idea above and click Generate!",
+    "download": "Download",
+    "edit": "Edit in Editor",
+    "share": "Share",
+    "regenerate": "Generate More",
+    "watermark_notice": "Sign up to remove watermark",
+    "template_used": "Template: {name}",
+    "mode": {
+      "single": "Single Meme",
+      "batch": "Batch Generate"
+    },
+    "batch": {
+      "title": "Batch Generate from Topic",
+      "subtitle": "Enter a topic and get multiple meme variations at once",
+      "topic_placeholder": "Enter a topic... e.g., 'Monday mornings' or 'remote work'",
+      "count_label": "Number of memes",
+      "angle": "Angle: {angle}"
+    },
+    "export": {
+      "size_label": "Export size:",
+      "original": "Original",
+      "square": "Square (1:1)",
+      "landscape": "Landscape (16:9)",
+      "portrait": "Portrait (9:16)",
+      "twitter": "Twitter (2:1)"
+    },
+    "success": {
+      "generated": "Memes generated successfully!"
+    },
+    "error": {
+      "empty_text": "Please describe your meme idea",
+      "empty_topic": "Please enter a topic",
+      "too_long": "Text is too long (max 500 characters)",
+      "failed": "Failed to generate memes. Please try again.",
+      "api_error": "Service temporarily unavailable"
     }
   },
   "editor": {

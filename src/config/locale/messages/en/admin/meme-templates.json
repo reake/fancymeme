@@ -1,0 +1,73 @@
+{
+  "list": {
+    "title": "Meme Templates",
+    "crumbs": {
+      "admin": "Admin",
+      "templates": "Templates"
+    },
+    "buttons": {
+      "add": "Add Template",
+      "edit": "Edit",
+      "view": "Preview",
+      "approve": "Approve",
+      "reject": "Reject"
+    },
+    "empty": "No templates found"
+  },
+  "fields": {
+    "name": "Name",
+    "slug": "Slug",
+    "image": "Image",
+    "category": "Category",
+    "status": "Status",
+    "source": "Source",
+    "usage_count": "Usage",
+    "created_at": "Created At"
+  },
+  "status": {
+    "active": "Active",
+    "pending": "Pending",
+    "deleted": "Deleted"
+  },
+  "source": {
+    "system": "System",
+    "user": "User",
+    "ai": "AI"
+  },
+  "detail": {
+    "title": "Template Details",
+    "crumbs": {
+      "admin": "Admin",
+      "templates": "Templates",
+      "detail": "Detail"
+    }
+  },
+  "edit": {
+    "title": "Edit Template",
+    "crumbs": {
+      "admin": "Admin",
+      "templates": "Templates",
+      "edit": "Edit"
+    },
+    "buttons": {
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "success": "Template updated successfully",
+    "error": "Failed to update template"
+  },
+  "add": {
+    "title": "Add Template",
+    "crumbs": {
+      "admin": "Admin",
+      "templates": "Templates",
+      "add": "Add"
+    },
+    "buttons": {
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "success": "Template created successfully",
+    "error": "Failed to create template"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "ShipAny Template Two",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
-    "keywords": "shipany, shipany-boilerplate, shipany-template-two-demo"
+    "title": "FancyMeme - AI Meme Generator | Create Viral Memes Instantly",
+    "description": "Transform any text into hilarious memes with AI. 60+ templates, instant generation, and easy customization. Create viral memes for social media in seconds.",
+    "keywords": "meme generator, ai meme, meme maker, create memes, viral memes, funny memes, meme templates, text to meme, ai meme generator"
   },
   "sign": {
     "sign_in_title": "Sign In",

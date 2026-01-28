@@ -105,6 +105,9 @@ export function Hero({
         {section.show_avatars && (
           <SocialAvatars tip={section.avatars_tip || ''} />
         )}
+
+        {/* Custom component slot for hero section */}
+        {section.custom_component && section.custom_component}
       </div>
 
       {(section.image?.src || section.image_invert?.src) && (

@@ -1,10 +1,11 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState, useTransition } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Edit3, Search } from 'lucide-react';
+import { Edit3, Loader2, Search, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { toast } from 'sonner';
 
 import { Link } from '@/core/i18n/navigation';
 import { Button } from '@/shared/components/ui/button';
@@ -14,6 +15,13 @@ import { cn } from '@/shared/lib/utils';
 import { MEME_TEMPLATES } from './editor/templates-data';
 import { MemeTemplate } from './editor/types';
 
+interface SearchResult {
+  id: string;
+  name: string;
+  imageUrl: string;
+  textBoxCount: number;
+}
+
 interface TemplatesGalleryProps {
   className?: string;
 }
@@ -21,13 +29,75 @@ interface TemplatesGalleryProps {
 export function TemplatesGallery({ className }: TemplatesGalleryProps) {
   const t = useTranslations('meme.templates');
   const [searchQuery, setSearchQuery] = useState('');
+  const [semanticResults, setSemanticResults] = useState<SearchResult[] | null>(null);
+  const [isSearching, startSearching] = useTransition();
+  const [searchMethod, setSearchMethod] = useState<'local' | 'semantic'>('local');
 
-  const filteredTemplates = useMemo(() => {
+  // Local filtering for instant results
+  const localFilteredTemplates = useMemo(() => {
     if (!searchQuery.trim()) return MEME_TEMPLATES;
     return MEME_TEMPLATES.filter((template) =>
       template.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }, [searchQuery]);
+
+  // Use semantic results if available, otherwise local
+  const filteredTemplates = useMemo(() => {
+    if (searchMethod === 'semantic' && semanticResults) {
+      // Map semantic results back to full template data
+      return semanticResults
+        .map((r) => MEME_TEMPLATES.find((t) => t.id === r.id))
+        .filter((t): t is MemeTemplate => t !== undefined);
+    }
+    return localFilteredTemplates;
+  }, [searchMethod, semanticResults, localFilteredTemplates]);
+
+  const handleSemanticSearch = useCallback(async () => {
+    if (!searchQuery.trim() || searchQuery.trim().length < 3) {
+      toast.error(t('semantic_search_min_chars') || 'Please enter at least 3 characters');
+      return;
+    }
+
+    startSearching(async () => {
+      try {
+        const response = await fetch('/api/meme/search-templates', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query: searchQuery.trim(), limit: 20 }),
+        });
+
+        if (!response.ok) throw new Error('Search failed');
+
+        const { code, data } = await response.json();
+        if (code !== 0) throw new Error('Search failed');
+
+        setSemanticResults(data.templates);
+        setSearchMethod('semantic');
+        
+        if (data.templates.length === 0) {
+          toast.info(t('no_semantic_results') || 'No matching templates found. Try different keywords.');
+        }
+      } catch (error) {
+        console.error('Semantic search error:', error);
+        toast.error(t('semantic_search_error') || 'Search failed. Using local results.');
+      }
+    });
+  }, [searchQuery, t]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+    // Reset to local search when typing
+    if (searchMethod === 'semantic') {
+      setSearchMethod('local');
+      setSemanticResults(null);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && searchQuery.trim().length >= 3) {
+      handleSemanticSearch();
+    }
+  };
 
   return (
     <section className={cn('py-16 md:py-24', className)}>
@@ -47,14 +117,44 @@ export function TemplatesGallery({ className }: TemplatesGalleryProps) {
           </p>
 
           {/* Search */}
-          <div className="max-w-md mx-auto relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <Input
-              placeholder={t('search_placeholder')}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10"
-            />
+          <div className="max-w-lg mx-auto">
+            <div className="relative flex gap-2">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input
+                  placeholder={t('semantic_search_placeholder') || 'Describe what you want to express... e.g. "feeling frustrated" or "celebrating a win"'}
+                  value={searchQuery}
+                  onChange={handleInputChange}
+                  onKeyDown={handleKeyDown}
+                  className="pl-10"
+                />
+              </div>
+              <Button
+                onClick={handleSemanticSearch}
+                disabled={isSearching || searchQuery.trim().length < 3}
+                variant={searchMethod === 'semantic' ? 'default' : 'outline'}
+              >
+                {isSearching ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <>
+                    <Sparkles className="h-4 w-4 mr-1" />
+                    {t('ai_search') || 'AI Search'}
+                  </>
+                )}
+              </Button>
+            </div>
+            {searchMethod === 'semantic' && semanticResults && (
+              <p className="text-xs text-muted-foreground mt-2 text-center">
+                {t('showing_ai_results') || 'Showing AI-matched results'} •{' '}
+                <button
+                  onClick={() => { setSearchMethod('local'); setSemanticResults(null); }}
+                  className="text-primary hover:underline"
+                >
+                  {t('show_all') || 'Show all templates'}
+                </button>
+              </p>
+            )}
           </div>
         </motion.div>
 

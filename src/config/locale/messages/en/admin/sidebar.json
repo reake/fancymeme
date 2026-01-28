@@ -87,6 +87,11 @@
           "title": "AI Chats",
           "url": "/admin/chats",
           "icon": "MessageCircle"
+        },
+        {
+          "title": "Meme Templates",
+          "url": "/admin/meme-templates",
+          "icon": "Image"
         }
       ]
     }

@@ -60,9 +60,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
     id: 'uno-draw-25',
     name: 'UNO Draw 25 Cards',
     imageUrl: 'https://www.meme-studio.io/templates/_3BF7x0uz9.webp',
-    defaultTextBoxes: [
-      { x: 5, y: 15, width: 40, text: '' },
-    ],
+    defaultTextBoxes: [{ x: 5, y: 15, width: 40, text: '' }],
   },
   {
     id: 'running-away-balloon',
@@ -176,9 +174,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
     id: 'blank-nut-button',
     name: 'Blank Nut Button',
     imageUrl: 'https://www.meme-studio.io/templates/M_RwcHZahW.webp',
-    defaultTextBoxes: [
-      { x: 5, y: 5, width: 45, text: '' },
-    ],
+    defaultTextBoxes: [{ x: 5, y: 5, width: 45, text: '' }],
   },
   {
     id: 'boardroom-meeting',
@@ -232,9 +228,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
     id: 'scroll-of-truth',
     name: 'The Scroll Of Truth',
     imageUrl: 'https://www.meme-studio.io/templates/cKn23PEkWO.webp',
-    defaultTextBoxes: [
-      { x: 15, y: 45, width: 35, text: '' },
-    ],
+    defaultTextBoxes: [{ x: 15, y: 45, width: 35, text: '' }],
   },
   {
     id: 'waiting-skeleton',
@@ -249,17 +243,13 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
     id: 'hard-to-swallow-pills',
     name: 'Hard To Swallow Pills',
     imageUrl: 'https://www.meme-studio.io/templates/Z76_CfJzHX.webp',
-    defaultTextBoxes: [
-      { x: 55, y: 55, width: 40, text: '' },
-    ],
+    defaultTextBoxes: [{ x: 55, y: 55, width: 40, text: '' }],
   },
   {
     id: 'trump-bill-signing',
     name: 'Trump Bill Signing',
     imageUrl: 'https://www.meme-studio.io/templates/YhuQgl6uS2.webp',
-    defaultTextBoxes: [
-      { x: 25, y: 55, width: 50, text: '' },
-    ],
+    defaultTextBoxes: [{ x: 25, y: 55, width: 50, text: '' }],
   },
   {
     id: 'the-rock-driving',
@@ -283,9 +273,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
     id: 'bernie-asking',
     name: 'Bernie I Am Once Again Asking',
     imageUrl: 'https://www.meme-studio.io/templates/Yp3Dz4LPTU.webp',
-    defaultTextBoxes: [
-      { y: 85, text: '' },
-    ],
+    defaultTextBoxes: [{ y: 85, text: '' }],
   },
   {
     id: 'monkey-puppet',
@@ -300,9 +288,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
     id: 'spongebob-imma-head-out',
     name: 'Spongebob Ight Imma Head Out',
     imageUrl: 'https://www.meme-studio.io/templates/x_AHY8qK0j.webp',
-    defaultTextBoxes: [
-      { y: 5, text: '' },
-    ],
+    defaultTextBoxes: [{ y: 5, text: '' }],
   },
   {
     id: 'x-x-everywhere',
@@ -409,9 +395,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
     id: 'marked-safe-from',
     name: 'Marked Safe From',
     imageUrl: 'https://www.meme-studio.io/templates/Rtw7-NUWUR.webp',
-    defaultTextBoxes: [
-      { x: 25, y: 35, width: 50, text: '' },
-    ],
+    defaultTextBoxes: [{ x: 25, y: 35, width: 50, text: '' }],
   },
   {
     id: 'star-wars-yoda',
@@ -454,9 +438,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
     id: 'this-is-fine',
     name: 'This Is Fine',
     imageUrl: 'https://www.meme-studio.io/templates/SFr_N0dTDs.webp',
-    defaultTextBoxes: [
-      { y: 5, text: '' },
-    ],
+    defaultTextBoxes: [{ y: 5, text: '' }],
   },
   {
     id: 'sleeping-shaq',

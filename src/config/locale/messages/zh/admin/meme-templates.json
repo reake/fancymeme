@@ -1,0 +1,73 @@
+{
+  "list": {
+    "title": "模因模板管理",
+    "crumbs": {
+      "admin": "管理后台",
+      "templates": "模板"
+    },
+    "buttons": {
+      "add": "添加模板",
+      "edit": "编辑",
+      "view": "预览",
+      "approve": "批准",
+      "reject": "拒绝"
+    },
+    "empty": "暂无模板"
+  },
+  "fields": {
+    "name": "名称",
+    "slug": "别名",
+    "image": "图片",
+    "category": "分类",
+    "status": "状态",
+    "source": "来源",
+    "usage_count": "使用次数",
+    "created_at": "创建时间"
+  },
+  "status": {
+    "active": "已激活",
+    "pending": "待审核",
+    "deleted": "已删除"
+  },
+  "source": {
+    "system": "系统",
+    "user": "用户",
+    "ai": "AI"
+  },
+  "detail": {
+    "title": "模板详情",
+    "crumbs": {
+      "admin": "管理后台",
+      "templates": "模板",
+      "detail": "详情"
+    }
+  },
+  "edit": {
+    "title": "编辑模板",
+    "crumbs": {
+      "admin": "管理后台",
+      "templates": "模板",
+      "edit": "编辑"
+    },
+    "buttons": {
+      "save": "保存",
+      "cancel": "取消"
+    },
+    "success": "模板更新成功",
+    "error": "模板更新失败"
+  },
+  "add": {
+    "title": "添加模板",
+    "crumbs": {
+      "admin": "管理后台",
+      "templates": "模板",
+      "add": "添加"
+    },
+    "buttons": {
+      "save": "保存",
+      "cancel": "取消"
+    },
+    "success": "模板创建成功",
+    "error": "模板创建失败"
+  }
+}

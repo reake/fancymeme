@@ -90,12 +90,64 @@
     "title": "Meme 模板库",
     "description": "浏览我们的热门 Meme 模板合集。点击任意模板开始编辑，创建你自己的爆款表情包。",
     "search_placeholder": "搜索模板...",
+    "semantic_search_placeholder": "描述你想表达的内容... 例如「感到沮丧」或「庆祝胜利」",
+    "ai_search": "AI 搜索",
     "showing_templates": "共 {count} 个模板",
+    "showing_ai_results": "正在显示 AI 匹配结果",
+    "show_all": "显示所有模板",
     "no_results": "未找到模板，请尝试其他关键词。",
+    "no_semantic_results": "未找到匹配的模板，请尝试不同的关键词。",
+    "semantic_search_error": "搜索失败，已使用本地结果。",
+    "semantic_search_min_chars": "请输入至少 3 个字符",
     "edit": "编辑",
     "metadata": {
       "title": "Meme 模板库 - 热门表情包模板",
       "description": "浏览 60+ 热门 Meme 模板，包括 Drake、男友偷看等经典模板。立即开始制作你的表情包！"
+    }
+  },
+  "textToMeme": {
+    "title": "一句话生成 Meme",
+    "subtitle": "只需描述你的想法 - AI 自动选择最佳模板并生成搞笑文案",
+    "placeholder": "描述你的 Meme 想法... 例如：「终于完成项目时」或「程序员 vs 普通人」",
+    "generate": "生成 Meme",
+    "generating": "正在创建你的 Meme...",
+    "try_it_free": "免费体验 - 无需注册",
+    "results_title": "生成结果",
+    "no_results": "在上方描述你的想法，点击生成！",
+    "download": "下载",
+    "edit": "在编辑器中编辑",
+    "share": "分享",
+    "regenerate": "再次生成",
+    "watermark_notice": "注册后可移除水印",
+    "template_used": "模板：{name}",
+    "mode": {
+      "single": "单个模因",
+      "batch": "批量生成"
+    },
+    "batch": {
+      "title": "按主题批量生成",
+      "subtitle": "输入一个主题，一次获取多个模因变体",
+      "topic_placeholder": "输入主题... 例如：「周一早晨」或「远程工作」",
+      "count_label": "模因数量",
+      "angle": "角度：{angle}"
+    },
+    "export": {
+      "size_label": "导出尺寸:",
+      "original": "原始尺寸",
+      "square": "正方形 (1:1)",
+      "landscape": "横向 (16:9)",
+      "portrait": "竖向 (9:16)",
+      "twitter": "Twitter (2:1)"
+    },
+    "success": {
+      "generated": "Meme 生成成功！"
+    },
+    "error": {
+      "empty_text": "请描述你的 Meme 想法",
+      "empty_topic": "请输入主题",
+      "too_long": "文字过长（最多 500 字符）",
+      "failed": "生成失败，请重试",
+      "api_error": "服务暂时不可用"
     }
   },
   "editor": {
