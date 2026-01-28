@@ -3,7 +3,7 @@
 import { useCallback, useMemo, useState, useTransition } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Edit3, Loader2, Search, Sparkles } from 'lucide-react';
+import { Edit3, Eye, Loader2, Search, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 
@@ -199,10 +199,7 @@ function TemplateCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.02 }}
     >
-      <Link
-        href={`/meme-editor/${template.id}`}
-        className="group block"
-      >
+      <div className="group">
         <div className="relative aspect-square overflow-hidden rounded-lg border bg-muted transition-all hover:border-primary hover:shadow-lg">
           <Image
             src={template.imageUrl}
@@ -214,19 +211,29 @@ function TemplateCard({
           />
 
           {/* Hover Overlay */}
-          <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
-            <Button size="sm" variant="secondary">
-              <Edit3 className="h-4 w-4 mr-1" />
-              {t('edit')}
-            </Button>
+          <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex flex-col items-center justify-center gap-2">
+            <Link href={`/meme-editor/${template.id}`}>
+              <Button size="sm" variant="secondary">
+                <Edit3 className="h-4 w-4 mr-1" />
+                {t('edit')}
+              </Button>
+            </Link>
+            <Link href={`/templates/${template.id}`}>
+              <Button size="sm" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/30">
+                <Eye className="h-4 w-4 mr-1" />
+                {t('view_details') || 'Details'}
+              </Button>
+            </Link>
           </div>
         </div>
 
         {/* Template Name */}
-        <p className="mt-2 text-sm font-medium line-clamp-1 group-hover:text-primary transition-colors">
-          {template.name}
-        </p>
-      </Link>
+        <Link href={`/templates/${template.id}`}>
+          <p className="mt-2 text-sm font-medium line-clamp-1 hover:text-primary transition-colors">
+            {template.name}
+          </p>
+        </Link>
+      </div>
     </motion.div>
   );
 }

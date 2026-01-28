@@ -152,7 +152,7 @@ export default async function TemplateDetailPage({ params }: PageProps) {
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-3">
               <Button size="lg" asChild>
-                <Link href={`/meme-editor?template=${template.id}`}>
+                <Link href={`/meme-editor/${template.id}`}>
                   <Edit3 className="mr-2 h-4 w-4" />
                   Edit Template
                 </Link>

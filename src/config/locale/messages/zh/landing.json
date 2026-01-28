@@ -14,14 +14,24 @@
     "nav": {
       "items": [
         {
-          "title": "功能亮点",
-          "url": "/#features",
-          "icon": "Sparkles"
+          "title": "Meme 生成器",
+          "url": "/meme-generator",
+          "icon": "RiMagicLine"
         },
         {
-          "title": "案例展示",
-          "url": "/showcases",
-          "icon": "Box"
+          "title": "模板库",
+          "url": "/templates",
+          "icon": "RiLayoutGridLine"
+        },
+        {
+          "title": "Meme 编辑器",
+          "url": "/meme-editor",
+          "icon": "RiEdit2Line"
+        },
+        {
+          "title": "社区",
+          "url": "/meme",
+          "icon": "RiGalleryLine"
         },
         {
           "title": "价格",
@@ -29,89 +39,9 @@
           "icon": "DollarSign"
         },
         {
-          "title": "Meme",
-          "icon": "RiEmotionLaughLine",
-          "children": [
-            {
-              "title": "AI Meme 生成器",
-              "description": "使用 AI 创建爆款表情包",
-              "url": "/meme-generator",
-              "icon": "RiMagicLine"
-            },
-            {
-              "title": "Meme 模板库",
-              "description": "60+ 热门表情包模板",
-              "url": "/templates",
-              "icon": "RiLayoutGridLine"
-            },
-            {
-              "title": "Meme 编辑器",
-              "description": "使用模板编辑表情包",
-              "url": "/meme-editor",
-              "icon": "RiEdit2Line"
-            },
-            {
-              "title": "Meme 社区",
-              "description": "浏览和分享表情包",
-              "url": "/meme",
-              "icon": "RiGalleryLine"
-            }
-          ]
-        },
-        {
-          "title": "AI",
-          "icon": "RiRobot2Line",
-          "children": [
-            {
-              "title": "AI 图片生成器",
-              "description": "使用 AI 生成图片",
-              "url": "/ai-image-generator",
-              "icon": "RiImage2Line"
-            },
-            {
-              "title": "AI 音乐生成器",
-              "description": "使用 AI 生成美妙的音乐",
-              "url": "/ai-music-generator",
-              "icon": "RiMusic2Line"
-            },
-            {
-              "title": "AI 视频生成器",
-              "description": "使用 AI 生成视频",
-              "url": "/ai-video-generator",
-              "icon": "RiVideoLine"
-            },
-            {
-              "title": "AI 聊天机器人",
-              "description": "与 AI 聊天机器人对话",
-              "url": "/chat",
-              "icon": "RiMessage2Line"
-            }
-          ]
-        },
-        {
-          "title": "内容",
-          "icon": "FileText",
-          "children": [
-            {
-              "title": "博客",
-              "description": "阅读博客文章",
-              "url": "/blog",
-              "icon": "Newspaper"
-            },
-            {
-              "title": "更新日志",
-              "description": "阅读更新日志",
-              "url": "/updates",
-              "icon": "Clock"
-            },
-            {
-              "title": "文档",
-              "description": "阅读文档",
-              "url": "/docs",
-              "target": "_blank",
-              "icon": "BookOpenText"
-            }
-          ]
+          "title": "博客",
+          "url": "/blog",
+          "icon": "Newspaper"
         }
       ]
     },
@@ -179,8 +109,8 @@
           "title": "资源",
           "children": [
             {
-              "title": "文档",
-              "url": "/docs",
+              "title": "模板库",
+              "url": "/templates",
               "target": "_self"
             },
             {
@@ -189,9 +119,9 @@
               "target": "_self"
             },
             {
-              "title": "对话",
-              "url": "/chat",
-              "target": "_blank"
+              "title": "社区",
+              "url": "/meme",
+              "target": "_self"
             }
           ]
         },
