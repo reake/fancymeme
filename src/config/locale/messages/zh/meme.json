@@ -1,7 +1,71 @@
 {
   "metadata": {
-    "title": "AI Meme 生成器 - 一键创建爆款表情包",
-    "description": "使用 AI 生成搞笑表情包。选择风格，描述想法，几秒内创建可分享的内容。"
+    "title": "FancyMeme - AI Meme 生成器 | 一句话生成爆款表情包",
+    "description": "用 AI 创建搞笑 Meme。只需描述你的想法 - FancyMeme 自动选择最佳模板并生成文案。免费开始，无需设计技能。"
+  },
+  "hero": {
+    "title": "一句话生成爆款 Meme",
+    "subtitle": "AI 自动选择最佳模板、生成搞笑文案，几秒内产出可分享的 Meme。无需任何设计技能。",
+    "cta_primary": "免费开始创作",
+    "cta_secondary": "浏览 50+ 模板"
+  },
+  "features": {
+    "title": "为什么选择 FancyMeme",
+    "subtitle": "用 AI 几秒内创建病毒式传播的 Meme",
+    "items": {
+      "text_to_meme": {
+        "title": "文字秒变 Meme",
+        "description": "只需用文字描述你的想法，AI 理解上下文和幽默感，自动生成完美的 Meme。"
+      },
+      "smart_match": {
+        "title": "智能模板匹配",
+        "description": "AI 分析你的文字，从精选模板库中挑选最合适的模板。无需任何 Meme 知识。"
+      },
+      "emotion_search": {
+        "title": "情感搜索",
+        "description": "用「感到沮丧」或「庆祝胜利」这样的描述搜索模板。不知道模板名也能找到。"
+      },
+      "templates": {
+        "title": "50+ 精选模板",
+        "description": "涵盖 Drake、男友偷看等热门模板。高清无水印，即选即用。"
+      },
+      "export": {
+        "title": "多平台导出",
+        "description": "支持 Instagram (1:1)、Twitter (16:9)、抖音 (9:16) 等多种格式导出。"
+      },
+      "free": {
+        "title": "免费开始",
+        "description": "每天免费创建 10 个 Meme，无需注册。随时升级享受无限创作。"
+      }
+    }
+  },
+  "useCases": {
+    "title": "适合每一位创作者",
+    "subtitle": "从营销人员到 Meme 爱好者，FancyMeme 帮助每个人创建有吸引力的内容",
+    "items": {
+      "social_media": {
+        "title": "社交媒体营销",
+        "description": "在 Instagram、Twitter、微博上脱颖而出。Meme 内容比普通帖子多 60% 的互动。"
+      },
+      "team": {
+        "title": "团队沟通",
+        "description": "活跃 Slack、飞书、钉钉群聊氛围。用恰到好处的 Meme 打破会议僵局。"
+      },
+      "content": {
+        "title": "内容创作",
+        "description": "为博客、公众号、演示文稿增添幽默。让你的内容令人难忘。"
+      },
+      "fun": {
+        "title": "纯粹搞笑",
+        "description": "和朋友创造专属梗图，在群聊里分享欢乐。因为生活需要 Meme。"
+      }
+    }
+  },
+  "cta": {
+    "title": "准备好创建爆款 Meme 了吗？",
+    "subtitle": "加入数千名用 AI 制作 Meme 的创作者。免费开始，无需信用卡。",
+    "button_primary": "开始创作",
+    "button_secondary": "浏览模板"
   },
   "page": {
     "title": "AI Meme 生成器",

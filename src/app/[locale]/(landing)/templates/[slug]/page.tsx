@@ -1,11 +1,18 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import {
+  ArrowLeft,
+  Download,
+  Edit3,
+  Layers,
+  Share2,
+  Sparkles,
+} from 'lucide-react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { ArrowLeft, Download, Edit3, Layers, Share2, Sparkles } from 'lucide-react';
 
+import { Link } from '@/core/i18n/navigation';
 import { envConfigs } from '@/config';
 import { defaultLocale } from '@/config/locale';
-import { Link } from '@/core/i18n/navigation';
 import { MEME_TEMPLATES } from '@/shared/blocks/meme/editor/templates-data';
 import { Button } from '@/shared/components/ui/button';
 import { Card, CardContent } from '@/shared/components/ui/card';
@@ -22,12 +29,14 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
   const template = MEME_TEMPLATES.find((t) => t.id === slug);
-  
+
   if (!template) {
     return {
       title: 'Template Not Found',
@@ -36,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = `${template.name} Meme Template | FancyMeme`;
   const description = `Create ${template.name} memes with AI. Customize text, download in high quality, and share on social media. Free online meme generator.`;
-  
+
   const canonicalUrl = `${envConfigs.app_url}${locale !== defaultLocale ? `/${locale}` : ''}/templates/${slug}`;
 
   return {
@@ -69,16 +78,15 @@ export default async function TemplateDetailPage({ params }: PageProps) {
   setRequestLocale(locale);
 
   const t = await getTranslations('meme');
-  
+
   const template = MEME_TEMPLATES.find((t) => t.id === slug);
-  
+
   if (!template) {
     notFound();
   }
 
   // Find related templates (same number of text boxes or random selection)
-  const relatedTemplates = MEME_TEMPLATES
-    .filter((t) => t.id !== slug)
+  const relatedTemplates = MEME_TEMPLATES.filter((t) => t.id !== slug)
     .sort(() => Math.random() - 0.5)
     .slice(0, 6);
 
@@ -104,10 +112,13 @@ export default async function TemplateDetailPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="container py-8">
+      <div className="container mt-15 py-8">
         {/* Breadcrumb */}
         <nav className="mb-6 flex items-center gap-2 text-sm">
-          <Link href="/templates" className="text-muted-foreground hover:text-foreground">
+          <Link
+            href="/templates"
+            className="text-muted-foreground hover:text-foreground"
+          >
             <ArrowLeft className="mr-1 inline h-4 w-4" />
             {t('templates.title')}
           </Link>
@@ -144,8 +155,9 @@ export default async function TemplateDetailPage({ params }: PageProps) {
             <div>
               <h1 className="text-3xl font-bold">{template.name}</h1>
               <p className="text-muted-foreground mt-2">
-                Create your own {template.name} meme with our AI-powered generator.
-                Just describe your idea and let AI write the perfect captions.
+                Create your own {template.name} meme with our AI-powered
+                generator. Just describe your idea and let AI write the perfect
+                captions.
               </p>
             </div>
 
@@ -194,13 +206,16 @@ export default async function TemplateDetailPage({ params }: PageProps) {
                 About {template.name} Meme
               </h2>
               <p>
-                The {template.name} meme template is one of the most popular formats 
-                for creating relatable and funny content. With {template.defaultTextBoxes?.length || 2} customizable 
-                text areas, you can express any comparison, reaction, or humorous situation.
+                The {template.name} meme template is one of the most popular
+                formats for creating relatable and funny content. With{' '}
+                {template.defaultTextBoxes?.length || 2} customizable text
+                areas, you can express any comparison, reaction, or humorous
+                situation.
               </p>
               <p>
-                Use our AI-powered meme generator to automatically create captions, 
-                or customize each text box manually in our easy-to-use editor.
+                Use our AI-powered meme generator to automatically create
+                captions, or customize each text box manually in our easy-to-use
+                editor.
               </p>
             </div>
           </div>
@@ -222,7 +237,9 @@ export default async function TemplateDetailPage({ params }: PageProps) {
                   className="aspect-square w-full object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="p-2">
-                  <p className="line-clamp-1 text-sm font-medium">{related.name}</p>
+                  <p className="line-clamp-1 text-sm font-medium">
+                    {related.name}
+                  </p>
                 </div>
               </Link>
             ))}

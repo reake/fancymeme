@@ -2,10 +2,10 @@
   "header": {
     "id": "header",
     "brand": {
-      "title": "ShipAny Two",
+      "title": "FancyMeme",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny Two",
+        "alt": "FancyMeme",
         "width": 100,
         "height": 100
       },
@@ -14,7 +14,7 @@
     "nav": {
       "items": [
         {
-          "title": "Meme Generator",
+          "title": "AI Generator",
           "url": "/meme-generator",
           "icon": "RiMagicLine"
         },
@@ -24,60 +24,36 @@
           "icon": "RiLayoutGridLine"
         },
         {
-          "title": "Meme Editor",
+          "title": "Editor",
           "url": "/meme-editor",
           "icon": "RiEdit2Line"
-        },
-        {
-          "title": "Community",
-          "url": "/meme",
-          "icon": "RiGalleryLine"
         },
         {
           "title": "Pricing",
           "url": "/pricing",
           "icon": "DollarSign"
-        },
-        {
-          "title": "Blog",
-          "url": "/blog",
-          "icon": "Newspaper"
         }
       ]
     },
     "buttons": [],
     "user_nav": {
-      "show_name": true,
-      "show_credits": true,
-      "show_sign_out": true,
-      "items": [
-        {
-          "title": "Billing",
-          "url": "/settings/billing",
-          "icon": "CreditCard"
-        },
-        {
-          "title": "Activity",
-          "url": "/activity",
-          "icon": "Activity"
-        }
-      ]
+      "show_name": false,
+      "show_credits": false,
+      "show_sign_out": false,
+      "items": []
     },
-    "show_sign": true,
+    "show_sign": false,
     "show_theme": true,
-    "show_locale": true,
-    "topbanner": {
-      "text": "This website is a demo site for the ShipAny template. To purchase the ShipAny template, please visit the <a href='https://shipany.ai/pricing' class='text-orange-300' target='_blank'>ShipAny website</a>"
-    }
+    "show_locale": true
   },
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "ShipAny Two",
-      "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
+      "title": "FancyMeme",
+      "description": "FancyMeme is an AI meme generator for fast, shareable content. Turn ideas into memes in minutes.",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny Two",
+        "alt": "FancyMeme",
         "width": 1024,
         "height": 1024
       },
@@ -86,62 +62,12 @@
     "nav": {
       "items": [
         {
-          "title": "About",
+          "title": "Product",
           "children": [
             {
               "title": "Features",
               "url": "/#features",
               "target": "_self"
-            },
-            {
-              "title": "Showcases",
-              "url": "/showcases",
-              "target": "_self"
-            },
-            {
-              "title": "Pricing",
-              "url": "/pricing",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "Resources",
-          "children": [
-            {
-              "title": "Templates",
-              "url": "/templates",
-              "target": "_self"
-            },
-            {
-              "title": "Blog",
-              "url": "/blog",
-              "target": "_self"
-            },
-            {
-              "title": "Community",
-              "url": "/meme",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "Friends",
-          "children": [
-            {
-              "title": "ShipAny",
-              "url": "https://shipany.ai",
-              "target": "_blank"
-            },
-            {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
-              "target": "_blank"
-            },
-            {
-              "title": "MCP.so",
-              "url": "https://mcp.so",
-              "target": "_blank"
             }
           ]
         }
@@ -150,27 +76,9 @@
     "social": {
       "items": [
         {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/your-app-name",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "Github",
-          "url": "https://github.com/your-app-name",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/your-app-name",
-          "target": "_blank"
-        },
-        {
           "title": "Email",
           "icon": "Mail",
-          "url": "mailto:support@your-domain.com",
+          "url": "mailto:support@fancymeme.com",
           "target": "_self"
         }
       ]
@@ -189,5 +97,51 @@
     },
     "show_theme": true,
     "show_locale": true
+  },
+  "faq": {
+    "id": "faq",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Do I need design skills?",
+        "answer": "No. Start with a prompt and tweak the result in the editor."
+      },
+      {
+        "question": "Can I edit the text and layout?",
+        "answer": "Yes. You can adjust captions and placement before exporting."
+      },
+      {
+        "question": "How does template matching work?",
+        "answer": "The AI suggests a template that fits your idea, and you can switch anytime."
+      },
+      {
+        "question": "Can I use memes commercially?",
+        "answer": "Make sure you have the rights to any assets you upload or use."
+      },
+      {
+        "question": "What can I export?",
+        "answer": "Download images ready for social posts and sharing."
+      }
+    ]
+  },
+  "cta": {
+    "id": "cta",
+    "title": "Ready to make your next meme?",
+    "description": "Turn a quick idea into a share-ready meme with FancyMeme.",
+    "buttons": [
+      {
+        "title": "Generate a Meme",
+        "url": "/#features",
+        "target": "_self",
+        "icon": "Zap"
+      },
+      {
+        "title": "Browse Features",
+        "url": "/#features",
+        "target": "_self",
+        "variant": "outline",
+        "icon": "BookOpenText"
+      }
+    ]
   }
 }

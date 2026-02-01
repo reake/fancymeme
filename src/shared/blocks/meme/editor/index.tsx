@@ -10,7 +10,12 @@ import { toast } from 'sonner';
 import { Link } from '@/core/i18n/navigation';
 import { Button } from '@/shared/components/ui/button';
 import { ScrollArea } from '@/shared/components/ui/scroll-area';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/shared/components/ui/tabs';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@/shared/components/ui/tabs';
 import { useAppContext } from '@/shared/contexts/app';
 import { cn } from '@/shared/lib/utils';
 
@@ -51,7 +56,9 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
     reset,
   } = useEditor();
 
-  const [activeTab, setActiveTab] = useState<'gallery' | 'customize'>('gallery');
+  const [activeTab, setActiveTab] = useState<'gallery' | 'customize'>(
+    'gallery'
+  );
   const [isExporting, setIsExporting] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -251,7 +258,8 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
         if (textBox.textAlign === 'center') textX = x + width / 2;
         else if (textBox.textAlign === 'right') textX = x + width;
 
-        if (textBox.strokeWidth > 0) ctx.strokeText(textBox.text, textX, y, width);
+        if (textBox.strokeWidth > 0)
+          ctx.strokeText(textBox.text, textX, y, width);
         ctx.fillText(textBox.text, textX, y, width);
         ctx.restore();
       });
@@ -307,7 +315,7 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
   }, [reset, router]);
 
   return (
-    <div className={cn('flex flex-col h-screen overflow-hidden', className)}>
+    <div className={cn('flex h-screen flex-col overflow-hidden', className)}>
       <input
         ref={fileInputRef}
         type="file"
@@ -317,19 +325,24 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
       />
 
       {/* Brand Header */}
-      <header className="flex-shrink-0 h-14 border-b bg-background flex items-center justify-between px-4">
+      <header className="bg-background flex h-14 flex-shrink-0 items-center justify-between border-b px-4">
         <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">M</span>
+          <Link
+            href="/"
+            className="flex items-center gap-2 transition-opacity hover:opacity-80"
+          >
+            <div className="bg-primary flex h-8 w-8 items-center justify-center rounded-lg">
+              <span className="text-primary-foreground text-sm font-bold">
+                M
+              </span>
             </div>
-            <span className="font-semibold hidden sm:inline">Meme Editor</span>
+            <span className="hidden font-semibold sm:inline">Meme Editor</span>
           </Link>
-          
+
           {state.template && (
             <>
-              <div className="w-px h-6 bg-border" />
-              <span className="text-sm text-muted-foreground truncate max-w-[200px]">
+              <div className="bg-border h-6 w-px" />
+              <span className="text-muted-foreground max-w-[200px] truncate text-sm">
                 {state.template.name}
               </span>
             </>
@@ -359,28 +372,28 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
       {/* Main Content Area */}
       <div className="flex flex-1 overflow-hidden">
         {/* Left Sidebar */}
-        <aside className="w-80 flex-shrink-0 border-r bg-card flex flex-col">
+        <aside className="bg-card flex w-80 flex-shrink-0 flex-col border-r">
           <Tabs
             value={activeTab}
             onValueChange={(v) => setActiveTab(v as 'gallery' | 'customize')}
-            className="flex flex-col h-full"
+            className="flex h-full flex-col"
           >
-            <TabsList className="w-full rounded-none border-b h-11 flex-shrink-0 bg-transparent p-0">
+            <TabsList className="h-11 w-full flex-shrink-0 rounded-none border-b bg-transparent p-0">
               <TabsTrigger
                 value="gallery"
-                className="flex-1 rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent"
+                className="data-[state=active]:border-primary flex-1 rounded-none border-b-2 border-transparent data-[state=active]:bg-transparent"
               >
                 {t('templates')}
               </TabsTrigger>
               <TabsTrigger
                 value="customize"
-                className="flex-1 rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent"
+                className="data-[state=active]:border-primary flex-1 rounded-none border-b-2 border-transparent data-[state=active]:bg-transparent"
               >
                 {t('customize')}
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="gallery" className="flex-1 m-0 overflow-hidden">
+            <TabsContent value="gallery" className="m-0 flex-1 overflow-hidden">
               <TemplateGallery
                 onSelectTemplate={handleSelectTemplate}
                 onUploadImage={handleUploadImage}
@@ -389,17 +402,20 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
               />
             </TabsContent>
 
-            <TabsContent value="customize" className="flex-1 m-0 overflow-hidden">
+            <TabsContent
+              value="customize"
+              className="m-0 flex-1 overflow-hidden"
+            >
               <ScrollArea className="h-full">
                 {!imageUrl ? (
-                  <div className="flex flex-col items-center justify-center h-64 p-6 text-center text-muted-foreground">
-                    <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4">
-                      <Home className="w-8 h-8" />
+                  <div className="text-muted-foreground flex h-64 flex-col items-center justify-center p-6 text-center">
+                    <div className="bg-muted mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+                      <Home className="h-8 w-8" />
                     </div>
                     <p className="text-sm">{t('select_template_first')}</p>
                   </div>
                 ) : state.textBoxes.length === 0 ? (
-                  <div className="flex flex-col items-center justify-center h-64 p-6 text-center text-muted-foreground">
+                  <div className="text-muted-foreground flex h-64 flex-col items-center justify-center p-6 text-center">
                     <p className="text-sm">{t('no_text_boxes')}</p>
                     <Button
                       variant="outline"
@@ -411,7 +427,7 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
                     </Button>
                   </div>
                 ) : (
-                  <div className="p-3 space-y-3">
+                  <div className="space-y-3 p-3">
                     {state.textBoxes.map((textBox, index) => (
                       <div
                         key={textBox.id}
@@ -423,18 +439,33 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
                         )}
                       >
                         {/* Text Item Header */}
-                        <button
-                          className="w-full px-3 py-2.5 flex items-center justify-between text-left"
+                        <div
+                          role="button"
+                          tabIndex={0}
+                          aria-expanded={state.selectedTextBoxId === textBox.id}
+                          className="flex w-full items-center justify-between px-3 py-2.5 text-left"
                           onClick={() =>
                             selectTextBox(
-                              state.selectedTextBoxId === textBox.id ? null : textBox.id
+                              state.selectedTextBoxId === textBox.id
+                                ? null
+                                : textBox.id
                             )
                           }
+                          onKeyDown={(event) => {
+                            if (event.key === 'Enter' || event.key === ' ') {
+                              event.preventDefault();
+                              selectTextBox(
+                                state.selectedTextBoxId === textBox.id
+                                  ? null
+                                  : textBox.id
+                              );
+                            }
+                          }}
                         >
-                          <span className="font-medium text-sm truncate flex-1">
+                          <span className="flex-1 truncate text-sm font-medium">
                             {textBox.text || `${t('text')} #${index + 1}`}
                           </span>
-                          <div className="flex items-center gap-1 ml-2">
+                          <div className="ml-2 flex items-center gap-1">
                             <Button
                               variant="ghost"
                               size="icon"
@@ -449,7 +480,7 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
                             <Button
                               variant="ghost"
                               size="icon"
-                              className="h-7 w-7 text-destructive hover:text-destructive"
+                              className="text-destructive hover:text-destructive h-7 w-7"
                               onClick={(e) => {
                                 e.stopPropagation();
                                 removeTextBox(textBox.id);
@@ -458,14 +489,16 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
                               <Trash2 className="h-3.5 w-3.5" />
                             </Button>
                           </div>
-                        </button>
+                        </div>
 
                         {/* Expanded Content */}
                         {state.selectedTextBoxId === textBox.id && (
-                          <div className="px-3 pb-3 border-t">
+                          <div className="border-t px-3 pb-3">
                             <TextCustomization
                               textBox={textBox}
-                              onUpdate={(updates) => updateTextBox(textBox.id, updates)}
+                              onUpdate={(updates) =>
+                                updateTextBox(textBox.id, updates)
+                              }
                               onRemove={() => removeTextBox(textBox.id)}
                               onDuplicate={() => duplicateTextBox(textBox.id)}
                               className="pt-3"
@@ -491,7 +524,7 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
         </aside>
 
         {/* Center Canvas Area */}
-        <main className="flex-1 bg-muted/30 flex items-center justify-center p-4 md:p-8 overflow-auto">
+        <main className="bg-muted/30 flex flex-1 items-center justify-center overflow-auto p-4 md:p-8">
           <MemeCanvas
             imageUrl={imageUrl}
             textBoxes={state.textBoxes}

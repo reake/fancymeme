@@ -5,7 +5,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'drake-hotline-bling',
     name: 'Drake Hotline Bling',
-    imageUrl: 'https://www.meme-studio.io/templates/yrJsOp1TrW.webp',
+    imageUrl: '/imgs/templates/drake-hotline-bling.webp',
     defaultTextBoxes: [
       { y: 15, text: '' },
       { y: 65, text: '' },
@@ -14,7 +14,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'distracted-boyfriend',
     name: 'Distracted Boyfriend',
-    imageUrl: 'https://www.meme-studio.io/templates/EsI5fipc3.webp',
+    imageUrl: '/imgs/templates/distracted-boyfriend.webp',
     defaultTextBoxes: [
       { x: 8, y: 75, width: 25, text: '' },
       { x: 38, y: 75, width: 25, text: '' },
@@ -24,7 +24,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'two-buttons',
     name: 'Two Buttons',
-    imageUrl: 'https://www.meme-studio.io/templates/NdQSMfzLRG.webp',
+    imageUrl: '/imgs/templates/two-buttons.webp',
     defaultTextBoxes: [
       { x: 8, y: 8, width: 35, text: '' },
       { x: 52, y: 8, width: 35, text: '' },
@@ -33,13 +33,13 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'change-my-mind',
     name: 'Change My Mind',
-    imageUrl: 'https://www.meme-studio.io/templates/ld5dpNOEpV.webp',
+    imageUrl: '/imgs/templates/change-my-mind.webp',
     defaultTextBoxes: [{ x: 18, y: 58, width: 42, text: '' }],
   },
   {
     id: 'expanding-brain',
     name: 'Expanding Brain',
-    imageUrl: 'https://www.meme-studio.io/templates/o0n-hFYEQ_.webp',
+    imageUrl: '/imgs/templates/expanding-brain.webp',
     defaultTextBoxes: [
       { x: 3, y: 3, width: 45, text: '' },
       { x: 3, y: 28, width: 45, text: '' },
@@ -50,7 +50,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'batman-slapping-robin',
     name: 'Batman Slapping Robin',
-    imageUrl: 'https://www.meme-studio.io/templates/n4KbGN7GVb.webp',
+    imageUrl: '/imgs/templates/batman-slapping-robin.webp',
     defaultTextBoxes: [
       { x: 5, y: 5, width: 40, text: '' },
       { x: 55, y: 5, width: 40, text: '' },
@@ -59,13 +59,13 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'uno-draw-25',
     name: 'UNO Draw 25 Cards',
-    imageUrl: 'https://www.meme-studio.io/templates/_3BF7x0uz9.webp',
+    imageUrl: '/imgs/templates/uno-draw-25.webp',
     defaultTextBoxes: [{ x: 5, y: 15, width: 40, text: '' }],
   },
   {
     id: 'running-away-balloon',
     name: 'Running Away Balloon',
-    imageUrl: 'https://www.meme-studio.io/templates/znjQiHE5mb.webp',
+    imageUrl: '/imgs/templates/running-away-balloon.webp',
     defaultTextBoxes: [
       { x: 5, y: 5, width: 30, text: '' },
       { x: 35, y: 35, width: 30, text: '' },
@@ -75,7 +75,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'mocking-spongebob',
     name: 'Mocking Spongebob',
-    imageUrl: 'https://www.meme-studio.io/templates/AUwqJ5ZvoB.webp',
+    imageUrl: '/imgs/templates/mocking-spongebob.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -84,7 +84,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'left-exit-12',
     name: 'Left Exit 12 Off Ramp',
-    imageUrl: 'https://www.meme-studio.io/templates/bCfwMFA4LX.webp',
+    imageUrl: '/imgs/templates/left-exit-12.webp',
     defaultTextBoxes: [
       { x: 35, y: 15, width: 25, text: '' },
       { x: 65, y: 35, width: 30, text: '' },
@@ -94,7 +94,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'is-this-a-pigeon',
     name: 'Is This A Pigeon?',
-    imageUrl: 'https://www.meme-studio.io/templates/pBWab15KK5.webp',
+    imageUrl: '/imgs/templates/is-this-a-pigeon.webp',
     defaultTextBoxes: [
       { x: 10, y: 5, width: 35, text: '' },
       { x: 45, y: 35, width: 25, text: '' },
@@ -104,7 +104,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'inhaling-seagull',
     name: 'Inhaling Seagull',
-    imageUrl: 'https://www.meme-studio.io/templates/GVk5PTTnOw.webp',
+    imageUrl: '/imgs/templates/inhaling-seagull.webp',
     defaultTextBoxes: [
       { x: 55, y: 3, width: 40, text: '' },
       { x: 55, y: 28, width: 40, text: '' },
@@ -115,7 +115,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'woman-yelling-at-cat',
     name: 'Woman Yelling at Cat',
-    imageUrl: 'https://www.meme-studio.io/templates/tICNFqF30n.webp',
+    imageUrl: '/imgs/templates/woman-yelling-at-cat.webp',
     defaultTextBoxes: [
       { x: 5, y: 5, width: 45, text: '' },
       { x: 55, y: 5, width: 40, text: '' },
@@ -124,7 +124,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'american-chopper',
     name: 'American Chopper Argument',
-    imageUrl: 'https://www.meme-studio.io/templates/41hJHlBJhz.webp',
+    imageUrl: '/imgs/templates/american-chopper.webp',
     defaultTextBoxes: [
       { x: 55, y: 2, width: 40, text: '' },
       { x: 55, y: 22, width: 40, text: '' },
@@ -136,7 +136,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'epic-handshake',
     name: 'Epic Handshake',
-    imageUrl: 'https://www.meme-studio.io/templates/QaF7ILuO13.webp',
+    imageUrl: '/imgs/templates/epic-handshake.webp',
     defaultTextBoxes: [
       { x: 5, y: 5, width: 30, text: '' },
       { x: 35, y: 70, width: 30, text: '' },
@@ -146,7 +146,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'hide-the-pain-harold',
     name: 'Hide the Pain Harold',
-    imageUrl: 'https://www.meme-studio.io/templates/hNUD2fJWEe.webp',
+    imageUrl: '/imgs/templates/hide-the-pain-harold.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -155,7 +155,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'tuxedo-winnie-pooh',
     name: 'Tuxedo Winnie The Pooh',
-    imageUrl: 'https://www.meme-studio.io/templates/4082jU8BJB.png',
+    imageUrl: '/imgs/templates/tuxedo-winnie-pooh.png',
     defaultTextBoxes: [
       { x: 55, y: 15, width: 40, text: '' },
       { x: 55, y: 65, width: 40, text: '' },
@@ -164,7 +164,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'unsettled-tom',
     name: 'Unsettled Tom',
-    imageUrl: 'https://www.meme-studio.io/templates/lh4WkZyHia.webp',
+    imageUrl: '/imgs/templates/unsettled-tom.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -173,13 +173,13 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'blank-nut-button',
     name: 'Blank Nut Button',
-    imageUrl: 'https://www.meme-studio.io/templates/M_RwcHZahW.webp',
+    imageUrl: '/imgs/templates/blank-nut-button.webp',
     defaultTextBoxes: [{ x: 5, y: 5, width: 45, text: '' }],
   },
   {
     id: 'boardroom-meeting',
     name: 'Boardroom Meeting Suggestion',
-    imageUrl: 'https://www.meme-studio.io/templates/jkIb_KoolR.webp',
+    imageUrl: '/imgs/templates/boardroom-meeting.webp',
     defaultTextBoxes: [
       { x: 5, y: 5, width: 25, text: '' },
       { x: 35, y: 5, width: 20, text: '' },
@@ -190,7 +190,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'one-does-not-simply',
     name: 'One Does Not Simply',
-    imageUrl: 'https://www.meme-studio.io/templates/EAb16qe3IE.webp',
+    imageUrl: '/imgs/templates/one-does-not-simply.webp',
     defaultTextBoxes: [
       { y: 5, text: 'ONE DOES NOT SIMPLY' },
       { y: 85, text: '' },
@@ -199,7 +199,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'surprised-pikachu',
     name: 'Surprised Pikachu',
-    imageUrl: 'https://www.meme-studio.io/templates/l3M6C0bygE.webp',
+    imageUrl: '/imgs/templates/surprised-pikachu.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -208,7 +208,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'roll-safe',
     name: 'Roll Safe Think About It',
-    imageUrl: 'https://www.meme-studio.io/templates/xYaAhEcYEi.webp',
+    imageUrl: '/imgs/templates/roll-safe.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -217,7 +217,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'who-killed-hannibal',
     name: 'Who Killed Hannibal',
-    imageUrl: 'https://www.meme-studio.io/templates/z4FlsB4RoS.webp',
+    imageUrl: '/imgs/templates/who-killed-hannibal.webp',
     defaultTextBoxes: [
       { x: 55, y: 5, width: 40, text: '' },
       { x: 55, y: 38, width: 40, text: '' },
@@ -227,13 +227,13 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'scroll-of-truth',
     name: 'The Scroll Of Truth',
-    imageUrl: 'https://www.meme-studio.io/templates/cKn23PEkWO.webp',
+    imageUrl: '/imgs/templates/scroll-of-truth.webp',
     defaultTextBoxes: [{ x: 15, y: 45, width: 35, text: '' }],
   },
   {
     id: 'waiting-skeleton',
     name: 'Waiting Skeleton',
-    imageUrl: 'https://www.meme-studio.io/templates/MUjhnp_B48.webp',
+    imageUrl: '/imgs/templates/waiting-skeleton.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -242,19 +242,19 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'hard-to-swallow-pills',
     name: 'Hard To Swallow Pills',
-    imageUrl: 'https://www.meme-studio.io/templates/Z76_CfJzHX.webp',
+    imageUrl: '/imgs/templates/hard-to-swallow-pills.webp',
     defaultTextBoxes: [{ x: 55, y: 55, width: 40, text: '' }],
   },
   {
     id: 'trump-bill-signing',
     name: 'Trump Bill Signing',
-    imageUrl: 'https://www.meme-studio.io/templates/YhuQgl6uS2.webp',
+    imageUrl: '/imgs/templates/trump-bill-signing.webp',
     defaultTextBoxes: [{ x: 25, y: 55, width: 50, text: '' }],
   },
   {
     id: 'the-rock-driving',
     name: 'The Rock Driving',
-    imageUrl: 'https://www.meme-studio.io/templates/LrScFT6ksE.webp',
+    imageUrl: '/imgs/templates/the-rock-driving.webp',
     defaultTextBoxes: [
       { x: 55, y: 10, width: 40, text: '' },
       { x: 55, y: 60, width: 40, text: '' },
@@ -263,7 +263,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'disaster-girl',
     name: 'Disaster Girl',
-    imageUrl: 'https://www.meme-studio.io/templates/9SL8f4yjde.webp',
+    imageUrl: '/imgs/templates/disaster-girl.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -272,13 +272,13 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'bernie-asking',
     name: 'Bernie I Am Once Again Asking',
-    imageUrl: 'https://www.meme-studio.io/templates/Yp3Dz4LPTU.webp',
+    imageUrl: '/imgs/templates/bernie-asking.webp',
     defaultTextBoxes: [{ y: 85, text: '' }],
   },
   {
     id: 'monkey-puppet',
     name: 'Monkey Puppet',
-    imageUrl: 'https://www.meme-studio.io/templates/e_3kBhZ9VE.webp',
+    imageUrl: '/imgs/templates/monkey-puppet.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -287,13 +287,13 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'spongebob-imma-head-out',
     name: 'Spongebob Ight Imma Head Out',
-    imageUrl: 'https://www.meme-studio.io/templates/x_AHY8qK0j.webp',
+    imageUrl: '/imgs/templates/spongebob-imma-head-out.webp',
     defaultTextBoxes: [{ y: 5, text: '' }],
   },
   {
     id: 'x-x-everywhere',
     name: 'X, X Everywhere',
-    imageUrl: 'https://www.meme-studio.io/templates/7MbvlrlGgS.webp',
+    imageUrl: '/imgs/templates/x-x-everywhere.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -302,7 +302,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'yall-got-any-more',
     name: "Y'all Got Any More Of",
-    imageUrl: 'https://www.meme-studio.io/templates/vs3wTaXjQE.webp',
+    imageUrl: '/imgs/templates/yall-got-any-more.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -311,7 +311,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'futurama-fry',
     name: 'Futurama Fry / Not Sure If',
-    imageUrl: 'https://www.meme-studio.io/templates/w8-ouGycP5.webp',
+    imageUrl: '/imgs/templates/futurama-fry.webp',
     defaultTextBoxes: [
       { y: 5, text: 'NOT SURE IF' },
       { y: 85, text: '' },
@@ -320,7 +320,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'ancient-aliens',
     name: 'Ancient Aliens',
-    imageUrl: 'https://www.meme-studio.io/templates/A5BdG2M7rf.webp',
+    imageUrl: '/imgs/templates/ancient-aliens.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: 'ALIENS' },
@@ -329,7 +329,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'oprah-you-get-a-car',
     name: 'Oprah You Get A Car',
-    imageUrl: 'https://www.meme-studio.io/templates/0BujHcTnzo.webp',
+    imageUrl: '/imgs/templates/oprah-you-get-a-car.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -338,7 +338,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'finding-neverland',
     name: 'Finding Neverland',
-    imageUrl: 'https://www.meme-studio.io/templates/ecBbhGAOnU.webp',
+    imageUrl: '/imgs/templates/finding-neverland.webp',
     defaultTextBoxes: [
       { x: 55, y: 5, width: 40, text: '' },
       { x: 55, y: 38, width: 40, text: '' },
@@ -348,7 +348,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'third-world-skeptical-kid',
     name: 'Third World Skeptical Kid',
-    imageUrl: 'https://www.meme-studio.io/templates/RALwaSgx2g.webp',
+    imageUrl: '/imgs/templates/third-world-skeptical-kid.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -357,7 +357,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'that-would-be-great',
     name: 'That Would Be Great',
-    imageUrl: 'https://www.meme-studio.io/templates/ucU35UcLA7.webp',
+    imageUrl: '/imgs/templates/that-would-be-great.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -366,7 +366,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'dont-you-squidward',
     name: "Don't You Squidward",
-    imageUrl: 'https://www.meme-studio.io/templates/2jIOcEwt3o.webp',
+    imageUrl: '/imgs/templates/dont-you-squidward.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -375,7 +375,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'sad-pablo-escobar',
     name: 'Sad Pablo Escobar',
-    imageUrl: 'https://www.meme-studio.io/templates/8V2CSutGxl.webp',
+    imageUrl: '/imgs/templates/sad-pablo-escobar.webp',
     defaultTextBoxes: [
       { x: 55, y: 5, width: 40, text: '' },
       { x: 55, y: 38, width: 40, text: '' },
@@ -385,7 +385,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'doge',
     name: 'Doge',
-    imageUrl: 'https://www.meme-studio.io/templates/kcH-txu-an.webp',
+    imageUrl: '/imgs/templates/doge.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -394,13 +394,13 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'marked-safe-from',
     name: 'Marked Safe From',
-    imageUrl: 'https://www.meme-studio.io/templates/Rtw7-NUWUR.webp',
+    imageUrl: '/imgs/templates/marked-safe-from.webp',
     defaultTextBoxes: [{ x: 25, y: 35, width: 50, text: '' }],
   },
   {
     id: 'star-wars-yoda',
     name: 'Star Wars Yoda',
-    imageUrl: 'https://www.meme-studio.io/templates/_VAxg9c_5K.webp',
+    imageUrl: '/imgs/templates/star-wars-yoda.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -409,7 +409,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'third-world-success-kid',
     name: 'Third World Success Kid',
-    imageUrl: 'https://www.meme-studio.io/templates/fjQ16G_fmb.webp',
+    imageUrl: '/imgs/templates/third-world-success-kid.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -418,7 +418,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'evil-kermit',
     name: 'Evil Kermit',
-    imageUrl: 'https://www.meme-studio.io/templates/NawUuinevO.webp',
+    imageUrl: '/imgs/templates/evil-kermit.webp',
     defaultTextBoxes: [
       { x: 5, y: 5, width: 45, text: '' },
       { x: 55, y: 5, width: 40, text: '' },
@@ -427,7 +427,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'panik-kalm-panik',
     name: 'Panik Kalm Panik',
-    imageUrl: 'https://www.meme-studio.io/templates/SBc--HuK8X.png',
+    imageUrl: '/imgs/templates/panik-kalm-panik.png',
     defaultTextBoxes: [
       { x: 5, y: 5, width: 45, text: '' },
       { x: 5, y: 38, width: 45, text: '' },
@@ -437,13 +437,13 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'this-is-fine',
     name: 'This Is Fine',
-    imageUrl: 'https://www.meme-studio.io/templates/SFr_N0dTDs.webp',
+    imageUrl: '/imgs/templates/this-is-fine.webp',
     defaultTextBoxes: [{ y: 5, text: '' }],
   },
   {
     id: 'sleeping-shaq',
     name: 'Sleeping Shaq',
-    imageUrl: 'https://www.meme-studio.io/templates/lcNKBOOd4E.webp',
+    imageUrl: '/imgs/templates/sleeping-shaq.webp',
     defaultTextBoxes: [
       { x: 55, y: 15, width: 40, text: '' },
       { x: 55, y: 65, width: 40, text: '' },
@@ -452,7 +452,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'theyre-the-same-picture',
     name: "They're The Same Picture",
-    imageUrl: 'https://www.meme-studio.io/templates/pGJfxfVYrV.webp',
+    imageUrl: '/imgs/templates/theyre-the-same-picture.webp',
     defaultTextBoxes: [
       { x: 8, y: 8, width: 35, text: '' },
       { x: 58, y: 8, width: 35, text: '' },
@@ -462,7 +462,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'success-kid',
     name: 'Success Kid',
-    imageUrl: 'https://www.meme-studio.io/templates/K6ofUrtebI.webp',
+    imageUrl: '/imgs/templates/success-kid.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -471,7 +471,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'grumpy-cat',
     name: 'Grumpy Cat',
-    imageUrl: 'https://www.meme-studio.io/templates/tNBSXjIdtE.webp',
+    imageUrl: '/imgs/templates/grumpy-cat.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -480,7 +480,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'bad-luck-brian',
     name: 'Bad Luck Brian',
-    imageUrl: 'https://www.meme-studio.io/templates/8oWi9AHPiW.webp',
+    imageUrl: '/imgs/templates/bad-luck-brian.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -489,7 +489,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'first-world-problems',
     name: 'First World Problems',
-    imageUrl: 'https://www.meme-studio.io/templates/ihrXZigbzV.webp',
+    imageUrl: '/imgs/templates/first-world-problems.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -498,7 +498,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'sweating-jordan-peele',
     name: 'Sweating Jordan Peele',
-    imageUrl: 'https://www.meme-studio.io/templates/xqT-N09YZ.webp',
+    imageUrl: '/imgs/templates/sweating-jordan-peele.webp',
     defaultTextBoxes: [
       { y: 5, text: '' },
       { y: 85, text: '' },
@@ -507,7 +507,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'vince-mcmahon-reaction',
     name: 'Vince McMahon Reaction',
-    imageUrl: 'https://www.meme-studio.io/templates/ORDOs0xg2.webp',
+    imageUrl: '/imgs/templates/vince-mcmahon-reaction.webp',
     defaultTextBoxes: [
       { x: 5, y: 3, width: 45, text: '' },
       { x: 5, y: 28, width: 45, text: '' },
@@ -518,7 +518,7 @@ export const MEME_TEMPLATES: MemeTemplate[] = [
   {
     id: 'disappointed-black-guy',
     name: 'Disappointed Black Guy',
-    imageUrl: 'https://www.meme-studio.io/templates/jFOLzN2tb.webp',
+    imageUrl: '/imgs/templates/disappointed-black-guy.webp',
     defaultTextBoxes: [
       { x: 55, y: 15, width: 40, text: '' },
       { x: 55, y: 65, width: 40, text: '' },

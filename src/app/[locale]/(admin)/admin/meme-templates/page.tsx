@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PERMISSIONS, requirePermission } from '@/core/rbac';
 import { Header, Main, MainHeader } from '@/shared/blocks/dashboard';
 import { TableCard } from '@/shared/blocks/table';
+import { Badge } from '@/shared/components/ui/badge';
 import {
   getMemeTemplates,
   getMemeTemplatesCount,
@@ -68,14 +69,19 @@ export default async function MemeTemplatesPage({
       {
         name: 'status',
         title: t('fields.status'),
-        type: 'badge',
         callback: (item: MemeTemplate) => {
-          const statusMap: Record<string, { label: string; variant: string }> = {
-            active: { label: t('status.active'), variant: 'success' },
-            pending: { label: t('status.pending'), variant: 'warning' },
+          const statusMap: Record<
+            string,
+            { label: string; variant: 'default' | 'secondary' | 'outline' | 'destructive' }
+          > = {
+            active: { label: t('status.active'), variant: 'secondary' },
+            pending: { label: t('status.pending'), variant: 'outline' },
             deleted: { label: t('status.deleted'), variant: 'destructive' },
           };
-          return statusMap[item.status] || { label: item.status, variant: 'default' };
+          const { label, variant } =
+            statusMap[item.status] || ({ label: item.status, variant: 'default' } as const);
+
+          return <Badge variant={variant}>{label}</Badge>;
         },
       },
       {
@@ -115,12 +121,14 @@ export default async function MemeTemplatesPage({
                 title: t('list.buttons.approve'),
                 icon: 'RiCheckLine',
                 url: `/api/admin/meme-templates/${item.id}/approve`,
+                target: '_self',
               },
               {
                 name: 'reject',
                 title: t('list.buttons.reject'),
                 icon: 'RiCloseLine',
                 url: `/api/admin/meme-templates/${item.id}/reject`,
+                target: '_self',
               }
             );
           }

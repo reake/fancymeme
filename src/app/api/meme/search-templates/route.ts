@@ -6,7 +6,7 @@ import { generateText } from 'ai';
 import { getAllConfigs } from '@/shared/models/config';
 import { MEME_TEMPLATES } from '@/shared/blocks/meme/editor/templates-data';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 // Build a searchable index of templates with metadata
 const TEMPLATE_INDEX = MEME_TEMPLATES.map((template) => ({
@@ -130,7 +130,7 @@ Consider:
 - The structure of the meme (number of text areas)
 - Common use cases for each template`,
       prompt: `Find meme templates for: "${trimmedQuery}"`,
-      maxTokens: 100,
+      maxOutputTokens: 100,
       temperature: 0.3,
     });
 

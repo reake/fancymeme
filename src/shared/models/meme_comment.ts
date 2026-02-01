@@ -22,7 +22,7 @@ export enum MemeCommentStatus {
 export async function createMemeComment(
   newComment: NewMemeComment
 ): Promise<MemeComment> {
-  const [result] = await db().transaction(async (tx) => {
+  const [result] = await db().transaction(async (tx: any) => {
     const [comment] = await tx
       .insert(memeComment)
       .values(newComment)
@@ -65,7 +65,7 @@ export async function deleteMemeCommentById(
   id: string,
   memeId: string
 ): Promise<void> {
-  await db().transaction(async (tx) => {
+  await db().transaction(async (tx: any) => {
     await tx
       .update(memeComment)
       .set({ status: MemeCommentStatus.DELETED, deletedAt: new Date() })

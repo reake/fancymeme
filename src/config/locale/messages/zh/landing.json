@@ -2,10 +2,10 @@
   "header": {
     "id": "header",
     "brand": {
-      "title": "ShipAny Two",
+      "title": "FancyMeme",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny Two",
+        "alt": "FancyMeme",
         "width": 100,
         "height": 100
       },
@@ -14,7 +14,7 @@
     "nav": {
       "items": [
         {
-          "title": "Meme 生成器",
+          "title": "AI 生成器",
           "url": "/meme-generator",
           "icon": "RiMagicLine"
         },
@@ -24,60 +24,36 @@
           "icon": "RiLayoutGridLine"
         },
         {
-          "title": "Meme 编辑器",
+          "title": "编辑器",
           "url": "/meme-editor",
           "icon": "RiEdit2Line"
-        },
-        {
-          "title": "社区",
-          "url": "/meme",
-          "icon": "RiGalleryLine"
         },
         {
           "title": "价格",
           "url": "/pricing",
           "icon": "DollarSign"
-        },
-        {
-          "title": "博客",
-          "url": "/blog",
-          "icon": "Newspaper"
         }
       ]
     },
     "buttons": [],
     "user_nav": {
-      "show_name": true,
-      "show_credits": true,
-      "show_sign_out": true,
-      "items": [
-        {
-          "title": "账单",
-          "url": "/settings/billing",
-          "icon": "CreditCard"
-        },
-        {
-          "title": "活动",
-          "url": "/activity",
-          "icon": "Activity"
-        }
-      ]
+      "show_name": false,
+      "show_credits": false,
+      "show_sign_out": false,
+      "items": []
     },
-    "show_sign": true,
+    "show_sign": false,
     "show_theme": true,
-    "show_locale": true,
-    "topbanner": {
-      "text": "此网站是 ShipAny 模板的演示站点，购买 ShipAny 模板，请访问 <a href='https://shipany.ai/zh/pricing' class='text-orange-300' target='_blank'>ShipAny 官网</a>"
-    }
+    "show_locale": true
   },
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "ShipAny Two",
-      "description": "ShipAny 是专为 AI SaaS 创业项目打造的 NextJS 模板。丰富模板与组件，极速交付你的产品。",
+      "title": "FancyMeme",
+      "description": "FancyMeme 是一款 AI 表情包生成器，几分钟把想法变成可发布内容。",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny Two",
+        "alt": "FancyMeme",
         "width": 100,
         "height": 100
       },
@@ -86,62 +62,12 @@
     "nav": {
       "items": [
         {
-          "title": "关于我们",
+          "title": "产品",
           "children": [
             {
-              "title": "功能亮点",
+              "title": "功能",
               "url": "/#features",
               "target": "_self"
-            },
-            {
-              "title": "案例展示",
-              "url": "/showcases",
-              "target": "_self"
-            },
-            {
-              "title": "价格",
-              "url": "/pricing",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "资源",
-          "children": [
-            {
-              "title": "模板库",
-              "url": "/templates",
-              "target": "_self"
-            },
-            {
-              "title": "博客",
-              "url": "/blog",
-              "target": "_self"
-            },
-            {
-              "title": "社区",
-              "url": "/meme",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "合作伙伴",
-          "children": [
-            {
-              "title": "ShipAny",
-              "url": "https://shipany.ai",
-              "target": "_blank"
-            },
-            {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
-              "target": "_blank"
-            },
-            {
-              "title": "MCP.so",
-              "url": "https://mcp.so",
-              "target": "_blank"
             }
           ]
         }
@@ -150,27 +76,9 @@
     "social": {
       "items": [
         {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/your-app-name",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "Github",
-          "url": "https://github.com/your-app-name",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/your-app-name",
-          "target": "_blank"
-        },
-        {
           "title": "邮箱",
           "icon": "Mail",
-          "url": "mailto:support@your-domain.com",
+          "url": "mailto:support@fancymeme.com",
           "target": "_self"
         }
       ]
@@ -189,5 +97,51 @@
     },
     "show_theme": true,
     "show_locale": true
+  },
+  "faq": {
+    "id": "faq",
+    "title": "常见问题",
+    "items": [
+      {
+        "question": "需要设计技能吗？",
+        "answer": "不需要，输入想法后即可生成并简单调整。"
+      },
+      {
+        "question": "可以编辑文字和布局吗？",
+        "answer": "可以，下载前可修改文案与排版。"
+      },
+      {
+        "question": "模板是怎么匹配的？",
+        "answer": "AI 会推荐合适的模板，你也可以随时切换。"
+      },
+      {
+        "question": "表情包可以商用吗？",
+        "answer": "请确保你对上传或使用的素材拥有合法权利。"
+      },
+      {
+        "question": "可以导出什么格式？",
+        "answer": "可导出适配社媒分享的图片。"
+      }
+    ]
+  },
+  "cta": {
+    "id": "cta",
+    "title": "准备开始做下一张表情包吗？",
+    "description": "用 FancyMeme 把灵感变成可发布内容。",
+    "buttons": [
+      {
+        "title": "立即生成",
+        "url": "/#features",
+        "target": "_self",
+        "icon": "Zap"
+      },
+      {
+        "title": "查看功能",
+        "url": "/#features",
+        "target": "_self",
+        "variant": "outline",
+        "icon": "BookOpenText"
+      }
+    ]
   }
 }

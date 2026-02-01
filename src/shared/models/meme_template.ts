@@ -167,10 +167,12 @@ export async function incrementTemplateUsageCount(id: string): Promise<void> {
 }
 
 export async function getTemplateCategories(): Promise<string[]> {
-  const result = await db()
+  const result = (await db()
     .selectDistinct({ category: memeTemplate.category })
     .from(memeTemplate)
-    .where(eq(memeTemplate.status, MemeTemplateStatus.ACTIVE));
+    .where(eq(memeTemplate.status, MemeTemplateStatus.ACTIVE))) as Array<{
+    category: string | null;
+  }>;
 
   return result
     .map((r) => r.category)

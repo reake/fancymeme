@@ -6,7 +6,6 @@ import {
   Download,
   ImageIcon,
   Loader2,
-  Save,
   Sparkles,
   User,
 } from 'lucide-react';
@@ -149,7 +148,6 @@ export function MemeGenerator({ srOnlyTitle, className }: MemeGeneratorProps) {
   const [generationStartTime, setGenerationStartTime] = useState<number | null>(null);
   const [taskStatus, setTaskStatus] = useState<AITaskStatus | null>(null);
   const [downloadingImageId, setDownloadingImageId] = useState<string | null>(null);
-  const [savingImageId, setSavingImageId] = useState<string | null>(null);
   const [isMounted, setIsMounted] = useState(false);
 
   const { user, isCheckSign, setIsShowSignModal, fetchUserCredits } = useAppContext();
@@ -425,40 +423,6 @@ export function MemeGenerator({ srOnlyTitle, className }: MemeGeneratorProps) {
     }
   };
 
-  const handleSaveMeme = async (meme: GeneratedMeme) => {
-    if (!user) {
-      setIsShowSignModal(true);
-      return;
-    }
-
-    try {
-      setSavingImageId(meme.id);
-
-      const resp = await fetch('/api/meme/create', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          imageUrl: meme.url,
-          prompt: meme.prompt,
-          generationType: 'ai',
-          isPublic: true,
-        }),
-      });
-
-      if (!resp.ok) throw new Error('Failed to save meme');
-
-      const { code, message } = await resp.json();
-      if (code !== 0) throw new Error(message || 'Save failed');
-
-      toast.success(t('success.saved'));
-    } catch (error: any) {
-      console.error('Failed to save meme:', error);
-      toast.error(`${t('error.save_failed')}: ${error.message}`);
-    } finally {
-      setSavingImageId(null);
-    }
-  };
-
   return (
     <section className={cn('py-16 md:py-24', className)}>
       <div className="container">
@@ -655,19 +619,6 @@ export function MemeGenerator({ srOnlyTitle, className }: MemeGeneratorProps) {
                               <Download className="mr-2 h-4 w-4" />
                             )}
                             {t('download')}
-                          </Button>
-                          <Button
-                            size="sm"
-                            className="flex-1"
-                            onClick={() => handleSaveMeme(meme)}
-                            disabled={savingImageId === meme.id}
-                          >
-                            {savingImageId === meme.id ? (
-                              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                            ) : (
-                              <Save className="mr-2 h-4 w-4" />
-                            )}
-                            {t('save_to_community')}
                           </Button>
                         </div>
                       </div>

@@ -1,7 +1,71 @@
 {
   "metadata": {
-    "title": "AI Meme Generator - Create Viral Memes Instantly",
-    "description": "Generate hilarious memes with AI. Choose your style, describe your idea, and create shareable content in seconds."
+    "title": "FancyMeme - AI Meme Generator | Turn Any Idea Into Viral Memes",
+    "description": "Create hilarious memes with AI. Just describe your idea - FancyMeme picks the perfect template and writes the caption. Free to start, no design skills needed."
+  },
+  "hero": {
+    "title": "Turn Any Idea Into Viral Memes — Instantly",
+    "subtitle": "AI picks the perfect template, writes the caption, and delivers share-ready memes in seconds. No design skills needed.",
+    "cta_primary": "Start Creating Free",
+    "cta_secondary": "Browse 50+ Templates"
+  },
+  "features": {
+    "title": "Why Choose FancyMeme",
+    "subtitle": "Create viral memes in seconds with AI-powered generation",
+    "items": {
+      "text_to_meme": {
+        "title": "Text-to-Meme AI",
+        "description": "Just describe your idea in plain text. Our AI understands context and humor to generate perfect memes automatically."
+      },
+      "smart_match": {
+        "title": "Smart Template Match",
+        "description": "AI analyzes your text and picks the most fitting template from our curated library. No meme expertise needed."
+      },
+      "emotion_search": {
+        "title": "Emotion-Based Search",
+        "description": "Search templates by describing feelings like 'frustrated' or 'celebrating'. Find the perfect meme without knowing its name."
+      },
+      "templates": {
+        "title": "50+ Curated Templates",
+        "description": "Access trending templates from Drake to Distracted Boyfriend. All high-quality, watermark-free, and ready to use."
+      },
+      "export": {
+        "title": "Social-Ready Export",
+        "description": "Download in formats optimized for Instagram (1:1), Twitter (16:9), TikTok (9:16), and more."
+      },
+      "free": {
+        "title": "Free to Start",
+        "description": "Create 10 memes per day for free. No signup required. Upgrade anytime for unlimited memes."
+      }
+    }
+  },
+  "useCases": {
+    "title": "Perfect For Every Creator",
+    "subtitle": "From marketers to meme lovers, FancyMeme helps everyone create engaging content",
+    "items": {
+      "social_media": {
+        "title": "Social Media Marketing",
+        "description": "Stand out on Instagram, Twitter, and LinkedIn. Memes get 60% more engagement than regular posts."
+      },
+      "team": {
+        "title": "Team Communication",
+        "description": "Lighten up Slack and Teams channels. Break the ice in meetings with perfectly timed memes."
+      },
+      "content": {
+        "title": "Content Creation",
+        "description": "Add humor to your blogs, newsletters, and presentations. Make your content memorable."
+      },
+      "fun": {
+        "title": "Just for Fun",
+        "description": "Create inside jokes with friends. Share laughs in group chats. Because memes are life."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Create Viral Memes?",
+    "subtitle": "Join thousands of creators making memes with AI. Free to start, no credit card required.",
+    "button_primary": "Start Creating",
+    "button_secondary": "Browse Templates"
   },
   "page": {
     "title": "AI Meme Generator",

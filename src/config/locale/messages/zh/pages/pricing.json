@@ -1,360 +1,245 @@
 {
   "metadata": {
-    "title": "价格",
-    "description": "选择方案，立即开始"
+    "title": "价格 - FancyMeme",
+    "description": "简单透明的定价方案。免费开始，按需升级。"
   },
   "page": {
-    "title": "ShipAny 价格表",
+    "title": "简单透明的定价",
     "sections": {
       "pricing": {
         "id": "pricing",
-        "title": "价格",
-        "description": "获取 ShipAny 的全部功能，极速交付你的 AI SaaS 创业项目。",
+        "title": "选择适合你的方案",
+        "description": "免费开始，按需升级。无隐藏费用。",
         "groups": [
           {
-            "name": "one-time",
-            "title": "按次付费"
-          },
-          {
             "name": "monthly",
-            "title": "包月",
-            "is_featured": true,
-            "label": "立省15%"
+            "title": "月付"
           },
           {
             "name": "yearly",
-            "title": "包年"
+            "title": "年付",
+            "is_featured": true,
+            "label": "省 30%"
           }
         ],
         "items": [
           {
-            "title": "入门版",
-            "description": "开启你的第一个 SaaS 创业项目。",
+            "title": "免费版",
+            "description": "体验 FancyMeme 的完美起点",
             "features_title": "包含",
             "features": [
-              "100 积分，有效期 1 个月",
-              "NextJS 项目模板",
-              "SEO 友好结构",
-              "支持 Stripe 支付",
-              "Supabase 数据存储",
-              "Google Oauth & 一键登录",
-              "多语言（i18n）支持"
-            ],
-            "interval": "one-time",
-            "amount": 9900,
-            "currency": "USD",
-            "price": "$99",
-            "original_price": "$199",
-            "currencies": [
-              {
-                "currency": "CNY",
-                "amount": 69900,
-                "price": "¥699",
-                "original_price": "¥1399",
-                "payment_providers": ["stripe"]
-              }
-            ],
-            "unit": "",
-            "is_featured": false,
-            "tip": "一次付费，畅享无限项目部署！",
-            "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "starter",
-            "product_name": "ShipAny 模板入门版",
-            "credits": 100,
-            "valid_days": 30,
-            "group": "one-time"
-          },
-          {
-            "title": "标准版",
-            "description": "快速交付你的 SaaS 创业项目。",
-            "label": "热门",
-            "features_title": "包含入门版功能，此外",
-            "features": [
-              "200 积分，有效期 3 个月",
-              "支持 Vercel 或 Cloudflare 部署",
-              "自动生成隐私政策&服务条款",
-              "集成 Google Analytics",
-              "集成 Google Search Console",
-              "Discord 技术社区",
-              "首个上线项目技术支持",
-              "终身免费更新"
-            ],
-            "interval": "one-time",
-            "amount": 19900,
-            "currency": "USD",
-            "price": "$199",
-            "original_price": "$299",
-            "currencies": [
-              {
-                "currency": "CNY",
-                "amount": 139900,
-                "price": "¥1399",
-                "original_price": "¥1999",
-                "payment_providers": ["stripe"]
-              }
-            ],
-            "unit": "",
-            "is_featured": true,
-            "tip": "一次付费，畅享无限项目部署！",
-            "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "standard",
-            "product_name": "ShipAny 模板标准版",
-            "credits": 200,
-            "valid_days": 90,
-            "group": "one-time"
-          },
-          {
-            "title": "高级版",
-            "description": "交付任意 AI SaaS 创业项目。",
-            "features_title": "包含标准版功能，此外",
-            "features": [
-              "300 积分，有效期 1 年",
-              "内置 AI 业务功能",
-              "用户中心",
-              "积分系统",
-              "为你的 SaaS 售卖 API",
-              "后台管理系统",
-              "优先技术支持"
-            ],
-            "interval": "one-time",
-            "amount": 29900,
-            "currency": "USD",
-            "price": "$299",
-            "original_price": "$399",
-            "currencies": [
-              {
-                "currency": "CNY",
-                "amount": 199900,
-                "price": "¥1999",
-                "original_price": "¥2799",
-                "payment_providers": ["stripe", "creem"]
-              }
-            ],
-            "unit": "",
-            "is_featured": false,
-            "tip": "一次付费，畅享无限项目部署！",
-            "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "premium",
-            "product_name": "ShipAny 模板高级版",
-            "credits": 300,
-            "valid_days": 365,
-            "group": "one-time"
-          },
-          {
-            "title": "入门版",
-            "description": "开启你的第一个 SaaS 创业项目。",
-            "features_title": "包含",
-            "features": [
-              "100 积分，有效期 1 个月",
-              "NextJS 项目模板",
-              "SEO 友好结构",
-              "支持 Stripe 支付",
-              "Supabase 数据存储",
-              "Google Oauth & 一键登录",
-              "多语言（i18n）支持"
+              "每天 10 个 Meme",
+              "基础模板",
+              "标准生成速度",
+              "带 FancyMeme 水印",
+              "适合分享的导出尺寸"
             ],
             "interval": "month",
-            "amount": 8900,
+            "amount": 0,
             "currency": "USD",
-            "price": "$89",
-            "original_price": "$99",
-            "unit": "/ 月",
+            "price": "¥0",
+            "unit": "",
             "is_featured": false,
-            "tip": "按月付费，畅享无限项目部署！",
+            "tip": "无需信用卡",
             "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "title": "开始使用",
+              "url": "/meme-generator",
+              "icon": "Sparkles"
             },
-            "product_id": "starter-monthly",
-            "product_name": "ShipAny 模板入门版包月",
-            "credits": 100,
-            "valid_days": 30,
-            "group": "monthly",
-            "plan_name": "入门版"
+            "product_id": "free",
+            "product_name": "FancyMeme 免费版",
+            "credits": 10,
+            "valid_days": 1,
+            "group": "monthly"
           },
           {
-            "title": "标准版",
-            "description": "快速交付你的 SaaS 创业项目。",
+            "title": "专业版",
+            "description": "适合常规 Meme 创作者",
             "label": "热门",
-            "features_title": "包含入门版功能，此外",
+            "features_title": "包含免费版所有功能，另有",
             "features": [
-              "200 积分，有效期 1 个月",
-              "支持 Vercel 或 Cloudflare 部署",
-              "自动生成隐私政策&服务条款",
-              "集成 Google Analytics",
-              "集成 Google Search Console",
-              "Discord 技术社区",
-              "首个上线项目技术支持",
-              "终身免费更新"
+              "每月 200 个 Meme",
+              "全部 50+ 高级模板",
+              "优先生成速度",
+              "无水印",
+              "AI 情感搜索",
+              "所有导出格式 (1:1, 16:9, 9:16)",
+              "Meme 历史记录保存"
             ],
             "interval": "month",
-            "amount": 16900,
+            "amount": 999,
             "currency": "USD",
-            "price": "$169",
-            "original_price": "$199",
+            "price": "¥68",
             "unit": "/ 月",
             "is_featured": true,
-            "tip": "按月付费，极速上线你的 SaaS 项目。",
+            "tip": "最受欢迎的选择",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "升级专业版",
               "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "icon": "RiVipCrownLine"
             },
-            "product_id": "standard-monthly",
-            "product_name": "ShipAny 模板标准版包月",
+            "product_id": "pro-monthly",
+            "product_name": "FancyMeme 专业版 月付",
             "credits": 200,
             "valid_days": 30,
             "group": "monthly",
-            "plan_name": "标准版"
+            "plan_name": "专业版"
           },
           {
-            "title": "高级版",
-            "description": "交付任意 AI SaaS 创业项目。",
-            "features_title": "包含标准版功能，此外",
+            "title": "无限版",
+            "description": "适合重度用户和团队",
+            "features_title": "包含专业版所有功能，另有",
             "features": [
-              "300 积分，有效期 1 个月",
-              "内置 AI 业务功能",
-              "用户中心",
-              "积分系统",
-              "为你的 SaaS 售卖 API",
-              "后台管理系统",
-              "优先技术支持"
+              "无限 Meme 生成",
+              "最快生成速度",
+              "新功能抢先体验",
+              "自定义水印（添加你的品牌）",
+              "优先邮件支持",
+              "商业使用授权"
             ],
             "interval": "month",
-            "amount": 24900,
+            "amount": 2999,
             "currency": "USD",
-            "price": "$249",
-            "original_price": "$299",
+            "price": "¥198",
             "unit": "/ 月",
             "is_featured": false,
-            "tip": "按月付费，助你交付任何 AI SaaS 项目。",
+            "tip": "适合重度用户",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "升级无限版",
               "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "icon": "RiInfinityLine"
             },
-            "product_id": "premium-monthly",
-            "product_name": "ShipAny 模板高级版包月",
-            "credits": 300,
+            "product_id": "unlimited-monthly",
+            "product_name": "FancyMeme 无限版 月付",
+            "credits": 9999,
             "valid_days": 30,
             "group": "monthly",
-            "plan_name": "高级版"
+            "plan_name": "无限版"
           },
           {
-            "title": "入门版",
-            "description": "开启你的第一个 SaaS 创业项目。",
+            "title": "免费版",
+            "description": "体验 FancyMeme 的完美起点",
             "features_title": "包含",
             "features": [
-              "100 积分，有效期 1 年",
-              "NextJS 项目模板",
-              "SEO 友好结构",
-              "支持 Stripe 支付",
-              "Supabase 数据存储",
-              "Google Oauth & 一键登录",
-              "多语言（i18n）支持"
+              "每天 10 个 Meme",
+              "基础模板",
+              "标准生成速度",
+              "带 FancyMeme 水印",
+              "适合分享的导出尺寸"
             ],
             "interval": "year",
-            "amount": 82800,
+            "amount": 0,
             "currency": "USD",
-            "price": "$69",
-            "original_price": "$89",
-            "unit": "/ 月",
+            "price": "¥0",
+            "unit": "",
             "is_featured": false,
-            "tip": "按年付费，畅享无限项目部署！",
+            "tip": "无需信用卡",
             "button": {
-              "title": "获取 ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "title": "开始使用",
+              "url": "/meme-generator",
+              "icon": "Sparkles"
             },
-            "product_id": "starter-yearly",
-            "product_name": "ShipAny 模板入门版包年",
-            "credits": 1200,
-            "valid_days": 365,
-            "group": "yearly",
-            "plan_name": "入门版"
+            "product_id": "free",
+            "product_name": "FancyMeme 免费版",
+            "credits": 10,
+            "valid_days": 1,
+            "group": "yearly"
           },
           {
-            "title": "标准版",
-            "description": "快速交付你的 SaaS 创业项目。",
+            "title": "专业版",
+            "description": "适合常规 Meme 创作者",
             "label": "热门",
-            "features_title": "包含入门版功能，此外",
+            "features_title": "包含免费版所有功能，另有",
             "features": [
-              "200 积分，有效期 1 年",
-              "支持 Vercel 或 Cloudflare 部署",
-              "自动生成隐私政策&服务条款",
-              "集成 Google Analytics",
-              "集成 Google Search Console",
-              "Discord 技术社区",
-              "首个上线项目技术支持",
-              "终身免费更新"
+              "每月 200 个 Meme（全年 2400 个）",
+              "全部 50+ 高级模板",
+              "优先生成速度",
+              "无水印",
+              "AI 情感搜索",
+              "所有导出格式 (1:1, 16:9, 9:16)",
+              "Meme 历史记录保存"
             ],
             "interval": "year",
-            "amount": 154800,
+            "amount": 8388,
             "currency": "USD",
-            "price": "$129",
-            "original_price": "$169",
+            "price": "¥48",
+            "original_price": "¥68",
             "unit": "/ 月",
             "is_featured": true,
-            "tip": "按年付费，极速上线你的 SaaS 项目。",
+            "tip": "年付 ¥576，省 ¥240",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "升级专业版",
               "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "icon": "RiVipCrownLine"
             },
-            "product_id": "standard-yearly",
-            "product_name": "ShipAny 模板标准版包年",
+            "product_id": "pro-yearly",
+            "product_name": "FancyMeme 专业版 年付",
             "credits": 2400,
             "valid_days": 365,
             "group": "yearly",
-            "plan_name": "标准版"
+            "plan_name": "专业版"
           },
           {
-            "title": "高级版",
-            "description": "交付任意 AI SaaS 创业项目。",
-            "features_title": "包含标准版功能，此外",
+            "title": "无限版",
+            "description": "适合重度用户和团队",
+            "features_title": "包含专业版所有功能，另有",
             "features": [
-              "300 积分，有效期 1 年",
-              "内置 AI 业务功能",
-              "用户中心",
-              "积分系统",
-              "为你的 SaaS 售卖 API",
-              "后台管理系统",
-              "优先技术支持"
+              "无限 Meme 生成",
+              "最快生成速度",
+              "新功能抢先体验",
+              "自定义水印（添加你的品牌）",
+              "优先邮件支持",
+              "商业使用授权"
             ],
             "interval": "year",
-            "amount": 226800,
+            "amount": 23988,
             "currency": "USD",
-            "price": "$189",
-            "original_price": "$249",
+            "price": "¥138",
+            "original_price": "¥198",
             "unit": "/ 月",
             "is_featured": false,
-            "tip": "按年付费，助你交付任何 AI SaaS 项目。",
+            "tip": "年付 ¥1656，省 ¥720",
             "button": {
-              "title": "获取 ShipAny",
+              "title": "升级无限版",
               "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "icon": "RiInfinityLine"
             },
-            "product_id": "premium-yearly",
-            "product_name": "ShipAny 模板高级版包年",
-            "credits": 3600,
+            "product_id": "unlimited-yearly",
+            "product_name": "FancyMeme 无限版 年付",
+            "credits": 99999,
             "valid_days": 365,
             "group": "yearly",
-            "plan_name": "高级版"
+            "plan_name": "无限版"
           }
         ]
+      },
+      "faq": {
+        "id": "pricing-faq",
+        "title": "价格常见问题",
+        "description": "关于套餐、计费与使用的快速解答。",
+        "items": [
+          {
+            "question": "有免费版吗？",
+            "answer": "有，免费版每天可生成有限数量的表情包。"
+          },
+          {
+            "question": "付费版可以去水印吗？",
+            "answer": "Pro 和 Unlimited 版本导出不带 FancyMeme 水印。"
+          },
+          {
+            "question": "可以随时取消吗？",
+            "answer": "可以，取消后可使用到当前计费周期结束。"
+          },
+          {
+            "question": "支持哪些导出比例？",
+            "answer": "支持 1:1、16:9、9:16 等常用社媒尺寸。"
+          },
+          {
+            "question": "有团队版吗？",
+            "answer": "团队版在规划中，如需多账号可联系支持邮箱。"
+          }
+        ],
+        "tip": "还有问题？请发邮件至 support@fancymeme.com。"
       }
     }
   },

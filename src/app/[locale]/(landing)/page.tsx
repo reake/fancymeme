@@ -26,20 +26,20 @@ export default async function LandingPage({
   const page: DynamicPage = {
     sections: {
       hero: {
-        title: t.raw('textToMeme.title'),
-        description: t.raw('textToMeme.subtitle'),
+        title: t.raw('hero.title'),
+        description: t.raw('hero.subtitle'),
         background_image: {
           src: '/imgs/bg/tree.jpg',
-          alt: 'meme generator background',
+          alt: 'FancyMeme - AI Meme Generator',
         },
         buttons: [
           {
-            title: t.raw('textToMeme.generate'),
+            title: t.raw('hero.cta_primary'),
             url: '#generator',
             icon: 'Sparkles',
           },
           {
-            title: t.raw('templates.title'),
+            title: t.raw('hero.cta_secondary'),
             url: '/templates',
             variant: 'outline',
             icon: 'Image',
@@ -52,60 +52,81 @@ export default async function LandingPage({
       },
       features: {
         id: 'features',
-        title: 'Why Choose FancyMeme',
-        description: 'Create viral memes in seconds with AI-powered generation',
+        title: t.raw('features.title'),
+        description: t.raw('features.subtitle'),
         items: [
           {
-            title: 'AI-Powered Captions',
-            description:
-              'Our AI understands context and humor to generate perfect meme captions automatically.',
-            icon: 'RiRobot2Line',
+            title: t.raw('features.items.text_to_meme.title'),
+            description: t.raw('features.items.text_to_meme.description'),
+            icon: 'RiMagicLine',
           },
           {
-            title: '60+ Popular Templates',
-            description:
-              'Access a curated library of trending meme templates, from Drake to Distracted Boyfriend.',
+            title: t.raw('features.items.smart_match.title'),
+            description: t.raw('features.items.smart_match.description'),
+            icon: 'RiBrainLine',
+          },
+          {
+            title: t.raw('features.items.emotion_search.title'),
+            description: t.raw('features.items.emotion_search.description'),
+            icon: 'RiSearchEyeLine',
+          },
+          {
+            title: t.raw('features.items.templates.title'),
+            description: t.raw('features.items.templates.description'),
             icon: 'RiImageLine',
           },
           {
-            title: 'Instant Generation',
-            description:
-              'Generate multiple meme variations in seconds. No design skills required.',
-            icon: 'RiFlashlightLine',
-          },
-          {
-            title: 'Easy Customization',
-            description:
-              'Fine-tune your memes with our powerful editor. Adjust text, fonts, and more.',
-            icon: 'RiEdit2Line',
-          },
-          {
-            title: 'Share Anywhere',
-            description:
-              'Download in multiple formats optimized for Instagram, Twitter, and more.',
+            title: t.raw('features.items.export.title'),
+            description: t.raw('features.items.export.description'),
             icon: 'RiShareLine',
           },
           {
-            title: 'Free to Start',
-            description:
-              'Try it free with no signup required. Upgrade for unlimited memes.',
+            title: t.raw('features.items.free.title'),
+            description: t.raw('features.items.free.description'),
             icon: 'RiGiftLine',
+          },
+        ],
+      },
+      useCases: {
+        id: 'use-cases',
+        title: t.raw('useCases.title'),
+        description: t.raw('useCases.subtitle'),
+        items: [
+          {
+            title: t.raw('useCases.items.social_media.title'),
+            description: t.raw('useCases.items.social_media.description'),
+            icon: 'RiInstagramLine',
+          },
+          {
+            title: t.raw('useCases.items.team.title'),
+            description: t.raw('useCases.items.team.description'),
+            icon: 'RiTeamLine',
+          },
+          {
+            title: t.raw('useCases.items.content.title'),
+            description: t.raw('useCases.items.content.description'),
+            icon: 'RiQuillPenLine',
+          },
+          {
+            title: t.raw('useCases.items.fun.title'),
+            description: t.raw('useCases.items.fun.description'),
+            icon: 'RiEmotionLaughLine',
           },
         ],
       },
       faq: tl.raw('faq'),
       cta: {
         id: 'cta',
-        title: 'Ready to Create Viral Memes?',
-        description: 'Start generating AI-powered memes for free. No credit card required.',
+        title: t.raw('cta.title'),
+        description: t.raw('cta.subtitle'),
         buttons: [
           {
-            title: 'Start Creating',
+            title: t.raw('cta.button_primary'),
             url: '#generator',
             icon: 'Sparkles',
           },
           {
-            title: 'Browse Templates',
+            title: t.raw('cta.button_secondary'),
             url: '/templates',
             variant: 'outline',
             icon: 'Image',

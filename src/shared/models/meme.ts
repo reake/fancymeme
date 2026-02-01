@@ -161,7 +161,7 @@ export async function likeMeme(
   likeId: string
 ): Promise<boolean> {
   try {
-    await db().transaction(async (tx) => {
+    await db().transaction(async (tx: any) => {
       await tx.insert(memeLike).values({ id: likeId, userId, memeId });
       await tx
         .update(meme)
@@ -179,7 +179,7 @@ export async function unlikeMeme(
   memeId: string
 ): Promise<boolean> {
   try {
-    await db().transaction(async (tx) => {
+    await db().transaction(async (tx: any) => {
       await tx
         .delete(memeLike)
         .where(
@@ -263,13 +263,13 @@ export async function getUserFavorites({
   limit?: number;
   getUser?: boolean;
 }): Promise<Meme[]> {
-  const favorites = await db()
+  const favorites = (await db()
     .select({ memeId: memeFavorite.memeId })
     .from(memeFavorite)
     .where(eq(memeFavorite.userId, userId))
     .orderBy(desc(memeFavorite.createdAt))
     .limit(limit)
-    .offset((page - 1) * limit);
+    .offset((page - 1) * limit)) as Array<{ memeId: string }>;
 
   if (favorites.length === 0) return [];
 
@@ -301,7 +301,7 @@ async function appendLikeAndFavoriteStatus(
 ): Promise<Meme[]> {
   const memeIds = memes.map((m) => m.id);
 
-  const likes = await db()
+  const likes = (await db()
     .select({ memeId: memeLike.memeId })
     .from(memeLike)
     .where(
@@ -309,9 +309,9 @@ async function appendLikeAndFavoriteStatus(
         eq(memeLike.userId, userId),
         sql`${memeLike.memeId} IN ${memeIds}`
       )
-    );
+    )) as Array<{ memeId: string }>;
 
-  const favorites = await db()
+  const favorites = (await db()
     .select({ memeId: memeFavorite.memeId })
     .from(memeFavorite)
     .where(
@@ -319,7 +319,7 @@ async function appendLikeAndFavoriteStatus(
         eq(memeFavorite.userId, userId),
         sql`${memeFavorite.memeId} IN ${memeIds}`
       )
-    );
+    )) as Array<{ memeId: string }>;
 
   const likedMemeIds = new Set(likes.map((l) => l.memeId));
   const favoritedMemeIds = new Set(favorites.map((f) => f.memeId));

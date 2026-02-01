@@ -91,13 +91,6 @@ export function HeroMemeInput({ className }: HeroMemeInputProps) {
           Browse Templates
           <ArrowRight className="h-3 w-3" />
         </Link>
-        <Link
-          href="/meme"
-          className="text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors"
-        >
-          Community Memes
-          <ArrowRight className="h-3 w-3" />
-        </Link>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "FancyMeme - AI 模因生成器 | 一键生成爆款表情包",
-    "description": "用 AI 将任何文字转化为搅笑模因。60+ 热门模板，秒速生成，轻松定制。为社交媒体创作病毒式传播的表情包。",
-    "keywords": "模因生成器, ai表情包, 表情包制作, 创建meme, 爆款表情包, 搅笑表情包, meme模板, 文字转meme, ai模因生成器"
+    "title": "FancyMeme - AI 表情包生成器",
+    "description": "FancyMeme 用 AI 把一句话变成可发布的表情包。智能匹配模板，提供文案灵感，支持快速编辑与导出。",
+    "keywords": "FancyMeme, AI表情包生成器, meme生成器, 表情包制作, 模板库, 文案生成, 社交媒体, 病毒式表情包"
   },
   "sign": {
     "sign_in_title": "登录",

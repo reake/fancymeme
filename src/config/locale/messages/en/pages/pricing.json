@@ -1,333 +1,245 @@
 {
   "metadata": {
-    "title": "Pricing",
-    "description": "Start with a plan"
+    "title": "Pricing - FancyMeme",
+    "description": "Simple pricing for meme creators. Start free, upgrade when you need more."
   },
   "page": {
-    "title": "ShipAny Pricing",
+    "title": "Simple Pricing for Meme Creators",
     "sections": {
       "pricing": {
         "id": "pricing",
-        "title": "Pricing",
-        "description": "Get all features of ShipAny, Ship your AI SaaS startups fast.",
+        "title": "Choose Your Plan",
+        "description": "Start free, upgrade when you need more. No hidden fees.",
         "groups": [
           {
-            "name": "one-time",
-            "title": "Pay as you go"
-          },
-          {
             "name": "monthly",
-            "title": "Monthly",
-            "is_featured": true,
-            "label": "save 15%"
+            "title": "Monthly"
           },
           {
             "name": "yearly",
-            "title": "Annually"
+            "title": "Yearly",
+            "is_featured": true,
+            "label": "Save 30%"
           }
         ],
         "items": [
           {
-            "title": "Starter",
-            "description": "Get started with your first SaaS startup.",
+            "title": "Free",
+            "description": "Perfect for trying out FancyMeme",
             "features_title": "Includes",
             "features": [
-              "100 credits, valid for 1 month",
-              "NextJS boilerplate",
-              "SEO-friendly structure",
-              "Payment with Stripe",
-              "Data storage with Supabase",
-              "Google Oauth & One-Tap Login",
-              "i18n support"
-            ],
-            "interval": "one-time",
-            "amount": 9900,
-            "currency": "USD",
-            "price": "$99",
-            "original_price": "$199",
-            "unit": "",
-            "is_featured": false,
-            "tip": "Pay once. Build unlimited projects!",
-            "button": {
-              "title": "Get ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "starter",
-            "product_name": "ShipAny Boilerplate Starter",
-            "credits": 100,
-            "valid_days": 30,
-            "group": "one-time"
-          },
-          {
-            "title": "Standard",
-            "description": "Ship Fast with your SaaS Startups.",
-            "label": "Popular",
-            "features_title": "Everything in Starter, plus",
-            "features": [
-              "200 credits, valid for 3 month",
-              "Deploy with Vercel or Cloudflare",
-              "Generation of Privacy & Terms",
-              "Google Analytics Integration",
-              "Google Search Console Integration",
-              "Discord community",
-              "Technical support for your first ship",
-              "Lifetime updates"
-            ],
-            "interval": "one-time",
-            "amount": 19900,
-            "currency": "USD",
-            "price": "$199",
-            "original_price": "$299",
-            "unit": "",
-            "is_featured": true,
-            "tip": "Pay once. Build unlimited projects!",
-            "button": {
-              "title": "Get ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "standard",
-            "product_name": "ShipAny Boilerplate Standard",
-            "credits": 200,
-            "valid_days": 90,
-            "group": "one-time"
-          },
-          {
-            "title": "Premium",
-            "description": "Ship Any AI SaaS Startups.",
-            "features_title": "Everything in Standard, plus",
-            "features": [
-              "300 credits, valid for 1 year",
-              "Business Functions with AI",
-              "User Center",
-              "Credits System",
-              "API Sales for your SaaS",
-              "Admin System",
-              "Priority Technical Support"
-            ],
-            "interval": "one-time",
-            "amount": 29900,
-            "currency": "USD",
-            "price": "$299",
-            "original_price": "$399",
-            "unit": "",
-            "is_featured": false,
-            "tip": "Pay once. Build unlimited projects!",
-            "button": {
-              "title": "Get ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
-            },
-            "product_id": "premium",
-            "product_name": "ShipAny Boilerplate Premium",
-            "credits": 300,
-            "valid_days": 365,
-            "group": "one-time"
-          },
-          {
-            "title": "Starter",
-            "description": "Get started with your first SaaS startup.",
-            "features_title": "Includes",
-            "features": [
-              "100 credits, valid for 1 month",
-              "NextJS boilerplate",
-              "SEO-friendly structure",
-              "Payment with Stripe",
-              "Data storage with Supabase",
-              "Google Oauth & One-Tap Login",
-              "i18n support"
+              "10 memes per day",
+              "Basic templates",
+              "Standard generation speed",
+              "With FancyMeme watermark",
+              "Share-ready exports"
             ],
             "interval": "month",
-            "amount": 8900,
+            "amount": 0,
             "currency": "USD",
-            "price": "$89",
-            "original_price": "$99",
-            "unit": "/ month",
+            "price": "$0",
+            "unit": "",
             "is_featured": false,
-            "tip": "Pay monthly. Build unlimited projects!",
+            "tip": "No credit card required",
             "button": {
-              "title": "Get ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "title": "Get Started",
+              "url": "/meme-generator",
+              "icon": "Sparkles"
             },
-            "product_id": "starter-monthly",
-            "product_name": "ShipAny Boilerplate Starter Monthly",
-            "credits": 100,
-            "valid_days": 30,
-            "group": "monthly",
-            "plan_name": "Starter"
+            "product_id": "free",
+            "product_name": "FancyMeme Free",
+            "credits": 10,
+            "valid_days": 1,
+            "group": "monthly"
           },
           {
-            "title": "Standard",
-            "description": "Ship Fast with your SaaS Startups.",
+            "title": "Pro",
+            "description": "For regular meme creators",
             "label": "Popular",
-            "features_title": "Everything in Starter, plus",
+            "features_title": "Everything in Free, plus",
             "features": [
-              "200 credits, valid for 1 month",
-              "Deploy with Vercel or Cloudflare",
-              "Generation of Privacy & Terms",
-              "Google Analytics Integration",
-              "Google Search Console Integration",
-              "Discord community",
-              "Technical support for your first ship",
-              "Lifetime updates"
+              "200 memes per month",
+              "All 50+ premium templates",
+              "Priority generation speed",
+              "No watermark",
+              "AI emotion-based search",
+              "All export formats (1:1, 16:9, 9:16)",
+              "Meme history saved"
             ],
             "interval": "month",
-            "amount": 16900,
+            "amount": 999,
             "currency": "USD",
-            "price": "$169",
-            "original_price": "$199",
+            "price": "$9.99",
             "unit": "/ month",
             "is_featured": true,
-            "tip": "Pay monthly. Ship Fast with your SaaS Startups.",
+            "tip": "Most popular choice",
             "button": {
-              "title": "Get ShipAny",
+              "title": "Start Pro",
               "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "icon": "RiVipCrownLine"
             },
-            "product_id": "standard-monthly",
-            "product_name": "ShipAny Boilerplate Standard Monthly",
+            "product_id": "pro-monthly",
+            "product_name": "FancyMeme Pro Monthly",
             "credits": 200,
             "valid_days": 30,
             "group": "monthly",
-            "plan_name": "Standard"
+            "plan_name": "Pro"
           },
           {
-            "title": "Premium",
-            "description": "Ship Any AI SaaS Startups.",
-            "features_title": "Everything in Standard, plus",
+            "title": "Unlimited",
+            "description": "For power users & teams",
+            "features_title": "Everything in Pro, plus",
             "features": [
-              "300 credits, valid for 1 month",
-              "Business Functions with AI",
-              "User Center",
-              "Credits System",
-              "API Sales for your SaaS",
-              "Admin System",
-              "Priority Technical Support"
+              "Unlimited meme generation",
+              "Fastest generation speed",
+              "Early access to new features",
+              "Custom watermark (add your brand)",
+              "Priority email support",
+              "Commercial usage license"
             ],
             "interval": "month",
-            "amount": 24900,
+            "amount": 2999,
             "currency": "USD",
-            "price": "$249",
-            "original_price": "$299",
+            "price": "$29.99",
             "unit": "/ month",
             "is_featured": false,
-            "tip": "Pay monthly. Ship Any AI SaaS Startups.",
+            "tip": "Best for heavy users",
             "button": {
-              "title": "Get ShipAny",
+              "title": "Go Unlimited",
               "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "icon": "RiInfinityLine"
             },
-            "product_id": "premium-monthly",
-            "product_name": "ShipAny Boilerplate Premium Monthly",
-            "credits": 300,
+            "product_id": "unlimited-monthly",
+            "product_name": "FancyMeme Unlimited Monthly",
+            "credits": 9999,
             "valid_days": 30,
             "group": "monthly",
-            "plan_name": "Premium"
+            "plan_name": "Unlimited"
           },
           {
-            "title": "Starter",
-            "description": "Get started with your first SaaS startup.",
+            "title": "Free",
+            "description": "Perfect for trying out FancyMeme",
             "features_title": "Includes",
             "features": [
-              "100 credits, valid for 1 year",
-              "NextJS boilerplate",
-              "SEO-friendly structure",
-              "Payment with Stripe",
-              "Data storage with Supabase",
-              "Google Oauth & One-Tap Login",
-              "i18n support"
+              "10 memes per day",
+              "Basic templates",
+              "Standard generation speed",
+              "With FancyMeme watermark",
+              "Share-ready exports"
             ],
             "interval": "year",
-            "amount": 82800,
+            "amount": 0,
             "currency": "USD",
-            "price": "$69",
-            "original_price": "$89",
-            "unit": "/ month",
+            "price": "$0",
+            "unit": "",
             "is_featured": false,
-            "tip": "Pay annually. Build unlimited projects!",
+            "tip": "No credit card required",
             "button": {
-              "title": "Get ShipAny",
-              "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "title": "Get Started",
+              "url": "/meme-generator",
+              "icon": "Sparkles"
             },
-            "product_id": "starter-yearly",
-            "product_name": "ShipAny Boilerplate Starter Annually",
-            "credits": 1200,
-            "valid_days": 365,
-            "group": "yearly",
-            "plan_name": "Starter"
+            "product_id": "free",
+            "product_name": "FancyMeme Free",
+            "credits": 10,
+            "valid_days": 1,
+            "group": "yearly"
           },
           {
-            "title": "Standard",
-            "description": "Ship Fast with your SaaS Startups.",
+            "title": "Pro",
+            "description": "For regular meme creators",
             "label": "Popular",
-            "features_title": "Everything in Starter, plus",
+            "features_title": "Everything in Free, plus",
             "features": [
-              "200 credits, valid for 1 year",
-              "Deploy with Vercel or Cloudflare",
-              "Generation of Privacy & Terms",
-              "Google Analytics Integration",
-              "Google Search Console Integration",
-              "Discord community",
-              "Technical support for your first ship",
-              "Lifetime updates"
+              "200 memes per month (2400/year)",
+              "All 50+ premium templates",
+              "Priority generation speed",
+              "No watermark",
+              "AI emotion-based search",
+              "All export formats (1:1, 16:9, 9:16)",
+              "Meme history saved"
             ],
             "interval": "year",
-            "amount": 154800,
+            "amount": 8388,
             "currency": "USD",
-            "price": "$129",
-            "original_price": "$169",
+            "price": "$6.99",
+            "original_price": "$9.99",
             "unit": "/ month",
             "is_featured": true,
-            "tip": "Pay annually. Ship Fast with your SaaS Startups.",
+            "tip": "Billed $83.88 annually",
             "button": {
-              "title": "Get ShipAny",
+              "title": "Start Pro",
               "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "icon": "RiVipCrownLine"
             },
-            "product_id": "standard-yearly",
-            "product_name": "ShipAny Boilerplate Standard Annually",
+            "product_id": "pro-yearly",
+            "product_name": "FancyMeme Pro Yearly",
             "credits": 2400,
             "valid_days": 365,
             "group": "yearly",
-            "plan_name": "Standard"
+            "plan_name": "Pro"
           },
           {
-            "title": "Premium",
-            "description": "Ship Any AI SaaS Startups.",
-            "features_title": "Everything in Standard, plus",
+            "title": "Unlimited",
+            "description": "For power users & teams",
+            "features_title": "Everything in Pro, plus",
             "features": [
-              "300 credits, valid for 1 year",
-              "Business Functions with AI",
-              "User Center",
-              "Credits System",
-              "API Sales for your SaaS",
-              "Admin System",
-              "Priority Technical Support"
+              "Unlimited meme generation",
+              "Fastest generation speed",
+              "Early access to new features",
+              "Custom watermark (add your brand)",
+              "Priority email support",
+              "Commercial usage license"
             ],
             "interval": "year",
-            "amount": 226800,
+            "amount": 23988,
             "currency": "USD",
-            "price": "$189",
-            "original_price": "$249",
+            "price": "$19.99",
+            "original_price": "$29.99",
             "unit": "/ month",
             "is_featured": false,
-            "tip": "Pay annually. Ship Any AI SaaS Startups.",
+            "tip": "Billed $239.88 annually",
             "button": {
-              "title": "Get ShipAny",
+              "title": "Go Unlimited",
               "url": "/#pricing",
-              "icon": "RiFlashlightFill"
+              "icon": "RiInfinityLine"
             },
-            "product_id": "premium-yearly",
-            "product_name": "ShipAny Boilerplate Premium Annually",
-            "credits": 3600,
+            "product_id": "unlimited-yearly",
+            "product_name": "FancyMeme Unlimited Yearly",
+            "credits": 99999,
             "valid_days": 365,
             "group": "yearly",
-            "plan_name": "Premium"
+            "plan_name": "Unlimited"
           }
         ]
+      },
+      "faq": {
+        "id": "pricing-faq",
+        "title": "Pricing FAQs",
+        "description": "Quick answers about plans, billing, and usage.",
+        "items": [
+          {
+            "question": "Is there a free plan?",
+            "answer": "Yes. The Free plan lets you create a limited number of memes each day."
+          },
+          {
+            "question": "Do paid plans remove the watermark?",
+            "answer": "Pro and Unlimited remove the FancyMeme watermark on exports."
+          },
+          {
+            "question": "Can I cancel anytime?",
+            "answer": "Yes. You can cancel your plan at any time and keep access until the end of the billing period."
+          },
+          {
+            "question": "What formats can I export?",
+            "answer": "Export share-ready images for common social sizes like 1:1, 16:9, and 9:16."
+          },
+          {
+            "question": "Do you offer team plans?",
+            "answer": "Team plans are on the roadmap. Contact us if you need multi-seat access."
+          }
+        ],
+        "tip": "Still have questions? Email support@fancymeme.com."
       }
     }
   },
