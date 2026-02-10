@@ -77,7 +77,6 @@ export default async function RootLayout({
       const analyticsService = await getAnalyticsService({
         ...envConfigs,
         google_analytics_id:
-          process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ||
           process.env.GOOGLE_ANALYTICS_ID ||
           envConfigs.google_analytics_id ||
           '',

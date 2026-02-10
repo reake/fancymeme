@@ -18,7 +18,6 @@ export function getAnalyticsManagerWithConfigs(configs: Configs) {
   // google analytics
   const gaId =
     configs.google_analytics_id ||
-    process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ||
     process.env.GOOGLE_ANALYTICS_ID ||
     DEFAULT_GOOGLE_ANALYTICS_ID;
   if (gaId) {
