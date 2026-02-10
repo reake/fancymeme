@@ -1,5 +1,5 @@
 import { Link } from '@/core/i18n/navigation';
-import { LazyImage } from '@/shared/blocks/common';
+import { appendAssetVersion } from '@/config';
 import { Badge } from '@/shared/components/ui/badge';
 import {
   SidebarHeader as SidebarHeaderComponent,
@@ -26,7 +26,7 @@ export function SidebarHeader({ header }: { header: SidebarHeaderType }) {
                 <Link href={header.brand.url || ''}>
                   {header.brand.logo && (
                     <img
-                      src={header.brand.logo.src}
+                      src={appendAssetVersion(header.brand.logo.src)}
                       alt={header.brand.logo.alt || ''}
                       className="h-auto w-8 shrink-0 rounded-md"
                     />

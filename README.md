@@ -2,11 +2,11 @@
 
 ## Getting Started
 
-read [fancymeme Document](https://fancymeme.ai/docs/quick-start) to start your AI SaaS project.
+read [fancymeme Document](https://fancymeme.com/docs/quick-start) to start your AI SaaS project.
 
 ## Buy Templates
 
-check [fancymeme Templates](https://fancymeme.ai/templates) to buy Business Templates.
+check [fancymeme Templates](https://fancymeme.com/templates) to buy Business Templates.
 
 ## Feedback
 

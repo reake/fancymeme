@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { Link } from '@/core/i18n/navigation';
+import { appendAssetVersion } from '@/config';
 import { Brand as BrandType } from '@/shared/types/blocks/common';
 
 export function BrandLogo({ brand }: { brand: BrandType }) {
@@ -12,8 +13,8 @@ export function BrandLogo({ brand }: { brand: BrandType }) {
     >
       {brand.logo && (
         <Image
-          src={brand.logo.src}
-          alt={brand.title ? '' : brand.logo.alt || ''}
+          src={appendAssetVersion(brand.logo.src)}
+          alt={brand.logo.alt || brand.title || ''}
           width={brand.logo.width || 80}
           height={brand.logo.height || 80}
           className="h-8 w-auto rounded-lg"

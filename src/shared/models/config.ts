@@ -16,6 +16,15 @@ export type Configs = Record<string, string>;
 
 export const CACHE_TAG_CONFIGS = 'configs';
 
+function isEnvOnlyConfigMode() {
+  return (
+    process.env.CONFIGS_ENV_ONLY === 'true' ||
+    process.env.LANDING_PAGE_ONLY === 'true' ||
+    envConfigs.configs_env_only === 'true' ||
+    envConfigs.landing_page_only === 'true'
+  );
+}
+
 export async function saveConfigs(configs: Record<string, string>) {
   const result = await db().transaction(async (tx: any) => {
     const configEntries = Object.entries(configs);
@@ -53,7 +62,7 @@ export const getConfigs = unstable_cache(
   async (): Promise<Configs> => {
     const configs: Record<string, string> = {};
 
-    if (!envConfigs.database_url) {
+    if (!envConfigs.database_url || isEnvOnlyConfigMode()) {
       return configs;
     }
 
@@ -77,9 +86,14 @@ export const getConfigs = unstable_cache(
 
 export async function getAllConfigs(): Promise<Configs> {
   let dbConfigs: Configs = {};
+  const envOnlyConfigMode = isEnvOnlyConfigMode();
 
   // only get configs from db in server side
-  if (typeof window === 'undefined' && envConfigs.database_url) {
+  if (
+    typeof window === 'undefined' &&
+    envConfigs.database_url &&
+    !envOnlyConfigMode
+  ) {
     try {
       dbConfigs = await getConfigs();
     } catch (e) {

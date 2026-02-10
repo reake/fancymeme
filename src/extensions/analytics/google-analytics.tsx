@@ -3,6 +3,8 @@ import Script from 'next/script';
 
 import { AnalyticsConfigs, AnalyticsProvider } from '.';
 
+export const DEFAULT_GOOGLE_ANALYTICS_ID = '';
+
 /**
  * Google analytics configs
  * @docs https://marketingplatform.google.com/about/analytics/
@@ -25,11 +27,16 @@ export class GoogleAnalyticsProvider implements AnalyticsProvider {
   }
 
   getHeadScripts(): ReactNode {
+    const gaId = this.configs.gaId || DEFAULT_GOOGLE_ANALYTICS_ID;
+    if (!gaId) {
+      return null;
+    }
+
     return (
       <>
         {/* Google tag (gtag.js) */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${this.configs.gaId}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
           strategy="afterInteractive"
           async
         />
@@ -41,7 +48,7 @@ export class GoogleAnalyticsProvider implements AnalyticsProvider {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${this.configs.gaId}');
+              gtag('config', '${gaId}');
             `,
           }}
         />

@@ -47,6 +47,7 @@ export default async function RootLayout({
 
   const isProduction = process.env.NODE_ENV === 'production';
   const isDebug = process.env.NEXT_PUBLIC_DEBUG === 'true';
+  const isLandingPageOnly = envConfigs.landing_page_only === 'true';
 
   // app url
   const appUrl = envConfigs.app_url || '';
@@ -72,35 +73,50 @@ export default async function RootLayout({
   let customerServiceBodyScripts = null;
 
   if (isProduction || isDebug) {
-    const configs = await getAllConfigs();
+    if (isLandingPageOnly) {
+      const analyticsService = await getAnalyticsService({
+        ...envConfigs,
+        google_analytics_id:
+          process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ||
+          process.env.GOOGLE_ANALYTICS_ID ||
+          envConfigs.google_analytics_id ||
+          '',
+      });
 
-    const [adsService, analyticsService, affiliateService, customerService] =
-      await Promise.all([
-        getAdsService(configs),
-        getAnalyticsService(configs),
-        getAffiliateService(configs),
-        getCustomerService(configs),
-      ]);
+      analyticsMetaTags = analyticsService.getMetaTags();
+      analyticsHeadScripts = analyticsService.getHeadScripts();
+      analyticsBodyScripts = analyticsService.getBodyScripts();
+    } else {
+      const configs = await getAllConfigs();
 
-    // get ads components
-    adsMetaTags = adsService.getMetaTags();
-    adsHeadScripts = adsService.getHeadScripts();
-    adsBodyScripts = adsService.getBodyScripts();
+      const [adsService, analyticsService, affiliateService, customerService] =
+        await Promise.all([
+          getAdsService(configs),
+          getAnalyticsService(configs),
+          getAffiliateService(configs),
+          getCustomerService(configs),
+        ]);
 
-    // get analytics components
-    analyticsMetaTags = analyticsService.getMetaTags();
-    analyticsHeadScripts = analyticsService.getHeadScripts();
-    analyticsBodyScripts = analyticsService.getBodyScripts();
+      // get ads components
+      adsMetaTags = adsService.getMetaTags();
+      adsHeadScripts = adsService.getHeadScripts();
+      adsBodyScripts = adsService.getBodyScripts();
 
-    // get affiliate components
-    affiliateMetaTags = affiliateService.getMetaTags();
-    affiliateHeadScripts = affiliateService.getHeadScripts();
-    affiliateBodyScripts = affiliateService.getBodyScripts();
+      // get analytics components
+      analyticsMetaTags = analyticsService.getMetaTags();
+      analyticsHeadScripts = analyticsService.getHeadScripts();
+      analyticsBodyScripts = analyticsService.getBodyScripts();
 
-    // get customer service components
-    customerServiceMetaTags = customerService.getMetaTags();
-    customerServiceHeadScripts = customerService.getHeadScripts();
-    customerServiceBodyScripts = customerService.getBodyScripts();
+      // get affiliate components
+      affiliateMetaTags = affiliateService.getMetaTags();
+      affiliateHeadScripts = affiliateService.getHeadScripts();
+      affiliateBodyScripts = affiliateService.getBodyScripts();
+
+      // get customer service components
+      customerServiceMetaTags = customerService.getMetaTags();
+      customerServiceHeadScripts = customerService.getHeadScripts();
+      customerServiceBodyScripts = customerService.getBodyScripts();
+    }
   }
 
   return (
