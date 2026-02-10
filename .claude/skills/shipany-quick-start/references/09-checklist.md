@@ -25,7 +25,7 @@ For the first version, **only edit the files in the allowlist below**. Do not to
 - `src/config/style/theme.css`
 - `public/logo.*`, `public/favicon.*`
 - `public/sitemap.xml`
-- `content/pages/privacy-policy*.mdx`, `content/pages/terms-of-service*.mdx`
+- `content/pages/privacy*.mdx`, `content/pages/terms*.mdx`
 
 ## Do not edit in v1 (unless explicitly requested)
 

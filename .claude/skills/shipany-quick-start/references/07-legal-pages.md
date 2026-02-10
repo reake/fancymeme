@@ -6,10 +6,10 @@ Remove placeholders and make contact/domain consistent.
 
 ## Files
 
-- `content/pages/privacy-policy.mdx`
-- `content/pages/terms-of-service.mdx`
-- `content/pages/privacy-policy.zh.mdx` (if present)
-- `content/pages/terms-of-service.zh.mdx` (if present)
+- `content/pages/privacy.mdx`
+- `content/pages/terms.mdx`
+- `content/pages/privacy.zh.mdx` (if present)
+- `content/pages/terms.zh.mdx` (if present)
 
 ## Replacements
 

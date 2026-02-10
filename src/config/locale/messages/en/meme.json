@@ -108,6 +108,7 @@
     "ready_to_generate": "Your meme is being created...",
     "no_memes_generated": "No memes generated yet. Describe your idea above!",
     "download": "Download",
+    "edit_in_editor": "Edit in Editor",
     "save_to_community": "Share to Community",
     "success": {
       "generated": "Meme generated successfully!",

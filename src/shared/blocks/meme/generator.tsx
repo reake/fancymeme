@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   CreditCard,
   Download,
+  Edit3,
   ImageIcon,
   Loader2,
   Sparkles,
@@ -76,6 +77,11 @@ const MODEL_OPTIONS = [
   {
     value: 'gemini-3-pro-image-preview',
     label: 'Gemini 3 Pro',
+    provider: 'gemini',
+  },
+  {
+    value: 'gemini-2.5-flash-image',
+    label: 'Gemini 2.5 Flash Image',
     provider: 'gemini',
   },
 ];
@@ -620,6 +626,17 @@ export function MemeGenerator({ srOnlyTitle, className }: MemeGeneratorProps) {
                             )}
                             {t('download')}
                           </Button>
+                          <Link
+                            href={`/meme-editor?imageUrl=${encodeURIComponent(
+                              meme.url
+                            )}`}
+                            className="flex-1"
+                          >
+                            <Button size="sm" variant="outline" className="w-full">
+                              <Edit3 className="mr-2 h-4 w-4" />
+                              {t('edit_in_editor')}
+                            </Button>
+                          </Link>
                         </div>
                       </div>
                     ))}

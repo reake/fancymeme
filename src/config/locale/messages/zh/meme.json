@@ -108,6 +108,7 @@
     "ready_to_generate": "正在创建你的 Meme...",
     "no_memes_generated": "还没有生成 Meme。在上方描述你的想法！",
     "download": "下载",
+    "edit_in_editor": "在编辑器中编辑",
     "save_to_community": "分享到社区",
     "success": {
       "generated": "Meme 生成成功！",

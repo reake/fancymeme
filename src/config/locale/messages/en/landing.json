@@ -44,7 +44,7 @@
     },
     "show_sign": false,
     "show_theme": true,
-    "show_locale": true
+    "show_locale": false
   },
   "footer": {
     "id": "footer",
@@ -87,16 +87,16 @@
       "items": [
         {
           "title": "Privacy Policy",
-          "url": "/privacy-policy"
+          "url": "/privacy"
         },
         {
           "title": "Terms of Service",
-          "url": "/terms-of-service"
+          "url": "/terms"
         }
       ]
     },
     "show_theme": true,
-    "show_locale": true
+    "show_locale": false
   },
   "faq": {
     "id": "faq",

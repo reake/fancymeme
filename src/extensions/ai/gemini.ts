@@ -53,7 +53,7 @@ export class GeminiProvider implements AIProvider {
       throw new Error('prompt is required');
     }
 
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${this.configs.apiKey}`;
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
 
     const requestParts: any[] = [
       {
@@ -85,23 +85,39 @@ export class GeminiProvider implements AIProvider {
       }
     }
 
-    const { image_input, ...generationConfig } = options || {};
+    const { image_input, ...rawGenerationConfig } = options || {};
+    const generationConfig: Record<string, any> = { ...rawGenerationConfig };
 
-    const payload = {
-      contents: {
-        role: 'user',
-        parts: requestParts,
-      },
-      generation_config: {
-        response_modalities: ['TEXT', 'IMAGE'],
-        ...generationConfig,
-      },
+    if (
+      Object.prototype.hasOwnProperty.call(generationConfig, 'response_modalities') &&
+      !Object.prototype.hasOwnProperty.call(generationConfig, 'responseModalities')
+    ) {
+      generationConfig.responseModalities = generationConfig.response_modalities;
+      delete generationConfig.response_modalities;
+    }
+
+    if (!Object.prototype.hasOwnProperty.call(generationConfig, 'responseModalities')) {
+      generationConfig.responseModalities = ['TEXT', 'IMAGE'];
+    }
+
+    const payload: Record<string, any> = {
+      contents: [
+        {
+          role: 'user',
+          parts: requestParts,
+        },
+      ],
     };
+
+    if (Object.keys(generationConfig).length > 0) {
+      payload.generationConfig = generationConfig;
+    }
 
     const resp = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'x-goog-api-key': this.configs.apiKey,
       },
       body: JSON.stringify(payload),
     });
@@ -127,14 +143,20 @@ export class GeminiProvider implements AIProvider {
       throw new Error('no parts returned');
     }
 
-    const imagePart = parts.find((p: any) => p.inlineData);
+    const imagePart = parts.find((p: any) => p.inlineData || p.inline_data);
 
     if (!imagePart) {
       throw new Error('no image part returned');
     }
 
-    const mimeType = imagePart.inlineData.mimeType;
-    const base64Data = imagePart.inlineData.data;
+    const inlineData = imagePart.inlineData || imagePart.inline_data;
+
+    const mimeType = inlineData?.mimeType || inlineData?.mime_type;
+    const base64Data = inlineData?.data;
+
+    if (!mimeType || !base64Data) {
+      throw new Error('invalid image data returned');
+    }
 
     // upload to storage
     const { getStorageService } = await import('@/shared/services/storage');
@@ -154,16 +176,21 @@ export class GeminiProvider implements AIProvider {
     }
 
     // replace base64 data with url to save db space
-    if (imagePart.inlineData) {
-      imagePart.inlineData.data = uploadResult.url;
-      // Ensure the original data object is updated
-      const partIndex = parts.findIndex((p: any) => p === imagePart);
-      if (partIndex !== -1 && data.candidates?.[0]?.content?.parts) {
-        // unset image base64 data
-        data.candidates[0].content.parts[partIndex].inlineData.data =
-          uploadResult.url;
-        // unset thoughtSignature
-        data.candidates[0].content.parts[partIndex].thoughtSignature = '';
+    if (inlineData) {
+      inlineData.data = uploadResult.url;
+    }
+
+    // Ensure the original data object is updated
+    const partIndex = parts.findIndex((p: any) => p === imagePart);
+    if (partIndex !== -1 && data.candidates?.[0]?.content?.parts) {
+      const targetPart = data.candidates[0].content.parts[partIndex];
+      if (targetPart?.inlineData) {
+        targetPart.inlineData.data = uploadResult.url;
+        targetPart.inlineData.thoughtSignature = '';
+      }
+      if (targetPart?.inline_data) {
+        targetPart.inline_data.data = uploadResult.url;
+        targetPart.inline_data.thoughtSignature = '';
       }
     }
 

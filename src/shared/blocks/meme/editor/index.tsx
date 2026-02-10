@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Copy, Download, Home, Save, Trash2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
@@ -35,6 +35,7 @@ interface MemeEditorProps {
 export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
   const t = useTranslations('meme.editor');
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { user, setIsShowSignModal } = useAppContext();
 
   const {
@@ -73,6 +74,17 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
       }
     }
   }, [templateSlug, setTemplate]);
+
+  // Load custom image from query param (?imageUrl=...)
+  useEffect(() => {
+    if (templateSlug) return;
+    const imageUrl =
+      searchParams.get('imageUrl') || searchParams.get('image');
+    if (imageUrl) {
+      setCustomImage(imageUrl);
+      setActiveTab('customize');
+    }
+  }, [templateSlug, searchParams, setCustomImage]);
 
   const handleSelectTemplate = useCallback(
     (template: MemeTemplate) => {
