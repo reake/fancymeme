@@ -30,13 +30,6 @@ export default async function MemeGeneratorPage({
           src: '/imgs/bg/tree.jpg',
           alt: 'hero background',
         },
-        buttons: [
-          {
-            title: t.raw('templates.edit'),
-            url: '/templates',
-            variant: 'outline',
-          },
-        ],
       },
       textToMeme: {
         component: <TextToMeme showTitle={false} />,

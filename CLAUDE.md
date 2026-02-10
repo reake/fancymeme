@@ -4,11 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-ShipAny Template Two is a modern full-stack SaaS application for AI-powered content generation with integrated payment processing. It supports multiple deployment targets (Vercel, Cloudflare, Docker) and payment providers (Stripe, PayPal, Creem).
+fancymeme Template Two is a modern full-stack SaaS application for AI-powered content generation with integrated payment processing. It supports multiple deployment targets (Vercel, Cloudflare, Docker) and payment providers (Stripe, PayPal, Creem).
 
 ## Essential Commands
 
 **Development:**
+
 ```bash
 pnpm dev              # Start development server with Turbopack
 pnpm build            # Production build
@@ -16,6 +17,7 @@ pnpm start            # Start production server
 ```
 
 **Database Operations:**
+
 ```bash
 pnpm db:generate      # Generate Drizzle migrations
 pnpm db:migrate       # Run database migrations
@@ -24,6 +26,7 @@ pnpm db:studio        # Open Drizzle Studio
 ```
 
 **Code Quality:**
+
 ```bash
 pnpm lint             # Run ESLint
 pnpm format           # Format with Prettier
@@ -31,6 +34,7 @@ pnpm format:check     # Check formatting
 ```
 
 **Cloudflare Deployment:**
+
 ```bash
 pnpm cf:preview       # Preview on Cloudflare
 pnpm cf:deploy        # Deploy to Cloudflare
@@ -40,6 +44,7 @@ pnpm cf:typegen       # Generate Cloudflare types
 ## Architecture Overview
 
 **App Router Structure:**
+
 ```
 src/app/[locale]/
 ├── (landing)/          # Public pages (home, pricing, etc.)
@@ -49,6 +54,7 @@ src/app/[locale]/
 ```
 
 **Core Systems:**
+
 - **Authentication**: `src/core/auth/` - Better-auth integration with dynamic configuration
 - **Database**: `src/core/db/` - Drizzle ORM with PostgreSQL/SQLite support
 - **RBAC**: `src/core/rbac/` - Role-based access control
@@ -65,16 +71,19 @@ src/app/[locale]/
 4. **Theme System**: Dynamic theming via `src/core/theme/` with CSS variables and Tailwind integration.
 
 **Environment Requirements:**
+
 - `DATABASE_URL`: PostgreSQL connection string
 - `AUTH_SECRET`: 32-character secret for better-auth (generate with `openssl rand -base64 32`)
 - `NEXT_PUBLIC_APP_URL`: Application URL
 
 **TypeScript Path Mapping:**
+
 - `@/*` maps to `./src/*`
 
 **AI Content Generation Features:**
+
 - Image generation
-- Audio generation  
+- Audio generation
 - Music generation
 - Video generation
 - Chatbot interface

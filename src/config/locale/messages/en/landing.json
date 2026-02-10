@@ -136,8 +136,8 @@
         "icon": "Zap"
       },
       {
-        "title": "Browse Features",
-        "url": "/#features",
+        "title": "Browse templates",
+        "url": "/templates",
         "target": "_self",
         "variant": "outline",
         "icon": "BookOpenText"

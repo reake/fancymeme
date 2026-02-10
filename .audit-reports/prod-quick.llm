@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audit version="0.0.34">
+<site url="http://localhost:3300" crawled="1" date="2026-02-10T09:33:45.715Z"/>
+<score overall="45" grade="F">
+ <cat name="Accessibility" score="86"/>
+ <cat name="Images" score="59"/>
+ <cat name="Content" score="46"/>
+ <cat name="Security" score="52"/>
+ <cat name="Crawlability" score="86"/>
+ <cat name="Performance" score="83"/>
+ <cat name="E-E-A-T" score="53"/>
+ <cat name="Links" score="93"/>
+ <cat name="Core SEO" score="100"/>
+ <cat name="Internationalization" score="100"/>
+ <cat name="Legal Compliance" score="100"/>
+ <cat name="Mobile" score="100"/>
+ <cat name="Social Media" score="100"/>
+ <cat name="URL Structure" score="100"/>
+</score>
+<summary passed="110" warnings="23" failed="7"/>
+<issues>
+ <category name="Crawlability" errors="1" warnings="2">
+  <rule id="crawl/sitemap-domain" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/crawl/sitemap-domain">
+   142 URL(s) point to different domain(s)
+   Items (142):
+    - https://fancymeme.com/ [host: fancymeme.com]
+    - https://fancymeme.com/pricing [host: fancymeme.com]
+    - https://fancymeme.com/templates [host: fancymeme.com]
+    - https://fancymeme.com/meme-generator [host: fancymeme.com]
+    - https://fancymeme.com/meme-editor [host: fancymeme.com]
+    - https://fancymeme.com/blog [host: fancymeme.com]
+    - https://fancymeme.com/showcases [host: fancymeme.com]
+    - https://fancymeme.com/templates/drake-hotline-bling [host: fancymeme.com]
+    - https://fancymeme.com/templates/distracted-boyfriend [host: fancymeme.com]
+    - https://fancymeme.com/templates/two-buttons [host: fancymeme.com]
+    - https://fancymeme.com/templates/change-my-mind [host: fancymeme.com]
+    - https://fancymeme.com/templates/expanding-brain [host: fancymeme.com]
+    - https://fancymeme.com/templates/batman-slapping-robin [host: fancymeme.com]
+    - https://fancymeme.com/templates/uno-draw-25 [host: fancymeme.com]
+    - https://fancymeme.com/templates/running-away-balloon [host: fancymeme.com]
+    - https://fancymeme.com/templates/mocking-spongebob [host: fancymeme.com]
+    - https://fancymeme.com/templates/left-exit-12 [host: fancymeme.com]
+    - https://fancymeme.com/templates/is-this-a-pigeon [host: fancymeme.com]
+    - https://fancymeme.com/templates/inhaling-seagull [host: fancymeme.com]
+    - https://fancymeme.com/templates/woman-yelling-at-cat [host: fancymeme.com]
+    - https://fancymeme.com/templates/american-chopper [host: fancymeme.com]
+    - https://fancymeme.com/templates/epic-handshake [host: fancymeme.com]
+    - https://fancymeme.com/templates/hide-the-pain-harold [host: fancymeme.com]
+    - https://fancymeme.com/templates/tuxedo-winnie-pooh [host: fancymeme.com]
+    - https://fancymeme.com/templates/unsettled-tom [host: fancymeme.com]
+    - https://fancymeme.com/templates/blank-nut-button [host: fancymeme.com]
+    - https://fancymeme.com/templates/boardroom-meeting [host: fancymeme.com]
+    - https://fancymeme.com/templates/one-does-not-simply [host: fancymeme.com]
+    - https://fancymeme.com/templates/surprised-pikachu [host: fancymeme.com]
+    - https://fancymeme.com/templates/roll-safe [host: fancymeme.com]
+    - https://fancymeme.com/templates/who-killed-hannibal [host: fancymeme.com]
+    - https://fancymeme.com/templates/scroll-of-truth [host: fancymeme.com]
+    - https://fancymeme.com/templates/waiting-skeleton [host: fancymeme.com]
+    - https://fancymeme.com/templates/hard-to-swallow-pills [host: fancymeme.com]
+    - https://fancymeme.com/templates/trump-bill-signing [host: fancymeme.com]
+    - https://fancymeme.com/templates/the-rock-driving [host: fancymeme.com]
+    - https://fancymeme.com/templates/disaster-girl [host: fancymeme.com]
+    - https://fancymeme.com/templates/bernie-asking [host: fancymeme.com]
+    - https://fancymeme.com/templates/monkey-puppet [host: fancymeme.com]
+    - https://fancymeme.com/templates/spongebob-imma-head-out [host: fancymeme.com]
+    - https://fancymeme.com/templates/x-x-everywhere [host: fancymeme.com]
+    - https://fancymeme.com/templates/yall-got-any-more [host: fancymeme.com]
+    - https://fancymeme.com/templates/futurama-fry [host: fancymeme.com]
+    - https://fancymeme.com/templates/ancient-aliens [host: fancymeme.com]
+    - https://fancymeme.com/templates/oprah-you-get-a-car [host: fancymeme.com]
+    - https://fancymeme.com/templates/finding-neverland [host: fancymeme.com]
+    - https://fancymeme.com/templates/third-world-skeptical-kid [host: fancymeme.com]
+    - https://fancymeme.com/templates/that-would-be-great [host: fancymeme.com]
+    - https://fancymeme.com/templates/dont-you-squidward [host: fancymeme.com]
+    - https://fancymeme.com/templates/sad-pablo-escobar [host: fancymeme.com]
+    - https://fancymeme.com/templates/doge [host: fancymeme.com]
+    - https://fancymeme.com/templates/marked-safe-from [host: fancymeme.com]
+    - https://fancymeme.com/templates/star-wars-yoda [host: fancymeme.com]
+    - https://fancymeme.com/templates/third-world-success-kid [host: fancymeme.com]
+    - https://fancymeme.com/templates/evil-kermit [host: fancymeme.com]
+    - https://fancymeme.com/templates/panik-kalm-panik [host: fancymeme.com]
+    - https://fancymeme.com/templates/this-is-fine [host: fancymeme.com]
+    - https://fancymeme.com/templates/sleeping-shaq [host: fancymeme.com]
+    - https://fancymeme.com/templates/theyre-the-same-picture [host: fancymeme.com]
+    - https://fancymeme.com/templates/success-kid [host: fancymeme.com]
+    - https://fancymeme.com/templates/grumpy-cat [host: fancymeme.com]
+    - https://fancymeme.com/templates/bad-luck-brian [host: fancymeme.com]
+    - https://fancymeme.com/templates/first-world-problems [host: fancymeme.com]
+    - https://fancymeme.com/templates/sweating-jordan-peele [host: fancymeme.com]
+    - https://fancymeme.com/templates/vince-mcmahon-reaction [host: fancymeme.com]
+    - https://fancymeme.com/templates/disappointed-black-guy [host: fancymeme.com]
+    - https://fancymeme.com/templates/all [host: fancymeme.com]
+    - https://fancymeme.com/templates/popular [host: fancymeme.com]
+    - https://fancymeme.com/templates/classic [host: fancymeme.com]
+    - https://fancymeme.com/templates/reaction [host: fancymeme.com]
+    - https://fancymeme.com/templates/comparison [host: fancymeme.com]
+    - https://fancymeme.com/zh [host: fancymeme.com]
+    - https://fancymeme.com/zh/pricing [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates [host: fancymeme.com]
+    - https://fancymeme.com/zh/meme-generator [host: fancymeme.com]
+    - https://fancymeme.com/zh/meme-editor [host: fancymeme.com]
+    - https://fancymeme.com/zh/blog [host: fancymeme.com]
+    - https://fancymeme.com/zh/showcases [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/drake-hotline-bling [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/distracted-boyfriend [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/two-buttons [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/change-my-mind [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/expanding-brain [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/batman-slapping-robin [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/uno-draw-25 [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/running-away-balloon [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/mocking-spongebob [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/left-exit-12 [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/is-this-a-pigeon [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/inhaling-seagull [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/woman-yelling-at-cat [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/american-chopper [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/epic-handshake [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/hide-the-pain-harold [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/tuxedo-winnie-pooh [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/unsettled-tom [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/blank-nut-button [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/boardroom-meeting [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/one-does-not-simply [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/surprised-pikachu [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/roll-safe [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/who-killed-hannibal [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/scroll-of-truth [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/waiting-skeleton [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/hard-to-swallow-pills [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/trump-bill-signing [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/the-rock-driving [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/disaster-girl [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/bernie-asking [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/monkey-puppet [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/spongebob-imma-head-out [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/x-x-everywhere [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/yall-got-any-more [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/futurama-fry [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/ancient-aliens [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/oprah-you-get-a-car [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/finding-neverland [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/third-world-skeptical-kid [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/that-would-be-great [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/dont-you-squidward [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/sad-pablo-escobar [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/doge [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/marked-safe-from [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/star-wars-yoda [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/third-world-success-kid [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/evil-kermit [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/panik-kalm-panik [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/this-is-fine [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/sleeping-shaq [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/theyre-the-same-picture [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/success-kid [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/grumpy-cat [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/bad-luck-brian [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/first-world-problems [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/sweating-jordan-peele [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/vince-mcmahon-reaction [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/disappointed-black-guy [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/all [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/popular [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/classic [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/reaction [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/comparison [host: fancymeme.com]
+  </rule>
+  <rule id="crawl/sitemap-coverage" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/crawl/sitemap-coverage">
+   1 indexable page(s) not in sitemap (100%); 221 sitemap URL(s) were not crawled
+   Items (222):
+    - /
+    - http://localhost:3000
+    - http://localhost:3000/create/jigsaw-puzzle
+    - http://localhost:3000/jigsaw-puzzle-generator
+    - http://localhost:3000/printable-jigsaw-puzzle
+    - http://localhost:3000/puzzles
+    - http://localhost:3000/contact
+    - http://localhost:3000/about
+    - http://localhost:3000/privacy
+    - http://localhost:3000/terms
+    - http://localhost:3000/blog
+    - http://localhost:3000/help
+    - http://localhost:3000/zh
+    - http://localhost:3000/zh/create/jigsaw-puzzle
+    - http://localhost:3000/zh/jigsaw-puzzle-generator
+    - http://localhost:3000/zh/printable-jigsaw-puzzle
+    - http://localhost:3000/zh/puzzles
+    - http://localhost:3000/zh/contact
+    - http://localhost:3000/zh/about
+    - http://localhost:3000/zh/privacy
+    - http://localhost:3000/zh/terms
+    - http://localhost:3000/zh/blog
+    - http://localhost:3000/zh/help
+    - http://localhost:3000/blog/best-photo-types-for-jigsaw-puzzles
+    - http://localhost:3000/blog/branded-jigsaw-puzzles-marketing
+    - http://localhost:3000/blog/classroom-puzzle-stations-activities
+    - http://localhost:3000/blog/create-printable-jigsaw-puzzle-pdf
+    - http://localhost:3000/blog/custom-puzzles-as-unique-gifts
+    - http://localhost:3000/blog/history-of-jigsaw-puzzles
+    - http://localhost:3000/blog/how-to-create-1000-piece-jigsaw-puzzle
+    - http://localhost:3000/blog/how-to-host-virtual-puzzle-party
+    - http://localhost:3000/blog/how-to-make-your-own-jigsaw-puzzle-online
+    - http://localhost:3000/blog/jigsaw-puzzle-difficulty-guide
+    - http://localhost:3000/blog/jigsaw-puzzles-for-kids-educational-benefits
+    - http://localhost:3000/blog/jigsaw-puzzles-mental-health-benefits
+    - http://localhost:3000/blog/mobile-photo-to-jigsaw-puzzle
+    - http://localhost:3000/blog/printable-jigsaw-puzzle-dpi-paper-guide
+    - http://localhost:3000/blog/puzzle-piece-shapes-grid-voronoi
+    - http://localhost:3000/blog/puzzle-storage-organization-tips
+    - http://localhost:3000/blog/svg-puzzle-laser-cutting-setup
+    - http://localhost:3000/blog/tips-for-solving-jigsaw-puzzles-faster
+    - http://localhost:3000/blog/turn-photo-into-jigsaw-puzzle-online
+    - http://localhost:3000/zh/blog/best-photo-types-for-jigsaw-puzzles
+    - http://localhost:3000/zh/blog/branded-jigsaw-puzzles-marketing
+    - http://localhost:3000/zh/blog/classroom-puzzle-stations-activities
+    - http://localhost:3000/zh/blog/create-printable-jigsaw-puzzle-pdf
+    - http://localhost:3000/zh/blog/custom-puzzles-as-unique-gifts
+    - http://localhost:3000/zh/blog/history-of-jigsaw-puzzles
+    - http://localhost:3000/zh/blog/how-to-create-1000-piece-jigsaw-puzzle
+    - http://localhost:3000/zh/blog/how-to-host-virtual-puzzle-party
+    - http://localhost:3000/zh/blog/how-to-make-your-own-jigsaw-puzzle-online
+    - http://localhost:3000/zh/blog/jigsaw-puzzle-difficulty-guide
+    - http://localhost:3000/zh/blog/jigsaw-puzzles-for-kids-educational-benefits
+    - http://localhost:3000/zh/blog/jigsaw-puzzles-mental-health-benefits
+    - http://localhost:3000/zh/blog/mobile-photo-to-jigsaw-puzzle
+    - http://localhost:3000/zh/blog/printable-jigsaw-puzzle-dpi-paper-guide
+    - http://localhost:3000/zh/blog/puzzle-piece-shapes-grid-voronoi
+    - http://localhost:3000/zh/blog/puzzle-storage-organization-tips
+    - http://localhost:3000/zh/blog/svg-puzzle-laser-cutting-setup
+    - http://localhost:3000/zh/blog/tips-for-solving-jigsaw-puzzles-faster
+    - http://localhost:3000/zh/blog/turn-photo-into-jigsaw-puzzle-online
+    - http://localhost:3000/jigsaw-puzzle/take-my-puzzle-mlksqtw8
+    - http://localhost:3000/jigsaw-puzzle/jimeng-2025-07-16-8641-jigsaw--ys39igc0
+    - http://localhost:3000/jigsaw-puzzle/my-car-list-9r9efmc6
+    - http://localhost:3000/jigsaw-puzzle/new-puzzle-t1lqvkea
+    - http://localhost:3000/jigsaw-puzzle/5-a-dogs-jigsaw-puzzle-7w2bbf0f
+    - http://localhost:3000/help/classroom-puzzle-sharing-workflow-jigsawify
+    - http://localhost:3000/help/create-puzzle-from-clipboard-jigsawify
+    - http://localhost:3000/help/fix-slow-jigsaw-puzzle-performance-jigsawify
+    - http://localhost:3000/help/printable-puzzle-pdf-workflow-jigsawify
+    - http://localhost:3000/help/svg-export-laser-cnc-checklist-jigsawify
+    - http://localhost:3000/help/troubleshoot-image-upload-failed-jigsawify
+    - http://localhost:3000/help/where-is-share-button-jigsawify
+    - http://localhost:3000/zh/help/classroom-puzzle-sharing-workflow-jigsawify
+    - http://localhost:3000/zh/help/create-puzzle-from-clipboard-jigsawify
+    - http://localhost:3000/zh/help/fix-slow-jigsaw-puzzle-performance-jigsawify
+    - http://localhost:3000/zh/help/printable-puzzle-pdf-workflow-jigsawify
+    - http://localhost:3000/zh/help/svg-export-laser-cnc-checklist-jigsawify
+    - http://localhost:3000/zh/help/troubleshoot-image-upload-failed-jigsawify
+    - http://localhost:3000/zh/help/where-is-share-button-jigsawify
+    - https://fancymeme.com/
+    - https://fancymeme.com/pricing
+    - https://fancymeme.com/templates
+    - https://fancymeme.com/meme-generator
+    - https://fancymeme.com/meme-editor
+    - https://fancymeme.com/blog
+    - https://fancymeme.com/showcases
+    - https://fancymeme.com/templates/drake-hotline-bling
+    - https://fancymeme.com/templates/distracted-boyfriend
+    - https://fancymeme.com/templates/two-buttons
+    - https://fancymeme.com/templates/change-my-mind
+    - https://fancymeme.com/templates/expanding-brain
+    - https://fancymeme.com/templates/batman-slapping-robin
+    - https://fancymeme.com/templates/uno-draw-25
+    - https://fancymeme.com/templates/running-away-balloon
+    - https://fancymeme.com/templates/mocking-spongebob
+    - https://fancymeme.com/templates/left-exit-12
+    - https://fancymeme.com/templates/is-this-a-pigeon
+    - https://fancymeme.com/templates/inhaling-seagull
+    - https://fancymeme.com/templates/woman-yelling-at-cat
+    - https://fancymeme.com/templates/american-chopper
+    - https://fancymeme.com/templates/epic-handshake
+    - https://fancymeme.com/templates/hide-the-pain-harold
+    - https://fancymeme.com/templates/tuxedo-winnie-pooh
+    - https://fancymeme.com/templates/unsettled-tom
+    - https://fancymeme.com/templates/blank-nut-button
+    - https://fancymeme.com/templates/boardroom-meeting
+    - https://fancymeme.com/templates/one-does-not-simply
+    - https://fancymeme.com/templates/surprised-pikachu
+    - https://fancymeme.com/templates/roll-safe
+    - https://fancymeme.com/templates/who-killed-hannibal
+    - https://fancymeme.com/templates/scroll-of-truth
+    - https://fancymeme.com/templates/waiting-skeleton
+    - https://fancymeme.com/templates/hard-to-swallow-pills
+    - https://fancymeme.com/templates/trump-bill-signing
+    - https://fancymeme.com/templates/the-rock-driving
+    - https://fancymeme.com/templates/disaster-girl
+    - https://fancymeme.com/templates/bernie-asking
+    - https://fancymeme.com/templates/monkey-puppet
+    - https://fancymeme.com/templates/spongebob-imma-head-out
+    - https://fancymeme.com/templates/x-x-everywhere
+    - https://fancymeme.com/templates/yall-got-any-more
+    - https://fancymeme.com/templates/futurama-fry
+    - https://fancymeme.com/templates/ancient-aliens
+    - https://fancymeme.com/templates/oprah-you-get-a-car
+    - https://fancymeme.com/templates/finding-neverland
+    - https://fancymeme.com/templates/third-world-skeptical-kid
+    - https://fancymeme.com/templates/that-would-be-great
+    - https://fancymeme.com/templates/dont-you-squidward
+    - https://fancymeme.com/templates/sad-pablo-escobar
+    - https://fancymeme.com/templates/doge
+    - https://fancymeme.com/templates/marked-safe-from
+    - https://fancymeme.com/templates/star-wars-yoda
+    - https://fancymeme.com/templates/third-world-success-kid
+    - https://fancymeme.com/templates/evil-kermit
+    - https://fancymeme.com/templates/panik-kalm-panik
+    - https://fancymeme.com/templates/this-is-fine
+    - https://fancymeme.com/templates/sleeping-shaq
+    - https://fancymeme.com/templates/theyre-the-same-picture
+    - https://fancymeme.com/templates/success-kid
+    - https://fancymeme.com/templates/grumpy-cat
+    - https://fancymeme.com/templates/bad-luck-brian
+    - https://fancymeme.com/templates/first-world-problems
+    - https://fancymeme.com/templates/sweating-jordan-peele
+    - https://fancymeme.com/templates/vince-mcmahon-reaction
+    - https://fancymeme.com/templates/disappointed-black-guy
+    - https://fancymeme.com/templates/all
+    - https://fancymeme.com/templates/popular
+    - https://fancymeme.com/templates/classic
+    - https://fancymeme.com/templates/reaction
+    - https://fancymeme.com/templates/comparison
+    - https://fancymeme.com/zh
+    - https://fancymeme.com/zh/pricing
+    - https://fancymeme.com/zh/templates
+    - https://fancymeme.com/zh/meme-generator
+    - https://fancymeme.com/zh/meme-editor
+    - https://fancymeme.com/zh/blog
+    - https://fancymeme.com/zh/showcases
+    - https://fancymeme.com/zh/templates/drake-hotline-bling
+    - https://fancymeme.com/zh/templates/distracted-boyfriend
+    - https://fancymeme.com/zh/templates/two-buttons
+    - https://fancymeme.com/zh/templates/change-my-mind
+    - https://fancymeme.com/zh/templates/expanding-brain
+    - https://fancymeme.com/zh/templates/batman-slapping-robin
+    - https://fancymeme.com/zh/templates/uno-draw-25
+    - https://fancymeme.com/zh/templates/running-away-balloon
+    - https://fancymeme.com/zh/templates/mocking-spongebob
+    - https://fancymeme.com/zh/templates/left-exit-12
+    - https://fancymeme.com/zh/templates/is-this-a-pigeon
+    - https://fancymeme.com/zh/templates/inhaling-seagull
+    - https://fancymeme.com/zh/templates/woman-yelling-at-cat
+    - https://fancymeme.com/zh/templates/american-chopper
+    - https://fancymeme.com/zh/templates/epic-handshake
+    - https://fancymeme.com/zh/templates/hide-the-pain-harold
+    - https://fancymeme.com/zh/templates/tuxedo-winnie-pooh
+    - https://fancymeme.com/zh/templates/unsettled-tom
+    - https://fancymeme.com/zh/templates/blank-nut-button
+    - https://fancymeme.com/zh/templates/boardroom-meeting
+    - https://fancymeme.com/zh/templates/one-does-not-simply
+    - https://fancymeme.com/zh/templates/surprised-pikachu
+    - https://fancymeme.com/zh/templates/roll-safe
+    - https://fancymeme.com/zh/templates/who-killed-hannibal
+    - https://fancymeme.com/zh/templates/scroll-of-truth
+    - https://fancymeme.com/zh/templates/waiting-skeleton
+    - https://fancymeme.com/zh/templates/hard-to-swallow-pills
+    - https://fancymeme.com/zh/templates/trump-bill-signing
+    - https://fancymeme.com/zh/templates/the-rock-driving
+    - https://fancymeme.com/zh/templates/disaster-girl
+    - https://fancymeme.com/zh/templates/bernie-asking
+    - https://fancymeme.com/zh/templates/monkey-puppet
+    - https://fancymeme.com/zh/templates/spongebob-imma-head-out
+    - https://fancymeme.com/zh/templates/x-x-everywhere
+    - https://fancymeme.com/zh/templates/yall-got-any-more
+    - https://fancymeme.com/zh/templates/futurama-fry
+    - https://fancymeme.com/zh/templates/ancient-aliens
+    - https://fancymeme.com/zh/templates/oprah-you-get-a-car
+    - https://fancymeme.com/zh/templates/finding-neverland
+    - https://fancymeme.com/zh/templates/third-world-skeptical-kid
+    - https://fancymeme.com/zh/templates/that-would-be-great
+    - https://fancymeme.com/zh/templates/dont-you-squidward
+    - https://fancymeme.com/zh/templates/sad-pablo-escobar
+    - https://fancymeme.com/zh/templates/doge
+    - https://fancymeme.com/zh/templates/marked-safe-from
+    - https://fancymeme.com/zh/templates/star-wars-yoda
+    - https://fancymeme.com/zh/templates/third-world-success-kid
+    - https://fancymeme.com/zh/templates/evil-kermit
+    - https://fancymeme.com/zh/templates/panik-kalm-panik
+    - https://fancymeme.com/zh/templates/this-is-fine
+    - https://fancymeme.com/zh/templates/sleeping-shaq
+    - https://fancymeme.com/zh/templates/theyre-the-same-picture
+    - https://fancymeme.com/zh/templates/success-kid
+    - https://fancymeme.com/zh/templates/grumpy-cat
+    - https://fancymeme.com/zh/templates/bad-luck-brian
+    - https://fancymeme.com/zh/templates/first-world-problems
+    - https://fancymeme.com/zh/templates/sweating-jordan-peele
+    - https://fancymeme.com/zh/templates/vince-mcmahon-reaction
+    - https://fancymeme.com/zh/templates/disappointed-black-guy
+    - https://fancymeme.com/zh/templates/all
+    - https://fancymeme.com/zh/templates/popular
+    - https://fancymeme.com/zh/templates/classic
+    - https://fancymeme.com/zh/templates/reaction
+    - https://fancymeme.com/zh/templates/comparison
+  </rule>
+ </category>
+ <category name="Security" errors="1" warnings="2">
+  <rule id="security/https" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/security/https">
+   Page not served over HTTPS
+   Pages (1): /
+  </rule>
+  <rule id="security/csp" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/csp">
+   No Content-Security-Policy header
+  </rule>
+  <rule id="security/x-frame-options" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/x-frame-options">
+   No clickjacking protection
+  </rule>
+ </category>
+ <category name="Links" errors="0" warnings="1">
+  <rule id="links/anchor-text" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/anchor-text">
+   1 link(s) have empty anchor text
+   Pages (1): /
+   Items (1):
+    - mailto:support@fancymeme.com
+  </rule>
+ </category>
+ <category name="Content" errors="1" warnings="2">
+  <rule id="content/meta-in-body" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/content/meta-in-body">
+   Found 15 meta tags in &lt;body&gt;
+   Pages (1): /
+   Items (15):
+    - description (description=&quot;FancyMeme turns a short prompt into a share-ready ...&quot;) [content: FancyMeme turns a short prompt into a share-ready ...]
+    - keywords (keywords=&quot;FancyMeme, AI meme generator, meme maker, meme tem...&quot;) [content: FancyMeme, AI meme generator, meme maker, meme tem...]
+    - robots (robots=&quot;index, follow&quot;) [content: index, follow]
+    - og:title (og:title=&quot;FancyMeme — AI Meme Generator for Shareable Memes&quot;) [content: FancyMeme — AI Meme Generator for Shareable Memes]
+    - og:description (og:description=&quot;FancyMeme turns a short prompt into a share-ready ...&quot;) [content: FancyMeme turns a short prompt into a share-ready ...]
+    - og:url (og:url=&quot;http://localhost:3000/&quot;) [content: http://localhost:3000/]
+    - og:site_name (og:site_name=&quot;fancymeme App&quot;) [content: fancymeme App]
+    - og:locale (og:locale=&quot;en&quot;) [content: en]
+    - og:image (og:image=&quot;http://localhost:3000/preview.png&quot;) [content: http://localhost:3000/preview.png]
+    - og:type (og:type=&quot;website&quot;) [content: website]
+    - twitter:card (twitter:card=&quot;summary_large_image&quot;) [content: summary_large_image]
+    - twitter:site (twitter:site=&quot;http://localhost:3000&quot;) [content: http://localhost:3000]
+    - twitter:title (twitter:title=&quot;FancyMeme — AI Meme Generator for Shareable Memes&quot;) [content: FancyMeme — AI Meme Generator for Shareable Memes]
+    - twitter:description (twitter:description=&quot;FancyMeme turns a short prompt into a share-ready ...&quot;) [content: FancyMeme turns a short prompt into a share-ready ...]
+    - twitter:image (twitter:image=&quot;http://localhost:3000/preview.png&quot;) [content: http://localhost:3000/preview.png]
+  </rule>
+  <rule id="content/keyword-stuffing" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/keyword-stuffing">
+   1 word(s) may be overused
+   Pages (1): /
+   Items (1):
+    - memes (&quot;memes&quot; (5.2%)) [count: 11, density: 5.238095238095238]
+  </rule>
+  <rule id="content/word-count" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/word-count">
+   Thin content: 231 words (min 300)
+   Pages (1): /
+  </rule>
+ </category>
+ <category name="Images" errors="1" warnings="3">
+  <rule id="images/image-file-size" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/images/image-file-size">
+   1 image(s) exceed 200.0 KB
+   Items (1):
+    - /_next/image?url=%2Fimgs%2Fbg%2Ftree.jpg&amp;w=3840&amp;q=70 [sizeBytes: 385970, size: 376.9 KB, status: 200, contentType: image/jpeg] (from: /)
+  </rule>
+  <rule id="images/alt-text" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/images/alt-text">
+   2 image(s) missing alt text
+   Pages (1): /
+   Items (2):
+    - /_next/image?url=%2Flogo.png&amp;w=256&amp;q=75
+    - /_next/image?url=%2Flogo.png&amp;w=2048&amp;q=75
+  </rule>
+  <rule id="images/responsive-size" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/responsive-size">
+   1 small image(s) may be serving oversized files
+   Pages (1): /
+   Items (1):
+    - image (100x100, no srcset)
+  </rule>
+  <rule id="images/dimensions" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/dimensions">
+   1 image(s) missing width/height (causes CLS)
+   Pages (1): /
+  </rule>
+ </category>
+ <category name="Performance" errors="0" warnings="6">
+  <rule id="perf/css-file-size" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/perf/css-file-size">
+   2 CSS file(s) exceed 150.0 KB
+   Items (2):
+    - /_next/static/chunks/743f390aaf6af655.css [sizeBytes: 163455, size: 159.6 KB, status: 200, contentType: text/css; charset=UTF-8] (from: /)
+    - /_next/static/chunks/6821ad574e053e84.css [sizeBytes: 167195, size: 163.3 KB, status: 200, contentType: text/css; charset=UTF-8] (from: /)
+  </rule>
+  <rule id="perf/render-blocking" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/render-blocking">
+   5 render-blocking resources
+   Pages (1): /
+   Items (5):
+    - /_next/static/chunks/743f390aaf6af655.css
+    - /_next/static/chunks/32f6ff94a39072e8.css
+    - /_next/static/chunks/09e2479264a917ad.css
+    - /_next/static/chunks/6821ad574e053e84.css
+    - /_next/static/chunks/a6dad97d9634a72d.js
+  </rule>
+  <rule id="perf/critical-request-chains" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/critical-request-chains">
+   5 critical request chain(s) found
+   Pages (1): /
+   Items (5):
+    - CSS: /_next/static/chunks/743f390aaf6af655.css
+    - CSS: /_next/static/chunks/32f6ff94a39072e8.css
+    - CSS: /_next/static/chunks/09e2479264a917ad.css
+    - CSS: /_next/static/chunks/6821ad574e053e84.css
+    - JS: /_next/static/chunks/a6dad97d9634a72d.js
+  </rule>
+  <rule id="perf/lazy-above-fold" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lazy-above-fold">
+   3 above-fold image(s) with lazy loading
+   Pages (1): /
+   Items (3):
+    - /_next/image?url=%2Flogo.png&amp;w=256&amp;q=75
+    - /_next/image?url=%2Fimgs%2Fbg%2Ftree.jpg&amp;w=3840&amp;q=70
+    - /_next/image?url=%2Flogo.png&amp;w=2048&amp;q=75
+  </rule>
+  <rule id="perf/cache-headers" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/cache-headers">
+   Cache-Control without max-age
+   Pages (1): /
+  </rule>
+  <rule id="perf/http2" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/perf/http2">
+   HTTP/2 requires HTTPS
+   Pages (1): /
+  </rule>
+ </category>
+ <category name="Accessibility" errors="3" warnings="2">
+  <rule id="a11y/duplicate-id-aria" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/duplicate-id-aria">
+   Rule error: CSS is not defined
+   Pages (1): /
+  </rule>
+  <rule id="a11y/list-structure" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/list-structure">
+   1 list(s) with invalid child elements
+   Pages (1): /
+   Items (1):
+    - ul.group
+  </rule>
+  <rule id="a11y/form-labels" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/form-labels">
+   1 form input(s) without labels
+   Pages (1): /
+   Items (1):
+    - textarea
+  </rule>
+  <rule id="a11y/color-contrast" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/color-contrast">
+   15 potential color contrast issue(s)
+   Pages (1): /
+   Items (10):
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-8 mb-...&quot; may have low contrast
+    - div with class &quot;border h-10 items-center justi...&quot; may have low contrast
+    - textarea with class &quot;flex w-full rounded-md border ...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground flex ite...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-4 tex...&quot; may have low contrast
+    - svg with class &quot;lucide lucide-wand-sparkles te...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-6 md:...&quot; may have low contrast
+    - svg with class &quot;lucide lucide-chevron-down tex...&quot; may have low contrast
+  </rule>
+  <rule id="a11y/focus-visible" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/focus-visible">
+   outline:none found - ensure alternative focus styles exist
+   Pages (1): /
+  </rule>
+ </category>
+ <category name="E-E-A-T" errors="0" warnings="5">
+  <rule id="eeat/about-page" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/about-page">
+   No About page found
+  </rule>
+  <rule id="eeat/author-byline" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/author-byline">
+   No content pages have author attribution
+  </rule>
+  <rule id="eeat/contact-page" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/contact-page">
+   No Contact page found
+  </rule>
+  <rule id="eeat/privacy-policy" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/privacy-policy">
+   No Privacy Policy page found
+  </rule>
+  <rule id="eeat/content-dates" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/content-dates">
+   No content pages have datePublished
+  </rule>
+ </category>
+</issues>
+</audit>

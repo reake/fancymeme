@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audit version="0.0.34">
+<site url="http://localhost:3300" crawled="66" date="2026-02-10T09:34:06.814Z"/>
+<score overall="45" grade="F">
+ <cat name="Accessibility" score="83"/>
+ <cat name="Content" score="68"/>
+ <cat name="Security" score="57"/>
+ <cat name="Core SEO" score="78"/>
+ <cat name="Images" score="78"/>
+ <cat name="Crawlability" score="86"/>
+ <cat name="Performance" score="79"/>
+ <cat name="Legal Compliance" score="67"/>
+ <cat name="Links" score="89"/>
+ <cat name="E-E-A-T" score="68"/>
+ <cat name="Social Media" score="99"/>
+ <cat name="Internationalization" score="100"/>
+ <cat name="Mobile" score="100"/>
+ <cat name="URL Structure" score="100"/>
+</score>
+<summary passed="5497" warnings="767" failed="391"/>
+<issues>
+ <category name="Crawlability" errors="1" warnings="2">
+  <rule id="crawl/sitemap-domain" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/crawl/sitemap-domain">
+   142 URL(s) point to different domain(s)
+   Items (142):
+    - https://fancymeme.com/ [host: fancymeme.com]
+    - https://fancymeme.com/pricing [host: fancymeme.com]
+    - https://fancymeme.com/templates [host: fancymeme.com]
+    - https://fancymeme.com/meme-generator [host: fancymeme.com]
+    - https://fancymeme.com/meme-editor [host: fancymeme.com]
+    - https://fancymeme.com/blog [host: fancymeme.com]
+    - https://fancymeme.com/showcases [host: fancymeme.com]
+    - https://fancymeme.com/templates/drake-hotline-bling [host: fancymeme.com]
+    - https://fancymeme.com/templates/distracted-boyfriend [host: fancymeme.com]
+    - https://fancymeme.com/templates/two-buttons [host: fancymeme.com]
+    - https://fancymeme.com/templates/change-my-mind [host: fancymeme.com]
+    - https://fancymeme.com/templates/expanding-brain [host: fancymeme.com]
+    - https://fancymeme.com/templates/batman-slapping-robin [host: fancymeme.com]
+    - https://fancymeme.com/templates/uno-draw-25 [host: fancymeme.com]
+    - https://fancymeme.com/templates/running-away-balloon [host: fancymeme.com]
+    - https://fancymeme.com/templates/mocking-spongebob [host: fancymeme.com]
+    - https://fancymeme.com/templates/left-exit-12 [host: fancymeme.com]
+    - https://fancymeme.com/templates/is-this-a-pigeon [host: fancymeme.com]
+    - https://fancymeme.com/templates/inhaling-seagull [host: fancymeme.com]
+    - https://fancymeme.com/templates/woman-yelling-at-cat [host: fancymeme.com]
+    - https://fancymeme.com/templates/american-chopper [host: fancymeme.com]
+    - https://fancymeme.com/templates/epic-handshake [host: fancymeme.com]
+    - https://fancymeme.com/templates/hide-the-pain-harold [host: fancymeme.com]
+    - https://fancymeme.com/templates/tuxedo-winnie-pooh [host: fancymeme.com]
+    - https://fancymeme.com/templates/unsettled-tom [host: fancymeme.com]
+    - https://fancymeme.com/templates/blank-nut-button [host: fancymeme.com]
+    - https://fancymeme.com/templates/boardroom-meeting [host: fancymeme.com]
+    - https://fancymeme.com/templates/one-does-not-simply [host: fancymeme.com]
+    - https://fancymeme.com/templates/surprised-pikachu [host: fancymeme.com]
+    - https://fancymeme.com/templates/roll-safe [host: fancymeme.com]
+    - https://fancymeme.com/templates/who-killed-hannibal [host: fancymeme.com]
+    - https://fancymeme.com/templates/scroll-of-truth [host: fancymeme.com]
+    - https://fancymeme.com/templates/waiting-skeleton [host: fancymeme.com]
+    - https://fancymeme.com/templates/hard-to-swallow-pills [host: fancymeme.com]
+    - https://fancymeme.com/templates/trump-bill-signing [host: fancymeme.com]
+    - https://fancymeme.com/templates/the-rock-driving [host: fancymeme.com]
+    - https://fancymeme.com/templates/disaster-girl [host: fancymeme.com]
+    - https://fancymeme.com/templates/bernie-asking [host: fancymeme.com]
+    - https://fancymeme.com/templates/monkey-puppet [host: fancymeme.com]
+    - https://fancymeme.com/templates/spongebob-imma-head-out [host: fancymeme.com]
+    - https://fancymeme.com/templates/x-x-everywhere [host: fancymeme.com]
+    - https://fancymeme.com/templates/yall-got-any-more [host: fancymeme.com]
+    - https://fancymeme.com/templates/futurama-fry [host: fancymeme.com]
+    - https://fancymeme.com/templates/ancient-aliens [host: fancymeme.com]
+    - https://fancymeme.com/templates/oprah-you-get-a-car [host: fancymeme.com]
+    - https://fancymeme.com/templates/finding-neverland [host: fancymeme.com]
+    - https://fancymeme.com/templates/third-world-skeptical-kid [host: fancymeme.com]
+    - https://fancymeme.com/templates/that-would-be-great [host: fancymeme.com]
+    - https://fancymeme.com/templates/dont-you-squidward [host: fancymeme.com]
+    - https://fancymeme.com/templates/sad-pablo-escobar [host: fancymeme.com]
+    - https://fancymeme.com/templates/doge [host: fancymeme.com]
+    - https://fancymeme.com/templates/marked-safe-from [host: fancymeme.com]
+    - https://fancymeme.com/templates/star-wars-yoda [host: fancymeme.com]
+    - https://fancymeme.com/templates/third-world-success-kid [host: fancymeme.com]
+    - https://fancymeme.com/templates/evil-kermit [host: fancymeme.com]
+    - https://fancymeme.com/templates/panik-kalm-panik [host: fancymeme.com]
+    - https://fancymeme.com/templates/this-is-fine [host: fancymeme.com]
+    - https://fancymeme.com/templates/sleeping-shaq [host: fancymeme.com]
+    - https://fancymeme.com/templates/theyre-the-same-picture [host: fancymeme.com]
+    - https://fancymeme.com/templates/success-kid [host: fancymeme.com]
+    - https://fancymeme.com/templates/grumpy-cat [host: fancymeme.com]
+    - https://fancymeme.com/templates/bad-luck-brian [host: fancymeme.com]
+    - https://fancymeme.com/templates/first-world-problems [host: fancymeme.com]
+    - https://fancymeme.com/templates/sweating-jordan-peele [host: fancymeme.com]
+    - https://fancymeme.com/templates/vince-mcmahon-reaction [host: fancymeme.com]
+    - https://fancymeme.com/templates/disappointed-black-guy [host: fancymeme.com]
+    - https://fancymeme.com/templates/all [host: fancymeme.com]
+    - https://fancymeme.com/templates/popular [host: fancymeme.com]
+    - https://fancymeme.com/templates/classic [host: fancymeme.com]
+    - https://fancymeme.com/templates/reaction [host: fancymeme.com]
+    - https://fancymeme.com/templates/comparison [host: fancymeme.com]
+    - https://fancymeme.com/zh [host: fancymeme.com]
+    - https://fancymeme.com/zh/pricing [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates [host: fancymeme.com]
+    - https://fancymeme.com/zh/meme-generator [host: fancymeme.com]
+    - https://fancymeme.com/zh/meme-editor [host: fancymeme.com]
+    - https://fancymeme.com/zh/blog [host: fancymeme.com]
+    - https://fancymeme.com/zh/showcases [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/drake-hotline-bling [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/distracted-boyfriend [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/two-buttons [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/change-my-mind [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/expanding-brain [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/batman-slapping-robin [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/uno-draw-25 [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/running-away-balloon [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/mocking-spongebob [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/left-exit-12 [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/is-this-a-pigeon [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/inhaling-seagull [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/woman-yelling-at-cat [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/american-chopper [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/epic-handshake [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/hide-the-pain-harold [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/tuxedo-winnie-pooh [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/unsettled-tom [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/blank-nut-button [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/boardroom-meeting [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/one-does-not-simply [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/surprised-pikachu [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/roll-safe [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/who-killed-hannibal [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/scroll-of-truth [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/waiting-skeleton [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/hard-to-swallow-pills [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/trump-bill-signing [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/the-rock-driving [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/disaster-girl [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/bernie-asking [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/monkey-puppet [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/spongebob-imma-head-out [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/x-x-everywhere [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/yall-got-any-more [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/futurama-fry [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/ancient-aliens [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/oprah-you-get-a-car [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/finding-neverland [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/third-world-skeptical-kid [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/that-would-be-great [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/dont-you-squidward [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/sad-pablo-escobar [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/doge [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/marked-safe-from [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/star-wars-yoda [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/third-world-success-kid [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/evil-kermit [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/panik-kalm-panik [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/this-is-fine [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/sleeping-shaq [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/theyre-the-same-picture [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/success-kid [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/grumpy-cat [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/bad-luck-brian [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/first-world-problems [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/sweating-jordan-peele [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/vince-mcmahon-reaction [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/disappointed-black-guy [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/all [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/popular [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/classic [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/reaction [host: fancymeme.com]
+    - https://fancymeme.com/zh/templates/comparison [host: fancymeme.com]
+  </rule>
+  <rule id="crawl/sitemap-coverage" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/crawl/sitemap-coverage">
+   66 indexable page(s) not in sitemap (100%); 221 sitemap URL(s) were not crawled
+   Items (287):
+    - /
+    - /pricing
+    - /meme-generator
+    - /templates
+    - /meme-editor
+    - /privacy
+    - /terms
+    - /meme-editor/drake-hotline-bling
+    - /meme-editor/distracted-boyfriend
+    - /meme-editor/two-buttons
+    - /meme-editor/change-my-mind
+    - /meme-editor/expanding-brain
+    - /meme-editor/batman-slapping-robin
+    - /meme-editor/uno-draw-25
+    - /meme-editor/running-away-balloon
+    - /meme-editor/mocking-spongebob
+    - /meme-editor/left-exit-12
+    - /meme-editor/is-this-a-pigeon
+    - /meme-editor/inhaling-seagull
+    - /meme-editor/woman-yelling-at-cat
+    - /meme-editor/american-chopper
+    - /meme-editor/epic-handshake
+    - /meme-editor/hide-the-pain-harold
+    - /meme-editor/tuxedo-winnie-pooh
+    - /meme-editor/unsettled-tom
+    - /meme-editor/blank-nut-button
+    - /meme-editor/boardroom-meeting
+    - /meme-editor/one-does-not-simply
+    - /meme-editor/surprised-pikachu
+    - /meme-editor/roll-safe
+    - /meme-editor/who-killed-hannibal
+    - /meme-editor/scroll-of-truth
+    - /meme-editor/waiting-skeleton
+    - /meme-editor/hard-to-swallow-pills
+    - /meme-editor/trump-bill-signing
+    - /meme-editor/the-rock-driving
+    - /meme-editor/disaster-girl
+    - /meme-editor/bernie-asking
+    - /meme-editor/monkey-puppet
+    - /meme-editor/spongebob-imma-head-out
+    - /meme-editor/x-x-everywhere
+    - /meme-editor/yall-got-any-more
+    - /meme-editor/futurama-fry
+    - /meme-editor/ancient-aliens
+    - /meme-editor/oprah-you-get-a-car
+    - /meme-editor/finding-neverland
+    - /meme-editor/third-world-skeptical-kid
+    - /meme-editor/that-would-be-great
+    - /meme-editor/dont-you-squidward
+    - /meme-editor/sad-pablo-escobar
+    - /meme-editor/doge
+    - /meme-editor/marked-safe-from
+    - /meme-editor/star-wars-yoda
+    - /meme-editor/third-world-success-kid
+    - /meme-editor/evil-kermit
+    - /meme-editor/panik-kalm-panik
+    - /meme-editor/this-is-fine
+    - /meme-editor/sleeping-shaq
+    - /meme-editor/theyre-the-same-picture
+    - /meme-editor/success-kid
+    - /meme-editor/grumpy-cat
+    - /meme-editor/bad-luck-brian
+    - /meme-editor/first-world-problems
+    - /meme-editor/sweating-jordan-peele
+    - /meme-editor/vince-mcmahon-reaction
+    - /meme-editor/disappointed-black-guy
+    - http://localhost:3000
+    - http://localhost:3000/create/jigsaw-puzzle
+    - http://localhost:3000/jigsaw-puzzle-generator
+    - http://localhost:3000/printable-jigsaw-puzzle
+    - http://localhost:3000/puzzles
+    - http://localhost:3000/contact
+    - http://localhost:3000/about
+    - http://localhost:3000/privacy
+    - http://localhost:3000/terms
+    - http://localhost:3000/blog
+    - http://localhost:3000/help
+    - http://localhost:3000/zh
+    - http://localhost:3000/zh/create/jigsaw-puzzle
+    - http://localhost:3000/zh/jigsaw-puzzle-generator
+    - http://localhost:3000/zh/printable-jigsaw-puzzle
+    - http://localhost:3000/zh/puzzles
+    - http://localhost:3000/zh/contact
+    - http://localhost:3000/zh/about
+    - http://localhost:3000/zh/privacy
+    - http://localhost:3000/zh/terms
+    - http://localhost:3000/zh/blog
+    - http://localhost:3000/zh/help
+    - http://localhost:3000/blog/best-photo-types-for-jigsaw-puzzles
+    - http://localhost:3000/blog/branded-jigsaw-puzzles-marketing
+    - http://localhost:3000/blog/classroom-puzzle-stations-activities
+    - http://localhost:3000/blog/create-printable-jigsaw-puzzle-pdf
+    - http://localhost:3000/blog/custom-puzzles-as-unique-gifts
+    - http://localhost:3000/blog/history-of-jigsaw-puzzles
+    - http://localhost:3000/blog/how-to-create-1000-piece-jigsaw-puzzle
+    - http://localhost:3000/blog/how-to-host-virtual-puzzle-party
+    - http://localhost:3000/blog/how-to-make-your-own-jigsaw-puzzle-online
+    - http://localhost:3000/blog/jigsaw-puzzle-difficulty-guide
+    - http://localhost:3000/blog/jigsaw-puzzles-for-kids-educational-benefits
+    - http://localhost:3000/blog/jigsaw-puzzles-mental-health-benefits
+    - http://localhost:3000/blog/mobile-photo-to-jigsaw-puzzle
+    - http://localhost:3000/blog/printable-jigsaw-puzzle-dpi-paper-guide
+    - http://localhost:3000/blog/puzzle-piece-shapes-grid-voronoi
+    - http://localhost:3000/blog/puzzle-storage-organization-tips
+    - http://localhost:3000/blog/svg-puzzle-laser-cutting-setup
+    - http://localhost:3000/blog/tips-for-solving-jigsaw-puzzles-faster
+    - http://localhost:3000/blog/turn-photo-into-jigsaw-puzzle-online
+    - http://localhost:3000/zh/blog/best-photo-types-for-jigsaw-puzzles
+    - http://localhost:3000/zh/blog/branded-jigsaw-puzzles-marketing
+    - http://localhost:3000/zh/blog/classroom-puzzle-stations-activities
+    - http://localhost:3000/zh/blog/create-printable-jigsaw-puzzle-pdf
+    - http://localhost:3000/zh/blog/custom-puzzles-as-unique-gifts
+    - http://localhost:3000/zh/blog/history-of-jigsaw-puzzles
+    - http://localhost:3000/zh/blog/how-to-create-1000-piece-jigsaw-puzzle
+    - http://localhost:3000/zh/blog/how-to-host-virtual-puzzle-party
+    - http://localhost:3000/zh/blog/how-to-make-your-own-jigsaw-puzzle-online
+    - http://localhost:3000/zh/blog/jigsaw-puzzle-difficulty-guide
+    - http://localhost:3000/zh/blog/jigsaw-puzzles-for-kids-educational-benefits
+    - http://localhost:3000/zh/blog/jigsaw-puzzles-mental-health-benefits
+    - http://localhost:3000/zh/blog/mobile-photo-to-jigsaw-puzzle
+    - http://localhost:3000/zh/blog/printable-jigsaw-puzzle-dpi-paper-guide
+    - http://localhost:3000/zh/blog/puzzle-piece-shapes-grid-voronoi
+    - http://localhost:3000/zh/blog/puzzle-storage-organization-tips
+    - http://localhost:3000/zh/blog/svg-puzzle-laser-cutting-setup
+    - http://localhost:3000/zh/blog/tips-for-solving-jigsaw-puzzles-faster
+    - http://localhost:3000/zh/blog/turn-photo-into-jigsaw-puzzle-online
+    - http://localhost:3000/jigsaw-puzzle/take-my-puzzle-mlksqtw8
+    - http://localhost:3000/jigsaw-puzzle/jimeng-2025-07-16-8641-jigsaw--ys39igc0
+    - http://localhost:3000/jigsaw-puzzle/my-car-list-9r9efmc6
+    - http://localhost:3000/jigsaw-puzzle/new-puzzle-t1lqvkea
+    - http://localhost:3000/jigsaw-puzzle/5-a-dogs-jigsaw-puzzle-7w2bbf0f
+    - http://localhost:3000/help/classroom-puzzle-sharing-workflow-jigsawify
+    - http://localhost:3000/help/create-puzzle-from-clipboard-jigsawify
+    - http://localhost:3000/help/fix-slow-jigsaw-puzzle-performance-jigsawify
+    - http://localhost:3000/help/printable-puzzle-pdf-workflow-jigsawify
+    - http://localhost:3000/help/svg-export-laser-cnc-checklist-jigsawify
+    - http://localhost:3000/help/troubleshoot-image-upload-failed-jigsawify
+    - http://localhost:3000/help/where-is-share-button-jigsawify
+    - http://localhost:3000/zh/help/classroom-puzzle-sharing-workflow-jigsawify
+    - http://localhost:3000/zh/help/create-puzzle-from-clipboard-jigsawify
+    - http://localhost:3000/zh/help/fix-slow-jigsaw-puzzle-performance-jigsawify
+    - http://localhost:3000/zh/help/printable-puzzle-pdf-workflow-jigsawify
+    - http://localhost:3000/zh/help/svg-export-laser-cnc-checklist-jigsawify
+    - http://localhost:3000/zh/help/troubleshoot-image-upload-failed-jigsawify
+    - http://localhost:3000/zh/help/where-is-share-button-jigsawify
+    - https://fancymeme.com/
+    - https://fancymeme.com/pricing
+    - https://fancymeme.com/templates
+    - https://fancymeme.com/meme-generator
+    - https://fancymeme.com/meme-editor
+    - https://fancymeme.com/blog
+    - https://fancymeme.com/showcases
+    - https://fancymeme.com/templates/drake-hotline-bling
+    - https://fancymeme.com/templates/distracted-boyfriend
+    - https://fancymeme.com/templates/two-buttons
+    - https://fancymeme.com/templates/change-my-mind
+    - https://fancymeme.com/templates/expanding-brain
+    - https://fancymeme.com/templates/batman-slapping-robin
+    - https://fancymeme.com/templates/uno-draw-25
+    - https://fancymeme.com/templates/running-away-balloon
+    - https://fancymeme.com/templates/mocking-spongebob
+    - https://fancymeme.com/templates/left-exit-12
+    - https://fancymeme.com/templates/is-this-a-pigeon
+    - https://fancymeme.com/templates/inhaling-seagull
+    - https://fancymeme.com/templates/woman-yelling-at-cat
+    - https://fancymeme.com/templates/american-chopper
+    - https://fancymeme.com/templates/epic-handshake
+    - https://fancymeme.com/templates/hide-the-pain-harold
+    - https://fancymeme.com/templates/tuxedo-winnie-pooh
+    - https://fancymeme.com/templates/unsettled-tom
+    - https://fancymeme.com/templates/blank-nut-button
+    - https://fancymeme.com/templates/boardroom-meeting
+    - https://fancymeme.com/templates/one-does-not-simply
+    - https://fancymeme.com/templates/surprised-pikachu
+    - https://fancymeme.com/templates/roll-safe
+    - https://fancymeme.com/templates/who-killed-hannibal
+    - https://fancymeme.com/templates/scroll-of-truth
+    - https://fancymeme.com/templates/waiting-skeleton
+    - https://fancymeme.com/templates/hard-to-swallow-pills
+    - https://fancymeme.com/templates/trump-bill-signing
+    - https://fancymeme.com/templates/the-rock-driving
+    - https://fancymeme.com/templates/disaster-girl
+    - https://fancymeme.com/templates/bernie-asking
+    - https://fancymeme.com/templates/monkey-puppet
+    - https://fancymeme.com/templates/spongebob-imma-head-out
+    - https://fancymeme.com/templates/x-x-everywhere
+    - https://fancymeme.com/templates/yall-got-any-more
+    - https://fancymeme.com/templates/futurama-fry
+    - https://fancymeme.com/templates/ancient-aliens
+    - https://fancymeme.com/templates/oprah-you-get-a-car
+    - https://fancymeme.com/templates/finding-neverland
+    - https://fancymeme.com/templates/third-world-skeptical-kid
+    - https://fancymeme.com/templates/that-would-be-great
+    - https://fancymeme.com/templates/dont-you-squidward
+    - https://fancymeme.com/templates/sad-pablo-escobar
+    - https://fancymeme.com/templates/doge
+    - https://fancymeme.com/templates/marked-safe-from
+    - https://fancymeme.com/templates/star-wars-yoda
+    - https://fancymeme.com/templates/third-world-success-kid
+    - https://fancymeme.com/templates/evil-kermit
+    - https://fancymeme.com/templates/panik-kalm-panik
+    - https://fancymeme.com/templates/this-is-fine
+    - https://fancymeme.com/templates/sleeping-shaq
+    - https://fancymeme.com/templates/theyre-the-same-picture
+    - https://fancymeme.com/templates/success-kid
+    - https://fancymeme.com/templates/grumpy-cat
+    - https://fancymeme.com/templates/bad-luck-brian
+    - https://fancymeme.com/templates/first-world-problems
+    - https://fancymeme.com/templates/sweating-jordan-peele
+    - https://fancymeme.com/templates/vince-mcmahon-reaction
+    - https://fancymeme.com/templates/disappointed-black-guy
+    - https://fancymeme.com/templates/all
+    - https://fancymeme.com/templates/popular
+    - https://fancymeme.com/templates/classic
+    - https://fancymeme.com/templates/reaction
+    - https://fancymeme.com/templates/comparison
+    - https://fancymeme.com/zh
+    - https://fancymeme.com/zh/pricing
+    - https://fancymeme.com/zh/templates
+    - https://fancymeme.com/zh/meme-generator
+    - https://fancymeme.com/zh/meme-editor
+    - https://fancymeme.com/zh/blog
+    - https://fancymeme.com/zh/showcases
+    - https://fancymeme.com/zh/templates/drake-hotline-bling
+    - https://fancymeme.com/zh/templates/distracted-boyfriend
+    - https://fancymeme.com/zh/templates/two-buttons
+    - https://fancymeme.com/zh/templates/change-my-mind
+    - https://fancymeme.com/zh/templates/expanding-brain
+    - https://fancymeme.com/zh/templates/batman-slapping-robin
+    - https://fancymeme.com/zh/templates/uno-draw-25
+    - https://fancymeme.com/zh/templates/running-away-balloon
+    - https://fancymeme.com/zh/templates/mocking-spongebob
+    - https://fancymeme.com/zh/templates/left-exit-12
+    - https://fancymeme.com/zh/templates/is-this-a-pigeon
+    - https://fancymeme.com/zh/templates/inhaling-seagull
+    - https://fancymeme.com/zh/templates/woman-yelling-at-cat
+    - https://fancymeme.com/zh/templates/american-chopper
+    - https://fancymeme.com/zh/templates/epic-handshake
+    - https://fancymeme.com/zh/templates/hide-the-pain-harold
+    - https://fancymeme.com/zh/templates/tuxedo-winnie-pooh
+    - https://fancymeme.com/zh/templates/unsettled-tom
+    - https://fancymeme.com/zh/templates/blank-nut-button
+    - https://fancymeme.com/zh/templates/boardroom-meeting
+    - https://fancymeme.com/zh/templates/one-does-not-simply
+    - https://fancymeme.com/zh/templates/surprised-pikachu
+    - https://fancymeme.com/zh/templates/roll-safe
+    - https://fancymeme.com/zh/templates/who-killed-hannibal
+    - https://fancymeme.com/zh/templates/scroll-of-truth
+    - https://fancymeme.com/zh/templates/waiting-skeleton
+    - https://fancymeme.com/zh/templates/hard-to-swallow-pills
+    - https://fancymeme.com/zh/templates/trump-bill-signing
+    - https://fancymeme.com/zh/templates/the-rock-driving
+    - https://fancymeme.com/zh/templates/disaster-girl
+    - https://fancymeme.com/zh/templates/bernie-asking
+    - https://fancymeme.com/zh/templates/monkey-puppet
+    - https://fancymeme.com/zh/templates/spongebob-imma-head-out
+    - https://fancymeme.com/zh/templates/x-x-everywhere
+    - https://fancymeme.com/zh/templates/yall-got-any-more
+    - https://fancymeme.com/zh/templates/futurama-fry
+    - https://fancymeme.com/zh/templates/ancient-aliens
+    - https://fancymeme.com/zh/templates/oprah-you-get-a-car
+    - https://fancymeme.com/zh/templates/finding-neverland
+    - https://fancymeme.com/zh/templates/third-world-skeptical-kid
+    - https://fancymeme.com/zh/templates/that-would-be-great
+    - https://fancymeme.com/zh/templates/dont-you-squidward
+    - https://fancymeme.com/zh/templates/sad-pablo-escobar
+    - https://fancymeme.com/zh/templates/doge
+    - https://fancymeme.com/zh/templates/marked-safe-from
+    - https://fancymeme.com/zh/templates/star-wars-yoda
+    - https://fancymeme.com/zh/templates/third-world-success-kid
+    - https://fancymeme.com/zh/templates/evil-kermit
+    - https://fancymeme.com/zh/templates/panik-kalm-panik
+    - https://fancymeme.com/zh/templates/this-is-fine
+    - https://fancymeme.com/zh/templates/sleeping-shaq
+    - https://fancymeme.com/zh/templates/theyre-the-same-picture
+    - https://fancymeme.com/zh/templates/success-kid
+    - https://fancymeme.com/zh/templates/grumpy-cat
+    - https://fancymeme.com/zh/templates/bad-luck-brian
+    - https://fancymeme.com/zh/templates/first-world-problems
+    - https://fancymeme.com/zh/templates/sweating-jordan-peele
+    - https://fancymeme.com/zh/templates/vince-mcmahon-reaction
+    - https://fancymeme.com/zh/templates/disappointed-black-guy
+    - https://fancymeme.com/zh/templates/all
+    - https://fancymeme.com/zh/templates/popular
+    - https://fancymeme.com/zh/templates/classic
+    - https://fancymeme.com/zh/templates/reaction
+    - https://fancymeme.com/zh/templates/comparison
+  </rule>
+ </category>
+ <category name="Core SEO" errors="60" warnings="87">
+  <rule id="core/meta-title" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-title">
+   Title too short (19 chars, min 30); Title too long (62 chars, max 60); Title too short (14 chars, min 30); Title too short (11 chars, min 30); Title too short (16 chars, min 30); Title too short (25 chars, min 30); Title too short (28 chars, min 30); Title too short (29 chars, min 30); Title too short (27 chars, min 30); Title too short (18 chars, min 30); Title too short (26 chars, min 30); Title too short (24 chars, min 30)
+   Pages (23): /pricing, /meme-generator, /templates, /privacy, /meme-editor, /terms, /meme-editor/two-buttons, /meme-editor/evil-kermit, /meme-editor/success-kid, /meme-editor/change-my-mind, /meme-editor/epic-handshake, /meme-editor/ancient-aliens, /meme-editor/star-wars-yoda, /meme-editor/bad-luck-brian, /meme-editor/expanding-brain, /meme-editor/x-x-everywhere, /meme-editor/unsettled-tom, /meme-editor/disaster-girl, /meme-editor/monkey-puppet, /meme-editor/sleeping-shaq, /meme-editor/doge, /meme-editor/this-is-fine, /meme-editor/grumpy-cat
+  </rule>
+  <rule id="core/h1" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/core/h1">
+   No H1 tag found
+   Pages (60): /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+  </rule>
+  <rule id="core/meta-description" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-description">
+   Description too short (73 chars, min 120); Description too short (117 chars, min 120); Description too short (47 chars, min 120); Description too short (28 chars, min 120); Description too short (30 chars, min 120); Description too short (68 chars, min 120); Description too short (69 chars, min 120); Description too short (60 chars, min 120); Description too short (63 chars, min 120); Description too short (64 chars, min 120); Description too short (70 chars, min 120); Description too short (66 chars, min 120); Description too short (65 chars, min 120); Description too short (74 chars, min 120); Description too short (71 chars, min 120); Description too short (62 chars, min 120); Description too short (77 chars, min 120); Description too short (67 chars, min 120); Description too short (78 chars, min 120); Description too short (75 chars, min 120); Description too short (53 chars, min 120); Description too short (72 chars, min 120); Description too short (61 chars, min 120); Description too short (59 chars, min 120)
+   Pages (64): /pricing, /meme-editor/roll-safe, /meme-editor/theyre-the-same-picture, /templates, /meme-editor, /privacy, /terms, /meme-editor/drake-hotline-bling, /meme-editor/one-does-not-simply, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/oprah-you-get-a-car, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/distracted-boyfriend, /meme-editor/running-away-balloon, /meme-editor/woman-yelling-at-cat, /meme-editor/hide-the-pain-harold, /meme-editor/first-world-problems, /meme-editor/two-buttons, /meme-editor/evil-kermit, /meme-editor/success-kid, /meme-editor/change-my-mind, /meme-editor/epic-handshake, /meme-editor/ancient-aliens, /meme-editor/star-wars-yoda, /meme-editor/bad-luck-brian, /meme-editor/expanding-brain, /meme-editor/x-x-everywhere, /meme-editor/batman-slapping-robin, /meme-editor/left-exit-12, /meme-editor/hard-to-swallow-pills, /meme-editor/yall-got-any-more, /meme-editor/sweating-jordan-peele, /meme-editor/uno-draw-25, /meme-editor/mocking-spongebob, /meme-editor/is-this-a-pigeon, /meme-editor/surprised-pikachu, /meme-editor/finding-neverland, /meme-editor/sad-pablo-escobar, /meme-editor/inhaling-seagull, /meme-editor/blank-nut-button, /meme-editor/waiting-skeleton, /meme-editor/the-rock-driving, /meme-editor/marked-safe-from, /meme-editor/panik-kalm-panik, /meme-editor/american-chopper, /meme-editor/third-world-skeptical-kid, /meme-editor/tuxedo-winnie-pooh, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy, /meme-editor/unsettled-tom, /meme-editor/disaster-girl, /meme-editor/monkey-puppet, /meme-editor/sleeping-shaq, /meme-editor/boardroom-meeting, /meme-editor/spongebob-imma-head-out, /meme-editor/trump-bill-signing, /meme-editor/bernie-asking, /meme-editor/futurama-fry, /meme-editor/doge, /meme-editor/third-world-success-kid, /meme-editor/this-is-fine, /meme-editor/grumpy-cat
+  </rule>
+ </category>
+ <category name="Security" errors="66" warnings="2">
+  <rule id="security/https" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/security/https">
+   Page not served over HTTPS
+   Pages (66): /, /pricing, /meme-generator, /templates, /meme-editor, /privacy, /terms, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+  </rule>
+  <rule id="security/csp" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/csp">
+   No Content-Security-Policy header
+  </rule>
+  <rule id="security/x-frame-options" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/x-frame-options">
+   No clickjacking protection
+  </rule>
+ </category>
+ <category name="Links" errors="0" warnings="9">
+  <rule id="links/orphan-pages" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/orphan-pages">
+   59 orphan page(s) with &lt;2 incoming links
+   Items (59):
+    - /meme-editor/drake-hotline-bling
+    - /meme-editor/distracted-boyfriend
+    - /meme-editor/two-buttons
+    - /meme-editor/change-my-mind
+    - /meme-editor/expanding-brain
+    - /meme-editor/batman-slapping-robin
+    - /meme-editor/uno-draw-25
+    - /meme-editor/running-away-balloon
+    - /meme-editor/mocking-spongebob
+    - /meme-editor/left-exit-12
+    - /meme-editor/is-this-a-pigeon
+    - /meme-editor/inhaling-seagull
+    - /meme-editor/woman-yelling-at-cat
+    - /meme-editor/american-chopper
+    - /meme-editor/epic-handshake
+    - /meme-editor/hide-the-pain-harold
+    - /meme-editor/tuxedo-winnie-pooh
+    - /meme-editor/unsettled-tom
+    - /meme-editor/blank-nut-button
+    - /meme-editor/boardroom-meeting
+    - /meme-editor/one-does-not-simply
+    - /meme-editor/surprised-pikachu
+    - /meme-editor/roll-safe
+    - /meme-editor/who-killed-hannibal
+    - /meme-editor/scroll-of-truth
+    - /meme-editor/waiting-skeleton
+    - /meme-editor/hard-to-swallow-pills
+    - /meme-editor/trump-bill-signing
+    - /meme-editor/the-rock-driving
+    - /meme-editor/disaster-girl
+    - /meme-editor/bernie-asking
+    - /meme-editor/monkey-puppet
+    - /meme-editor/spongebob-imma-head-out
+    - /meme-editor/x-x-everywhere
+    - /meme-editor/yall-got-any-more
+    - /meme-editor/futurama-fry
+    - /meme-editor/ancient-aliens
+    - /meme-editor/oprah-you-get-a-car
+    - /meme-editor/finding-neverland
+    - /meme-editor/third-world-skeptical-kid
+    - /meme-editor/that-would-be-great
+    - /meme-editor/dont-you-squidward
+    - /meme-editor/sad-pablo-escobar
+    - /meme-editor/doge
+    - /meme-editor/marked-safe-from
+    - /meme-editor/star-wars-yoda
+    - /meme-editor/third-world-success-kid
+    - /meme-editor/evil-kermit
+    - /meme-editor/panik-kalm-panik
+    - /meme-editor/this-is-fine
+    - /meme-editor/sleeping-shaq
+    - /meme-editor/theyre-the-same-picture
+    - /meme-editor/success-kid
+    - /meme-editor/grumpy-cat
+    - /meme-editor/bad-luck-brian
+    - /meme-editor/first-world-problems
+    - /meme-editor/sweating-jordan-peele
+    - /meme-editor/vince-mcmahon-reaction
+    - /meme-editor/disappointed-black-guy
+  </rule>
+  <rule id="links/anchor-text" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/anchor-text">
+   1 link(s) have empty anchor text
+   Pages (6): /, /pricing, /meme-generator, /templates, /privacy, /terms
+   Items (1):
+    - mailto:support@fancymeme.com
+  </rule>
+  <rule id="links/internal-links" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/internal-links">
+   Too many internal links (187, max 100)
+   Pages (1): /templates
+  </rule>
+  <rule id="links/weak-internal-links" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/links/weak-internal-links">
+   59 page(s) have only 1 internal link
+   Items (59):
+    - /meme-editor/drake-hotline-bling
+    - /meme-editor/distracted-boyfriend
+    - /meme-editor/two-buttons
+    - /meme-editor/change-my-mind
+    - /meme-editor/expanding-brain
+    - /meme-editor/batman-slapping-robin
+    - /meme-editor/uno-draw-25
+    - /meme-editor/running-away-balloon
+    - /meme-editor/mocking-spongebob
+    - /meme-editor/left-exit-12
+    - /meme-editor/is-this-a-pigeon
+    - /meme-editor/inhaling-seagull
+    - /meme-editor/woman-yelling-at-cat
+    - /meme-editor/american-chopper
+    - /meme-editor/epic-handshake
+    - /meme-editor/hide-the-pain-harold
+    - /meme-editor/tuxedo-winnie-pooh
+    - /meme-editor/unsettled-tom
+    - /meme-editor/blank-nut-button
+    - /meme-editor/boardroom-meeting
+    - /meme-editor/one-does-not-simply
+    - /meme-editor/surprised-pikachu
+    - /meme-editor/roll-safe
+    - /meme-editor/who-killed-hannibal
+    - /meme-editor/scroll-of-truth
+    - /meme-editor/waiting-skeleton
+    - /meme-editor/hard-to-swallow-pills
+    - /meme-editor/trump-bill-signing
+    - /meme-editor/the-rock-driving
+    - /meme-editor/disaster-girl
+    - /meme-editor/bernie-asking
+    - /meme-editor/monkey-puppet
+    - /meme-editor/spongebob-imma-head-out
+    - /meme-editor/x-x-everywhere
+    - /meme-editor/yall-got-any-more
+    - /meme-editor/futurama-fry
+    - /meme-editor/ancient-aliens
+    - /meme-editor/oprah-you-get-a-car
+    - /meme-editor/finding-neverland
+    - /meme-editor/third-world-skeptical-kid
+    - /meme-editor/that-would-be-great
+    - /meme-editor/dont-you-squidward
+    - /meme-editor/sad-pablo-escobar
+    - /meme-editor/doge
+    - /meme-editor/marked-safe-from
+    - /meme-editor/star-wars-yoda
+    - /meme-editor/third-world-success-kid
+    - /meme-editor/evil-kermit
+    - /meme-editor/panik-kalm-panik
+    - /meme-editor/this-is-fine
+    - /meme-editor/sleeping-shaq
+    - /meme-editor/theyre-the-same-picture
+    - /meme-editor/success-kid
+    - /meme-editor/grumpy-cat
+    - /meme-editor/bad-luck-brian
+    - /meme-editor/first-world-problems
+    - /meme-editor/sweating-jordan-peele
+    - /meme-editor/vince-mcmahon-reaction
+    - /meme-editor/disappointed-black-guy
+  </rule>
+ </category>
+ <category name="Content" errors="66" warnings="67">
+  <rule id="content/meta-in-body" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/content/meta-in-body">
+   Found 15 meta tags in &lt;body&gt;
+   Pages (66): /, /pricing, /meme-generator, /templates, /meme-editor, /privacy, /terms, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+   Items (15):
+    - description (description=&quot;FancyMeme turns a short prompt into a share-ready ...&quot;) [content: FancyMeme turns a short prompt into a share-ready ...]
+    - keywords (keywords=&quot;FancyMeme, AI meme generator, meme maker, meme tem...&quot;) [content: FancyMeme, AI meme generator, meme maker, meme tem...]
+    - robots (robots=&quot;index, follow&quot;) [content: index, follow]
+    - og:title (og:title=&quot;FancyMeme — AI Meme Generator for Shareable Memes&quot;) [content: FancyMeme — AI Meme Generator for Shareable Memes]
+    - og:description (og:description=&quot;FancyMeme turns a short prompt into a share-ready ...&quot;) [content: FancyMeme turns a short prompt into a share-ready ...]
+    - og:url (og:url=&quot;http://localhost:3000/&quot;) [content: http://localhost:3000/]
+    - og:site_name (og:site_name=&quot;fancymeme App&quot;) [content: fancymeme App]
+    - og:locale (og:locale=&quot;en&quot;) [content: en]
+    - og:image (og:image=&quot;http://localhost:3000/preview.png&quot;) [content: http://localhost:3000/preview.png]
+    - og:type (og:type=&quot;website&quot;) [content: website]
+    - twitter:card (twitter:card=&quot;summary_large_image&quot;) [content: summary_large_image]
+    - twitter:site (twitter:site=&quot;http://localhost:3000&quot;) [content: http://localhost:3000]
+    - twitter:title (twitter:title=&quot;FancyMeme — AI Meme Generator for Shareable Memes&quot;) [content: FancyMeme — AI Meme Generator for Shareable Memes]
+    - twitter:description (twitter:description=&quot;FancyMeme turns a short prompt into a share-ready ...&quot;) [content: FancyMeme turns a short prompt into a share-ready ...]
+    - twitter:image (twitter:image=&quot;http://localhost:3000/preview.png&quot;) [content: http://localhost:3000/preview.png]
+  </rule>
+  <rule id="content/keyword-stuffing" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/keyword-stuffing">
+   1 word(s) may be overused; 2 word(s) may be overused
+   Pages (3): /, /meme-generator, /terms
+   Items (4):
+    - memes (&quot;memes&quot; (5.2%)) [count: 11, density: 5.238095238095238]
+    - meme (&quot;meme&quot; (5.7%)) [count: 6, density: 5.714285714285714]
+    - service (&quot;service&quot; (3.8%)) [count: 24, density: 3.767660910518053]
+    - fancymeme (&quot;fancymeme&quot; (3.1%)) [count: 20, density: 3.139717425431711]
+  </rule>
+  <rule id="content/word-count" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/word-count">
+   Thin content: 231 words (min 300); Thin content: 122 words (min 300); Thin content: 119 words (min 300); Thin content: 178 words (min 300); Thin content: 145 words (min 300); Thin content: 149 words (min 300); Thin content: 148 words (min 300); Thin content: 150 words (min 300); Thin content: 151 words (min 300); Thin content: 152 words (min 300); Thin content: 147 words (min 300)
+   Pages (64): /, /pricing, /meme-generator, /templates, /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/change-my-mind, /meme-editor/batman-slapping-robin, /meme-editor/running-away-balloon, /meme-editor/american-chopper, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/who-killed-hannibal, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/x-x-everywhere, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/expanding-brain, /meme-editor/mocking-spongebob, /meme-editor/inhaling-seagull, /meme-editor/epic-handshake, /meme-editor/unsettled-tom, /meme-editor/surprised-pikachu, /meme-editor/waiting-skeleton, /meme-editor/disaster-girl, /meme-editor/monkey-puppet, /meme-editor/ancient-aliens, /meme-editor/finding-neverland, /meme-editor/evil-kermit, /meme-editor/sleeping-shaq, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/uno-draw-25, /meme-editor/is-this-a-pigeon, /meme-editor/woman-yelling-at-cat, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/one-does-not-simply, /meme-editor/scroll-of-truth, /meme-editor/hard-to-swallow-pills, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/third-world-success-kid, /meme-editor/theyre-the-same-picture, /meme-editor/left-exit-12, /meme-editor/roll-safe, /meme-editor/spongebob-imma-head-out, /meme-editor/yall-got-any-more, /meme-editor/oprah-you-get-a-car, /meme-editor/bernie-asking, /meme-editor/futurama-fry, /meme-editor/doge
+  </rule>
+ </category>
+ <category name="Images" errors="6" warnings="70">
+  <rule id="images/image-file-size" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/images/image-file-size">
+   1 image(s) exceed 200.0 KB
+   Items (1):
+    - /_next/image?url=%2Fimgs%2Fbg%2Ftree.jpg&amp;w=3840&amp;q=70 [sizeBytes: 385970, size: 376.9 KB, status: 200, contentType: image/jpeg] (from: /, /meme-generator)
+  </rule>
+  <rule id="images/alt-text" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/images/alt-text">
+   2 image(s) missing alt text
+   Pages (6): /, /pricing, /meme-generator, /templates, /privacy, /terms
+   Items (2):
+    - /_next/image?url=%2Flogo.png&amp;w=256&amp;q=75
+    - /_next/image?url=%2Flogo.png&amp;w=2048&amp;q=75
+  </rule>
+  <rule id="images/responsive-size" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/responsive-size">
+   1 small image(s) may be serving oversized files
+   Pages (6): /, /pricing, /meme-generator, /templates, /privacy, /terms
+   Items (1):
+    - image (100x100, no srcset)
+  </rule>
+  <rule id="images/dimensions" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/dimensions">
+   1 image(s) missing width/height (causes CLS); 59 image(s) missing width/height (causes CLS)
+   Pages (63): /, /meme-generator, /templates, /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+  </rule>
+ </category>
+ <category name="Performance" errors="0" warnings="272">
+  <rule id="perf/css-file-size" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/perf/css-file-size">
+   2 CSS file(s) exceed 150.0 KB
+   Items (2):
+    - /_next/static/chunks/743f390aaf6af655.css [sizeBytes: 163455, size: 159.6 KB, status: 200, contentType: text/css; charset=UTF-8] (from: /, /pricing, /meme-generator, /templates, /meme-editor, /privacy, /terms, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy)
+    - /_next/static/chunks/6821ad574e053e84.css [sizeBytes: 167195, size: 163.3 KB, status: 200, contentType: text/css; charset=UTF-8] (from: /, /pricing, /meme-generator, /templates, /privacy, /terms)
+  </rule>
+  <rule id="perf/render-blocking" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/render-blocking">
+   5 render-blocking resources
+   Pages (6): /, /pricing, /meme-generator, /templates, /privacy, /terms
+   Items (5):
+    - /_next/static/chunks/743f390aaf6af655.css
+    - /_next/static/chunks/32f6ff94a39072e8.css
+    - /_next/static/chunks/09e2479264a917ad.css
+    - /_next/static/chunks/6821ad574e053e84.css
+    - /_next/static/chunks/a6dad97d9634a72d.js
+  </rule>
+  <rule id="perf/total-byte-weight" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/total-byte-weight">
+   Total tracked resources: 2726KB (heavy page)
+  </rule>
+  <rule id="perf/critical-request-chains" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/critical-request-chains">
+   5 critical request chain(s) found; 3 critical request chain(s) found
+   Pages (66): /, /pricing, /meme-generator, /templates, /privacy, /terms, /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+   Items (8):
+    - CSS: /_next/static/chunks/743f390aaf6af655.css
+    - CSS: /_next/static/chunks/32f6ff94a39072e8.css
+    - CSS: /_next/static/chunks/09e2479264a917ad.css
+    - CSS: /_next/static/chunks/6821ad574e053e84.css
+    - JS: /_next/static/chunks/a6dad97d9634a72d.js
+    - CSS: /_next/static/chunks/743f390aaf6af655.css
+    - CSS: /_next/static/chunks/32f6ff94a39072e8.css
+    - JS: /_next/static/chunks/a6dad97d9634a72d.js
+  </rule>
+  <rule id="perf/lazy-above-fold" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lazy-above-fold">
+   3 above-fold image(s) with lazy loading; 2 above-fold image(s) with lazy loading
+   Pages (66): /, /meme-generator, /templates, /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy, /pricing, /privacy, /terms
+   Items (8):
+    - /_next/image?url=%2Flogo.png&amp;w=256&amp;q=75
+    - /_next/image?url=%2Fimgs%2Fbg%2Ftree.jpg&amp;w=3840&amp;q=70
+    - /_next/image?url=%2Flogo.png&amp;w=2048&amp;q=75
+    - /imgs/templates/drake-hotline-bling.webp
+    - /imgs/templates/distracted-boyfriend.webp
+    - /imgs/templates/two-buttons.webp
+    - /_next/image?url=%2Flogo.png&amp;w=256&amp;q=75
+    - /_next/image?url=%2Flogo.png&amp;w=2048&amp;q=75
+  </rule>
+  <rule id="perf/cache-headers" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/cache-headers">
+   Cache-Control without max-age
+   Pages (66): /, /pricing, /meme-generator, /templates, /meme-editor, /privacy, /terms, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+  </rule>
+  <rule id="perf/http2" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/perf/http2">
+   HTTP/2 requires HTTPS
+   Pages (66): /, /pricing, /meme-generator, /templates, /meme-editor, /privacy, /terms, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+  </rule>
+ </category>
+ <category name="Social Media" errors="0" warnings="2">
+  <rule id="social/og-url-match" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/social/og-url-match">
+   og:url does not match canonical URL
+   Pages (2): /privacy, /terms
+  </rule>
+ </category>
+ <category name="Accessibility" errors="192" warnings="193">
+  <rule id="a11y/duplicate-id-aria" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/duplicate-id-aria">
+   Rule error: CSS is not defined
+   Pages (63): /, /pricing, /meme-generator, /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+  </rule>
+  <rule id="a11y/aria-input-field-name" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/aria-input-field-name">
+   1 input field(s) without accessible names
+   Pages (60): /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+   Items (1):
+    - input[type=&quot;file&quot;]
+  </rule>
+  <rule id="a11y/list-structure" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/list-structure">
+   1 list(s) with invalid child elements
+   Pages (6): /, /pricing, /meme-generator, /templates, /privacy, /terms
+   Items (1):
+    - ul.group
+  </rule>
+  <rule id="a11y/form-labels" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/form-labels">
+   1 form input(s) without labels; 2 form input(s) without labels
+   Pages (63): /, /meme-generator, /templates, /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+   Items (4):
+    - textarea
+    - input
+    - file
+    - input
+  </rule>
+  <rule id="a11y/color-contrast" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/color-contrast">
+   15 potential color contrast issue(s); 9 potential color contrast issue(s); 10 potential color contrast issue(s); 4 potential color contrast issue(s); 6 potential color contrast issue(s)
+   Pages (66): /, /meme-generator, /pricing, /templates, /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy, /privacy, /terms
+   Items (39):
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-8 mb-...&quot; may have low contrast
+    - div with class &quot;border h-10 items-center justi...&quot; may have low contrast
+    - textarea with class &quot;flex w-full rounded-md border ...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground flex ite...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-4 tex...&quot; may have low contrast
+    - svg with class &quot;lucide lucide-wand-sparkles te...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-6 md:...&quot; may have low contrast
+    - svg with class &quot;lucide lucide-chevron-down tex...&quot; may have low contrast
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mx-auto ...&quot; may have low contrast
+    - div with class &quot;border inline-flex h-10 items-...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground text-sm...&quot; may have low contrast
+    - span with class &quot;text-muted-foreground text-sm...&quot; may have low contrast
+    - span with class &quot;text-muted-foreground text-sm ...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-sm ...&quot; may have low contrast
+    - a with class &quot;text-muted-foreground hover:te...&quot; may have low contrast
+    - div with class &quot;h-px min-w-0 [background-image...&quot; may have low contrast
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mx-auto ...&quot; may have low contrast
+    - svg with class &quot;lucide lucide-search text-mute...&quot; may have low contrast
+    - input with class &quot;file:text-foreground placehold...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground mb-6 tex...&quot; may have low contrast
+    - button with class &quot;inline-flex items-center justi...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-sm ...&quot; may have low contrast
+    - a with class &quot;text-muted-foreground hover:te...&quot; may have low contrast
+    - div with class &quot;h-px min-w-0 [background-image...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground text-sm...&quot; may have low contrast
+    - div with class &quot;border inline-flex items-cente...&quot; may have low contrast
+    - svg with class &quot;lucide lucide-search text-mute...&quot; may have low contrast
+    - input with class &quot;file:text-foreground placehold...&quot; may have low contrast
+    - div with class &quot;flex flex-col items-center jus...&quot; may have low contrast
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground text-md ...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-sm ...&quot; may have low contrast
+    - a with class &quot;text-muted-foreground hover:te...&quot; may have low contrast
+    - div with class &quot;h-px min-w-0 [background-image...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground text-sm...&quot; may have low contrast
+  </rule>
+  <rule id="a11y/focus-visible" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/focus-visible">
+   outline:none found - ensure alternative focus styles exist
+   Pages (63): /, /pricing, /meme-generator, /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+  </rule>
+  <rule id="a11y/identical-links-same-purpose" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/identical-links-same-purpose">
+   2 link text(s) lead to different destinations; 1 link text(s) lead to different destinations
+   Pages (2): /templates, /terms
+   Items (3):
+    - &quot;edit&quot; → 59 different URLs
+    - &quot;details&quot; → 59 different URLs
+    - &quot;privacy policy&quot; → 2 different URLs
+  </rule>
+  <rule id="a11y/image-redundant-alt" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/image-redundant-alt">
+   44 image(s) with redundant alt text
+   Pages (61): /templates, /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+   Items (10):
+    - alt=&quot;Drake Hotline Bling&quot; matches filename
+    - alt=&quot;Distracted Boyfriend&quot; matches filename
+    - alt=&quot;Two Buttons&quot; matches filename
+    - alt=&quot;Change My Mind&quot; matches filename
+    - alt=&quot;Expanding Brain&quot; matches filename
+    - alt=&quot;Batman Slapping Robin&quot; matches filename
+    - alt=&quot;Running Away Balloon&quot; matches filename
+    - alt=&quot;Mocking Spongebob&quot; matches filename
+    - alt=&quot;Inhaling Seagull&quot; matches filename
+    - alt=&quot;Woman Yelling at Cat&quot; matches filename
+  </rule>
+  <rule id="a11y/link-text" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/link-text">
+   59 link(s) with generic text
+   Pages (1): /templates
+   Items (1):
+    - details
+  </rule>
+ </category>
+ <category name="E-E-A-T" errors="0" warnings="3">
+  <rule id="eeat/about-page" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/about-page">
+   No About page found
+  </rule>
+  <rule id="eeat/contact-page" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/contact-page">
+   No Contact page found
+  </rule>
+  <rule id="eeat/privacy-policy" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/eeat/privacy-policy">
+   Privacy policy only linked from 9% of pages
+  </rule>
+ </category>
+ <category name="Legal Compliance" errors="0" warnings="60">
+  <rule id="legal/privacy-policy" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/legal/privacy-policy">
+   No privacy policy link found
+   Pages (60): /meme-editor, /meme-editor/drake-hotline-bling, /meme-editor/distracted-boyfriend, /meme-editor/two-buttons, /meme-editor/change-my-mind, /meme-editor/expanding-brain, /meme-editor/batman-slapping-robin, /meme-editor/uno-draw-25, /meme-editor/running-away-balloon, /meme-editor/mocking-spongebob, /meme-editor/left-exit-12, /meme-editor/is-this-a-pigeon, /meme-editor/inhaling-seagull, /meme-editor/woman-yelling-at-cat, /meme-editor/american-chopper, /meme-editor/epic-handshake, /meme-editor/hide-the-pain-harold, /meme-editor/tuxedo-winnie-pooh, /meme-editor/unsettled-tom, /meme-editor/blank-nut-button, /meme-editor/boardroom-meeting, /meme-editor/one-does-not-simply, /meme-editor/surprised-pikachu, /meme-editor/roll-safe, /meme-editor/who-killed-hannibal, /meme-editor/scroll-of-truth, /meme-editor/waiting-skeleton, /meme-editor/hard-to-swallow-pills, /meme-editor/trump-bill-signing, /meme-editor/the-rock-driving, /meme-editor/disaster-girl, /meme-editor/bernie-asking, /meme-editor/monkey-puppet, /meme-editor/spongebob-imma-head-out, /meme-editor/x-x-everywhere, /meme-editor/yall-got-any-more, /meme-editor/futurama-fry, /meme-editor/ancient-aliens, /meme-editor/oprah-you-get-a-car, /meme-editor/finding-neverland, /meme-editor/third-world-skeptical-kid, /meme-editor/that-would-be-great, /meme-editor/dont-you-squidward, /meme-editor/sad-pablo-escobar, /meme-editor/doge, /meme-editor/marked-safe-from, /meme-editor/star-wars-yoda, /meme-editor/third-world-success-kid, /meme-editor/evil-kermit, /meme-editor/panik-kalm-panik, /meme-editor/this-is-fine, /meme-editor/sleeping-shaq, /meme-editor/theyre-the-same-picture, /meme-editor/success-kid, /meme-editor/grumpy-cat, /meme-editor/bad-luck-brian, /meme-editor/first-world-problems, /meme-editor/sweating-jordan-peele, /meme-editor/vince-mcmahon-reaction, /meme-editor/disappointed-black-guy
+  </rule>
+ </category>
+</issues>
+</audit>

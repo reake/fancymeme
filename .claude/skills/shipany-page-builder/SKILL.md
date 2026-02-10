@@ -1,13 +1,13 @@
 ---
-name: shipany-page-builder
+name: fancymeme-page-builder
 description: Create new dynamic pages from a short spec (keywords, route/path, reference content).
 ---
 
-# ShipAny Page Builder (Dynamic Pages)
+# fancymeme Page Builder (Dynamic Pages)
 
-This skill creates **new pages** using ShipAny’s **dynamic page builder** approach: a page is rendered from a JSON file (per-locale), and activated by registering that JSON path in `localeMessagesPaths`.
+This skill creates **new pages** using fancymeme’s **dynamic page builder** approach: a page is rendered from a JSON file (per-locale), and activated by registering that JSON path in `localeMessagesPaths`.
 
-This skill is intentionally **much simpler** than `shipany-quick-start`: it only creates new dynamic pages.
+This skill is intentionally **much simpler** than `fancymeme-quick-start`: it only creates new dynamic pages.
 
 ## v1 edit scope (hard limit)
 

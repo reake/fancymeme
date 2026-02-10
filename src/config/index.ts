@@ -5,14 +5,36 @@ import packageJson from '../../package.json';
 
 export type ConfigMap = Record<string, string>;
 
+const assetVersion =
+  process.env.NEXT_PUBLIC_ASSET_VERSION ||
+  process.env.VERCEL_GIT_COMMIT_SHA ||
+  process.env.CF_PAGES_COMMIT_SHA ||
+  packageJson.version;
+
+export function appendAssetVersion(url?: string | null): string {
+  if (!url) {
+    return '';
+  }
+
+  // Only version local static assets from /public to avoid mutating external URLs.
+  if (!url.startsWith('/') || /[?&]v=/.test(url) || !assetVersion) {
+    return url;
+  }
+
+  return `${url}${url.includes('?') ? '&' : '?'}v=${assetVersion}`;
+}
+
 export const envConfigs: ConfigMap = {
   app_url: process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000',
-  app_name: process.env.NEXT_PUBLIC_APP_NAME ?? 'ShipAny App',
+  app_name: process.env.NEXT_PUBLIC_APP_NAME ?? 'fancymeme App',
   app_description: process.env.NEXT_PUBLIC_APP_DESCRIPTION ?? '',
   app_logo: process.env.NEXT_PUBLIC_APP_LOGO ?? '/logo.png',
-  app_favicon: process.env.NEXT_PUBLIC_APP_FAVICON ?? '/favicon.ico',
-  app_preview_image:
-    process.env.NEXT_PUBLIC_APP_PREVIEW_IMAGE ?? '/preview.png',
+  app_favicon: appendAssetVersion(
+    process.env.NEXT_PUBLIC_APP_FAVICON ?? '/favicon.ico'
+  ),
+  app_preview_image: appendAssetVersion(
+    process.env.NEXT_PUBLIC_APP_PREVIEW_IMAGE ?? '/preview.png'
+  ),
   theme: process.env.NEXT_PUBLIC_THEME ?? 'default',
   appearance: process.env.NEXT_PUBLIC_APPEARANCE ?? 'system',
   locale: process.env.NEXT_PUBLIC_DEFAULT_LOCALE ?? 'en',

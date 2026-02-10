@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audit version="0.0.34">
+<site url="http://localhost:3000" crawled="15" date="2026-02-10T09:28:35.921Z"/>
+<score overall="47" grade="F">
+ <cat name="Accessibility" score="81"/>
+ <cat name="Images" score="76"/>
+ <cat name="Security" score="57"/>
+ <cat name="Performance" score="63"/>
+ <cat name="Structured Data" score="93"/>
+ <cat name="Core SEO" score="93"/>
+ <cat name="Content" score="92"/>
+ <cat name="Social Media" score="95"/>
+ <cat name="Crawlability" score="98"/>
+ <cat name="E-E-A-T" score="100"/>
+ <cat name="Internationalization" score="100"/>
+ <cat name="Legal Compliance" score="100"/>
+ <cat name="Links" score="100"/>
+ <cat name="Local SEO" score="100"/>
+ <cat name="Mobile" score="100"/>
+ <cat name="URL Structure" score="100"/>
+</score>
+<summary passed="1327" warnings="203" failed="85"/>
+<issues>
+ <category name="Crawlability" errors="0" warnings="2">
+  <rule id="crawl/canonical-chain" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/crawl/canonical-chain">
+   Page redirects before content is served
+   Pages (1): /
+   Items (1):
+    - / (http://localhost:3000 → http://localhost:3000/) [finalUrl: http://localhost:3000/, chain: [object Object]]
+  </rule>
+  <rule id="crawl/sitemap-coverage" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/crawl/sitemap-coverage">
+   64 sitemap URL(s) were not crawled
+   Items (64):
+    - /zh/create/jigsaw-puzzle
+    - /zh/contact
+    - /zh/about
+    - /zh/privacy
+    - /zh/terms
+    - /zh/blog
+    - /zh/help
+    - /blog/best-photo-types-for-jigsaw-puzzles
+    - /blog/branded-jigsaw-puzzles-marketing
+    - /blog/classroom-puzzle-stations-activities
+    - /blog/create-printable-jigsaw-puzzle-pdf
+    - /blog/custom-puzzles-as-unique-gifts
+    - /blog/history-of-jigsaw-puzzles
+    - /blog/how-to-create-1000-piece-jigsaw-puzzle
+    - /blog/how-to-host-virtual-puzzle-party
+    - /blog/how-to-make-your-own-jigsaw-puzzle-online
+    - /blog/jigsaw-puzzle-difficulty-guide
+    - /blog/jigsaw-puzzles-for-kids-educational-benefits
+    - /blog/jigsaw-puzzles-mental-health-benefits
+    - /blog/mobile-photo-to-jigsaw-puzzle
+    - /blog/printable-jigsaw-puzzle-dpi-paper-guide
+    - /blog/puzzle-piece-shapes-grid-voronoi
+    - /blog/puzzle-storage-organization-tips
+    - /blog/svg-puzzle-laser-cutting-setup
+    - /blog/tips-for-solving-jigsaw-puzzles-faster
+    - /blog/turn-photo-into-jigsaw-puzzle-online
+    - /zh/blog/best-photo-types-for-jigsaw-puzzles
+    - /zh/blog/branded-jigsaw-puzzles-marketing
+    - /zh/blog/classroom-puzzle-stations-activities
+    - /zh/blog/create-printable-jigsaw-puzzle-pdf
+    - /zh/blog/custom-puzzles-as-unique-gifts
+    - /zh/blog/history-of-jigsaw-puzzles
+    - /zh/blog/how-to-create-1000-piece-jigsaw-puzzle
+    - /zh/blog/how-to-host-virtual-puzzle-party
+    - /zh/blog/how-to-make-your-own-jigsaw-puzzle-online
+    - /zh/blog/jigsaw-puzzle-difficulty-guide
+    - /zh/blog/jigsaw-puzzles-for-kids-educational-benefits
+    - /zh/blog/jigsaw-puzzles-mental-health-benefits
+    - /zh/blog/mobile-photo-to-jigsaw-puzzle
+    - /zh/blog/printable-jigsaw-puzzle-dpi-paper-guide
+    - /zh/blog/puzzle-piece-shapes-grid-voronoi
+    - /zh/blog/puzzle-storage-organization-tips
+    - /zh/blog/svg-puzzle-laser-cutting-setup
+    - /zh/blog/tips-for-solving-jigsaw-puzzles-faster
+    - /zh/blog/turn-photo-into-jigsaw-puzzle-online
+    - /jigsaw-puzzle/5-a-dogs-jigsaw-puzzle-7w2bbf0f
+    - /jigsaw-puzzle/new-puzzle-t1lqvkea
+    - /jigsaw-puzzle/my-car-list-9r9efmc6
+    - /jigsaw-puzzle/jimeng-2025-07-16-8641-jigsaw--ys39igc0
+    - /jigsaw-puzzle/take-my-puzzle-mlksqtw8
+    - /help/classroom-puzzle-sharing-workflow-jigsawify
+    - /help/create-puzzle-from-clipboard-jigsawify
+    - /help/fix-slow-jigsaw-puzzle-performance-jigsawify
+    - /help/printable-puzzle-pdf-workflow-jigsawify
+    - /help/svg-export-laser-cnc-checklist-jigsawify
+    - /help/troubleshoot-image-upload-failed-jigsawify
+    - /help/where-is-share-button-jigsawify
+    - /zh/help/classroom-puzzle-sharing-workflow-jigsawify
+    - /zh/help/create-puzzle-from-clipboard-jigsawify
+    - /zh/help/fix-slow-jigsaw-puzzle-performance-jigsawify
+    - /zh/help/printable-puzzle-pdf-workflow-jigsawify
+    - /zh/help/svg-export-laser-cnc-checklist-jigsawify
+    - /zh/help/troubleshoot-image-upload-failed-jigsawify
+    - /zh/help/where-is-share-button-jigsawify
+  </rule>
+ </category>
+ <category name="Core SEO" errors="0" warnings="15">
+  <rule id="core/meta-title" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-title">
+   Title too long (61 chars, max 60); Title too short (29 chars, min 30); Title too long (67 chars, max 60); Title too long (62 chars, max 60); Title too short (14 chars, min 30); Title too short (16 chars, min 30); Title too short (26 chars, min 30)
+   Pages (7): /, /zh, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /privacy, /terms, /zh/puzzles
+  </rule>
+  <rule id="core/meta-description" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/core/meta-description">
+   Description too short (52 chars, min 120); Description too long (168 chars, max 160); Description too long (173 chars, max 160); Description too short (62 chars, min 120); Description too short (64 chars, min 120); Description too short (47 chars, min 120); Description too short (39 chars, min 120)
+   Pages (8): /zh, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /privacy, /terms, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+  </rule>
+ </category>
+ <category name="Security" errors="15" warnings="2">
+  <rule id="security/https" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/security/https">
+   Page not served over HTTPS
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+  </rule>
+  <rule id="security/csp" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/csp">
+   No Content-Security-Policy header
+  </rule>
+  <rule id="security/x-frame-options" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/security/x-frame-options">
+   No clickjacking protection
+  </rule>
+ </category>
+ <category name="Content" errors="0" warnings="13">
+  <rule id="content/keyword-stuffing" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/keyword-stuffing">
+   2 word(s) may be overused; 1 word(s) may be overused; 3 word(s) may be overused
+   Pages (7): /, /about, /help, /printable-jigsaw-puzzle, /privacy, /blog, /create/jigsaw-puzzle
+   Items (8):
+    - puzzle (&quot;puzzle&quot; (4.8%)) [count: 80, density: 4.756242568370987]
+    - jigsaw (&quot;jigsaw&quot; (3.8%)) [count: 64, density: 3.804994054696789]
+    - puzzle (&quot;puzzle&quot; (3.1%)) [count: 9, density: 3.0927835051546393]
+    - puzzles (&quot;puzzles&quot; (4.8%)) [count: 32, density: 4.826546003016592]
+    - puzzles (&quot;puzzles&quot; (4.2%)) [count: 28, density: 4.197901049475263]
+    - jigsaw (&quot;jigsaw&quot; (4.0%)) [count: 27, density: 4.0479760119940025]
+    - puzzle (&quot;puzzle&quot; (3.6%)) [count: 24, density: 3.598200899550225]
+    - your (&quot;your&quot; (3.8%)) [count: 38, density: 3.8229376257545273]
+  </rule>
+  <rule id="content/word-count" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/content/word-count">
+   Thin content: 82 words (min 300); Thin content: 199 words (min 300); Thin content: 298 words (min 300); Thin content: 95 words (min 300); Thin content: 45 words (min 300); Thin content: 28 words (min 300)
+   Pages (6): /zh, /contact, /puzzles, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+  </rule>
+ </category>
+ <category name="Structured Data" errors="2" warnings="0">
+  <rule id="schema/json-ld-valid" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/schema/json-ld-valid">
+   Invalid JSON-LD syntax
+   Pages (2): /printable-jigsaw-puzzle, /zh/printable-jigsaw-puzzle
+   Items (2):
+    - parse-0 (Validation: WebPage.url is required)
+    - WebPage:url (WebPage missing url) [message: Validation: WebPage.url is required, severity: missing, path: url]
+  </rule>
+ </category>
+ <category name="Images" errors="15" warnings="19">
+  <rule id="images/alt-text" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/images/alt-text">
+   2 image(s) missing alt text
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (2):
+    - /_next/image?url=%2Flogo.png&amp;w=256&amp;q=75
+    - /_next/image?url=%2Flogo.png&amp;w=256&amp;q=75
+  </rule>
+  <rule id="images/responsive-size" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/responsive-size">
+   2 small image(s) may be serving oversized files
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (2):
+    - image (100x100, no srcset)
+    - image (100x100, no srcset)
+  </rule>
+  <rule id="images/dimensions" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/images/dimensions">
+   4 image(s) missing width/height (causes CLS); 8 image(s) missing width/height (causes CLS)
+   Pages (4): /, /zh, /puzzles, /zh/puzzles
+  </rule>
+ </category>
+ <category name="Performance" errors="5" warnings="126">
+  <rule id="perf/js-file-size" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/perf/js-file-size">
+   1 JS file(s) exceed 1.0 MB; 2 JS file(s) exceed 250.0 KB
+   Items (3):
+    - /_next/static/chunks/0a4c4_next_dist_compiled_react-dom_4237bb50._.js [sizeBytes: 1049957, size: 1.0 MB, status: 200, contentType: application/javascript; charset=UTF-8] (from: /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles)
+    - /_next/static/chunks/0a4c4_next_dist_compiled_next-devtools_index_80d26b5a.js [sizeBytes: 802173, size: 783.4 KB, status: 200, contentType: application/javascript; charset=UTF-8] (from: /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles)
+    - /_next/static/chunks/0a4c4_next_dist_client_90f795e1._.js [sizeBytes: 720353, size: 703.5 KB, status: 200, contentType: application/javascript; charset=UTF-8] (from: /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles)
+  </rule>
+  <rule id="perf/lcp-hints" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lcp-hints">
+   1 potential LCP image(s) without preload
+   Pages (2): /, /zh
+   Items (1):
+    - /_next/image?url=%2Fjigsawify-hero-modern-960.png&amp;w=3840&amp;q=70
+  </rule>
+  <rule id="perf/ttfb" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/perf/ttfb">
+   Very slow server response (1575ms); Very slow server response (1232ms); Very slow server response (1229ms); Slow server response (833ms); Slow server response (983ms)
+   Pages (5): /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /create/jigsaw-puzzle
+  </rule>
+  <rule id="perf/css-file-size" severity="error" status="warn" docs="https://docs.squirrelscan.com/rules/perf/css-file-size">
+   2 CSS file(s) exceed 150.0 KB
+   Items (2):
+    - /_next/static/chunks/%5Broot-of-the-server%5D__b6040410._.css [sizeBytes: 257915, size: 251.9 KB, status: 200, contentType: text/css; charset=UTF-8] (from: /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles)
+    - /_next/static/chunks/_62a69acd._.css [sizeBytes: 269401, size: 263.1 KB, status: 200, contentType: text/css; charset=UTF-8] (from: /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles)
+  </rule>
+  <rule id="perf/dom-size" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/dom-size">
+   Element with 77 children found; Element with 73 children found; Element with 76 children found
+   Pages (15): /, /zh, /contact, /about, /privacy, /terms, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+  </rule>
+  <rule id="perf/total-byte-weight" severity="warning" status="fail" docs="https://docs.squirrelscan.com/rules/perf/total-byte-weight">
+   Total tracked resources: 6340KB (very heavy)
+  </rule>
+  <rule id="perf/critical-request-chains" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/critical-request-chains">
+   3 critical request chain(s) found
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (3):
+    - CSS: /_next/static/chunks/%5Broot-of-the-server%5D__b6040410._.css
+    - CSS: /_next/static/chunks/_62a69acd._.css
+    - JS: /_next/static/chunks/0a4c4_next_dist_build_polyfills_polyfill-nomodule.js
+  </rule>
+  <rule id="perf/duplicate-js" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/duplicate-js">
+   2 library(s) loaded multiple times
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (2):
+    - node (3x)
+    - src (6x)
+  </rule>
+  <rule id="perf/lazy-above-fold" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/lazy-above-fold">
+   2 above-fold image(s) with lazy loading; 3 above-fold image(s) with lazy loading
+   Pages (15): /, /zh, /contact, /about, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /blog, /puzzles, /zh/puzzles
+   Items (7):
+    - /_next/image?url=%2Flogo.png&amp;w=256&amp;q=75
+    - /_next/image?url=%2Fimgs%2Fposts%2Fbest-photo-types-for-jigsaw-puzzles.png&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Flogo.png&amp;w=256&amp;q=75
+    - /_next/image?url=%2Fimgs%2Fposts%2Fjigsaw-puzzles-mental-health-benefits.jpg&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimgs%2Fposts%2Fcustom-puzzles-as-unique-gifts.jpg&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimgs%2Fposts%2Fbest-photo-types-for-jigsaw-puzzles.jpg&amp;w=3840&amp;q=75
+    - /_next/image?url=%2Fimgs%2Fposts%2Fturn-photo-into-jigsaw-puzzle-online.jpg&amp;w=3840&amp;q=75
+  </rule>
+  <rule id="perf/unminified-js" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/perf/unminified-js">
+   9 JavaScript file(s) appear unminified
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (5):
+    - 0a4c4_next_dist_compiled_react-dom_4237bb50._.js (1025.3KB, ~259.9KB savings) [reason: high newlines (1.57%), 80 comments, long function names, formatted code, excessive whitespace]
+    - 0a4c4_next_dist_compiled_react-server-dom-turbopack_545e4e78._.js (165.6KB, ~52.2KB savings) [reason: high newlines (1.66%), 17 comments, long function names, formatted code, excessive whitespace]
+    - 0a4c4_next_dist_compiled_next-devtools_index_80d26b5a.js (783.4KB, ~708.9KB savings) [reason: 80 comments]
+    - 0a4c4_next_dist_compiled_11f73bb0._.js (147.6KB, ~60.3KB savings) [reason: high newlines (1.93%), 171 comments, long function names, formatted code, excessive whitespace]
+    - 0a4c4_next_dist_client_90f795e1._.js (703.5KB, ~274.4KB savings) [reason: high newlines (1.82%), 2660 comments, long function names, formatted code, excessive whitespace]
+  </rule>
+  <rule id="perf/http2" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/perf/http2">
+   HTTP/2 requires HTTPS
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+  </rule>
+  <rule id="perf/source-maps" severity="info" status="warn" docs="https://docs.squirrelscan.com/rules/perf/source-maps">
+   194 potential source map(s) detected; 1 inline source map(s) found
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (11):
+    - /_next/static/chunks/0a4c4_next_dist_compiled_react-dom_4237bb50._.js.map (from /_next/static/chunks/0a4c4_next_dist_compiled_react-dom_4237bb50._.js)
+    - /_next/static/chunks/%22 (from /_next/static/chunks/0a4c4_next_dist_compiled_react-server-dom-turbopack_545e4e78._.js)
+    - /_next/static/chunks/0a4c4_next_dist_compiled_react-server-dom-turbopack_545e4e78._.js.map (from /_next/static/chunks/0a4c4_next_dist_compiled_react-server-dom-turbopack_545e4e78._.js)
+    - /_next/static/chunks/index.js.map (from /_next/static/chunks/0a4c4_next_dist_cf285c57._.js)
+    - /_next/static/chunks/0a4c4_next_dist_compiled_next-devtools_index_80d26b5a.js.map (from /_next/static/chunks/0a4c4_next_dist_compiled_next-devtools_index_80d26b5a.js)
+    - /_next/static/chunks/helpers.js.map (from /_next/static/chunks/0a4c4_next_dist_compiled_11f73bb0._.js)
+    - /_next/static/chunks/runtime.js.map (from /_next/static/chunks/0a4c4_next_dist_compiled_11f73bb0._.js)
+    - /_next/static/chunks/0a4c4_next_dist_compiled_11f73bb0._.js.map (from /_next/static/chunks/0a4c4_next_dist_compiled_11f73bb0._.js)
+    - /_next/static/chunks/asset-prefix.js.map (from /_next/static/chunks/0a4c4_next_dist_client_90f795e1._.js)
+    - /_next/static/chunks/set-attributes-from-props.js.map (from /_next/static/chunks/0a4c4_next_dist_client_90f795e1._.js)
+    - /_next/static/chunks/turbopack-_1d05b01b._.js
+  </rule>
+ </category>
+ <category name="Social Media" errors="0" warnings="4">
+  <rule id="social/og-url-match" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/social/og-url-match">
+   og:url does not match canonical URL
+   Pages (4): /contact, /about, /privacy, /terms
+  </rule>
+ </category>
+ <category name="Accessibility" errors="48" warnings="22">
+  <rule id="a11y/button-name" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/button-name">
+   1 button(s) without accessible names
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (1):
+    - button.inline-flex
+  </rule>
+  <rule id="a11y/duplicate-id-aria" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/duplicate-id-aria">
+   Rule error: CSS is not defined
+   Pages (1): /help
+  </rule>
+  <rule id="a11y/aria-command-name" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/aria-command-name">
+   1 command element(s) without accessible names
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (1):
+    - button[type=&quot;submit&quot;]
+  </rule>
+  <rule id="a11y/aria-input-field-name" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/aria-input-field-name">
+   1 input field(s) without accessible names
+   Pages (1): /create/jigsaw-puzzle
+   Items (1):
+    - input[type=&quot;file&quot;]
+  </rule>
+  <rule id="a11y/aria-labels" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/aria-labels">
+   1 button(s) without accessible names
+   Pages (15): /, /zh, /contact, /about, /blog, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /puzzles, /privacy, /terms, /create/jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (1):
+    - inline-flex items-center justi
+  </rule>
+  <rule id="a11y/form-labels" severity="error" status="fail" docs="https://docs.squirrelscan.com/rules/a11y/form-labels">
+   1 form input(s) without labels
+   Pages (1): /create/jigsaw-puzzle
+   Items (1):
+    - file
+  </rule>
+  <rule id="a11y/color-contrast" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/color-contrast">
+   16 potential color contrast issue(s); 10 potential color contrast issue(s); 9 potential color contrast issue(s); 8 potential color contrast issue(s); 14 potential color contrast issue(s); 11 potential color contrast issue(s); 6 potential color contrast issue(s)
+   Pages (15): /, /zh, /create/jigsaw-puzzle, /contact, /about, /blog, /puzzles, /zh/puzzles, /help, /jigsaw-puzzle-generator, /printable-jigsaw-puzzle, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /privacy, /terms
+   Items (75):
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mx-auto ...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-6 tex...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground min-w-0 ...&quot; may have low contrast
+    - li with class &quot;text-muted-foreground flex ite...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-lg...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-sm...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-4 tex...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-bal...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-4 lea...&quot; may have low contrast
+    - div with class &quot;pointer-events-none absolute i...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-sm ...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-1 tex...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground flex ite...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-xs ...&quot; may have low contrast
+    - label with class &quot;text-muted-foreground text-xs ...&quot; may have low contrast
+    - span with class &quot;text-muted-foreground text-xs...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-gra...&quot; may have low contrast
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-lg ...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mx-auto ...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-4 gro...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-xs...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-6...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-gra...&quot; may have low contrast
+    - a with class &quot;focus-visible:ring-ring focus-...&quot; may have low contrast
+    - div with class &quot;h-px min-w-0 [background-image...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground text-sm...&quot; may have low contrast
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-lg ...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground space-y-...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-6 tex...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-4...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-gra...&quot; may have low contrast
+    - a with class &quot;focus-visible:ring-ring focus-...&quot; may have low contrast
+    - div with class &quot;h-px min-w-0 [background-image...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground text-sm...&quot; may have low contrast
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-4 max...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-3 lin...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground flex ite...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-gra...&quot; may have low contrast
+    - a with class &quot;focus-visible:ring-ring focus-...&quot; may have low contrast
+    - div with class &quot;h-px min-w-0 [background-image...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground text-sm...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-2 lin...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-3 tex...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-4 lea...&quot; may have low contrast
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mx-auto ...&quot; may have low contrast
+    - svg with class &quot;lucide lucide-search text-mute...&quot; may have low contrast
+    - input with class &quot;file:text-foreground placehold...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-2 tex...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-2 lin...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-1...&quot; may have low contrast
+    - svg with class &quot;lucide lucide-chevron-down tex...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-bas...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-6 tex...&quot; may have low contrast
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mx-auto ...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-12 te...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-sm ...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-4 lea...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-6 tex...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mt-6 px-...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-gra...&quot; may have low contrast
+    - a with class &quot;focus-visible:ring-ring focus-...&quot; may have low contrast
+    - div with class &quot;h-px min-w-0 [background-image...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground mb-8 tex...&quot; may have low contrast
+    - a with class &quot;data-[active=true]:focus:bg-mu...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground text-md ...&quot; may have low contrast
+    - p with class &quot;text-muted-foreground text-gra...&quot; may have low contrast
+    - a with class &quot;focus-visible:ring-ring focus-...&quot; may have low contrast
+    - div with class &quot;h-px min-w-0 [background-image...&quot; may have low contrast
+    - div with class &quot;text-muted-foreground text-sm...&quot; may have low contrast
+  </rule>
+  <rule id="a11y/heading-order" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/heading-order">
+   1 heading level skip(s) detected
+   Pages (3): /contact, /puzzles, /zh/puzzles
+   Items (1):
+    - H3 after H1
+  </rule>
+  <rule id="a11y/identical-links-same-purpose" severity="warning" status="warn" docs="https://docs.squirrelscan.com/rules/a11y/identical-links-same-purpose">
+   1 link text(s) lead to different destinations
+   Pages (4): /zh, /zh/jigsaw-puzzle-generator, /zh/printable-jigsaw-puzzle, /zh/puzzles
+   Items (1):
+    - &quot;jigsawify&quot; → 2 different URLs
+  </rule>
+ </category>
+</issues>
+</audit>
