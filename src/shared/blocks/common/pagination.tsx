@@ -83,6 +83,7 @@ const generatePaginationLinks = (
           <PaginationLink
             onClick={() => i !== currentPage && onPageChange(i)}
             isActive={i == currentPage}
+            aria-label={`Go to page ${i}`}
             className="cursor-pointer"
           >
             {i}
@@ -97,6 +98,7 @@ const generatePaginationLinks = (
           <PaginationLink
             onClick={() => i !== currentPage && onPageChange(i)}
             isActive={i === currentPage}
+            aria-label={`Go to page ${i}`}
             className="cursor-pointer"
           >
             {i}
@@ -111,6 +113,8 @@ const generatePaginationLinks = (
           <PaginationLink
             onClick={() => onPageChange(currentPage)}
             isActive={true}
+            aria-label={`Page ${currentPage}, current page`}
+            disabled
             className="cursor-pointer"
           >
             {currentPage}
@@ -125,6 +129,7 @@ const generatePaginationLinks = (
           <PaginationLink
             onClick={() => i !== currentPage && onPageChange(i)}
             isActive={i === currentPage}
+            aria-label={`Go to page ${i}`}
             className="cursor-pointer"
           >
             {i}

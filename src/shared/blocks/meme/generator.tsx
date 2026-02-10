@@ -44,6 +44,7 @@ interface MemeGeneratorProps {
 interface GeneratedMeme {
   id: string;
   url: string;
+  templateSlug?: string;
   provider?: string;
   model?: string;
   prompt?: string;
@@ -200,6 +201,39 @@ export function MemeGenerator({ srOnlyTitle, className }: MemeGeneratorProps) {
     setTaskStatus(null);
   }, []);
 
+  const createTemplatesFromUrls = useCallback(
+    async (urls: string[]) => {
+      if (urls.length === 0) return [];
+      const baseName = prompt.trim().slice(0, 60);
+
+      const results = await Promise.all(
+        urls.map(async (url) => {
+          try {
+            const resp = await fetch('/api/meme/templates/create', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                imageUrl: url,
+                source: 'ai',
+                name: baseName || undefined,
+              }),
+            });
+
+            const { code, data } = await resp.json();
+            if (code !== 0) throw new Error('create template failed');
+            return data;
+          } catch (error) {
+            console.error('Failed to create template from AI image:', error);
+            return null;
+          }
+        })
+      );
+
+      return results;
+    },
+    [prompt]
+  );
+
   const pollTaskStatus = useCallback(
     async (id: string) => {
       try {
@@ -254,10 +288,12 @@ export function MemeGenerator({ srOnlyTitle, className }: MemeGeneratorProps) {
           if (imageUrls.length === 0) {
             toast.error(t('error.no_result'));
           } else {
+            const templates = await createTemplatesFromUrls(imageUrls);
             setGeneratedMemes(
               imageUrls.map((url, index) => ({
                 id: `${task.id}-${index}`,
                 url,
+                templateSlug: templates[index]?.slug,
                 provider: task.provider,
                 model: task.model,
                 prompt: task.prompt ?? undefined,
@@ -288,7 +324,7 @@ export function MemeGenerator({ srOnlyTitle, className }: MemeGeneratorProps) {
         return true;
       }
     },
-    [generationStartTime, resetTaskState, fetchUserCredits, t]
+    [generationStartTime, resetTaskState, fetchUserCredits, t, createTemplatesFromUrls]
   );
 
   useEffect(() => {
@@ -376,10 +412,12 @@ export function MemeGenerator({ srOnlyTitle, className }: MemeGeneratorProps) {
         const imageUrls = extractImageUrls(parsedResult);
 
         if (imageUrls.length > 0) {
+          const templates = await createTemplatesFromUrls(imageUrls);
           setGeneratedMemes(
             imageUrls.map((url, index) => ({
               id: `${newTaskId}-${index}`,
               url,
+              templateSlug: templates[index]?.slug,
               provider,
               model,
               prompt: trimmedPrompt,
@@ -626,17 +664,31 @@ export function MemeGenerator({ srOnlyTitle, className }: MemeGeneratorProps) {
                             )}
                             {t('download')}
                           </Button>
-                          <Link
-                            href={`/meme-editor?imageUrl=${encodeURIComponent(
-                              meme.url
-                            )}`}
-                            className="flex-1"
-                          >
-                            <Button size="sm" variant="outline" className="w-full">
+                          {meme.templateSlug ? (
+                            <Link
+                              href={`/meme-editor/${meme.templateSlug}`}
+                              className="flex-1"
+                            >
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                className="w-full"
+                              >
+                                <Edit3 className="mr-2 h-4 w-4" />
+                                {t('edit_in_editor')}
+                              </Button>
+                            </Link>
+                          ) : (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="w-full"
+                              disabled
+                            >
                               <Edit3 className="mr-2 h-4 w-4" />
                               {t('edit_in_editor')}
                             </Button>
-                          </Link>
+                          )}
                         </div>
                       </div>
                     ))}

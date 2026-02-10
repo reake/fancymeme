@@ -54,15 +54,6 @@ export function Footer({ footer }: { footer: FooterType }) {
           </div>
         </div>
 
-        <div className="flex min-w-0 flex-wrap items-center gap-4 sm:gap-8">
-          {footer.show_built_with !== false ? <BuiltWith /> : null}
-          <div className="min-w-0 flex-1" />
-          {footer.show_theme !== false ? <ThemeToggler type="toggle" /> : null}
-          {footer.show_locale !== false ? (
-            <LocaleSelector type="button" />
-          ) : null}
-        </div>
-
         <div
           aria-hidden
           className="h-px min-w-0 [background-image:linear-gradient(90deg,var(--color-foreground)_1px,transparent_1px)] bg-[length:6px_1px] bg-repeat-x opacity-25"

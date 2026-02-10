@@ -121,7 +121,7 @@ export function TopBanner({
       if (sidebarContainer) {
         (sidebarContainer as HTMLElement).style.top = `${bannerHeight}px`;
         (sidebarContainer as HTMLElement).style.height =
-          `calc(100vh - ${bannerHeight}px)`;
+          `calc(100dvh - ${bannerHeight}px)`;
       }
 
       const sidebarWrapper = document.querySelector(
@@ -145,7 +145,7 @@ export function TopBanner({
       );
       if (sidebarContainer) {
         (sidebarContainer as HTMLElement).style.top = '0px';
-        (sidebarContainer as HTMLElement).style.height = '100vh';
+        (sidebarContainer as HTMLElement).style.height = '100dvh';
       }
 
       const sidebarWrapper = document.querySelector(
@@ -194,7 +194,7 @@ export function TopBanner({
     );
     if (sidebarContainer) {
       (sidebarContainer as HTMLElement).style.top = '0px';
-      (sidebarContainer as HTMLElement).style.height = '100vh';
+      (sidebarContainer as HTMLElement).style.height = '100dvh';
     }
 
     const sidebarWrapper = document.querySelector(
@@ -276,6 +276,7 @@ export function TopBanner({
 
               {closable ? (
                 <button
+                  type="button"
                   onClick={handleDismiss}
                   className="bg-primary/10 flex-shrink-0 rounded p-1 transition-colors"
                   aria-label="Close"

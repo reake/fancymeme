@@ -42,6 +42,8 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
   setRequestLocale(locale);
+  const skipToMainLabel =
+    locale === 'zh' ? '跳转到主要内容' : 'Skip to main content';
 
   const isProduction = process.env.NODE_ENV === 'production';
   const isDebug = process.env.NEXT_PUBLIC_DEBUG === 'true';
@@ -147,6 +149,12 @@ export default async function RootLayout({
         {customerServiceHeadScripts}
       </head>
       <body suppressHydrationWarning className="overflow-x-hidden">
+        <a
+          href="#main-content"
+          className="focus:bg-background focus:text-foreground focus:ring-ring sr-only fixed top-4 left-4 z-[100] rounded-md px-3 py-2 text-sm font-medium shadow-sm focus:not-sr-only focus:ring-2"
+        >
+          {skipToMainLabel}
+        </a>
         <NextTopLoader
           color="#6466F1"
           initialPosition={0.08}

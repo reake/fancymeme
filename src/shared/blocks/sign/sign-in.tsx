@@ -154,6 +154,7 @@ export function SignIn({
                 <Input
                   id="email"
                   type="email"
+                  autoComplete="email"
                   placeholder={t('email_placeholder')}
                   required
                   onChange={(e) => {
@@ -178,7 +179,7 @@ export function SignIn({
                   id="password"
                   type="password"
                   placeholder={t('password_placeholder')}
-                  autoComplete="password"
+                  autoComplete="current-password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />

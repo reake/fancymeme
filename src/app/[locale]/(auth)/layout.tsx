@@ -11,7 +11,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="flex min-h-dvh w-full items-center justify-center">
       <div className="absolute top-4 left-4">
         <BrandLogo
           brand={{
@@ -30,7 +30,9 @@ export default function AuthLayout({
         <ThemeToggler />
         <LocaleSelector type="button" />
       </div>
-      <div className="w-full px-4">{children}</div>
+      <main id="main-content" className="w-full px-4">
+        {children}
+      </main>
     </div>
   );
 }

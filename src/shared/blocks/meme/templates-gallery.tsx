@@ -29,9 +29,13 @@ interface TemplatesGalleryProps {
 export function TemplatesGallery({ className }: TemplatesGalleryProps) {
   const t = useTranslations('meme.templates');
   const [searchQuery, setSearchQuery] = useState('');
-  const [semanticResults, setSemanticResults] = useState<SearchResult[] | null>(null);
+  const [semanticResults, setSemanticResults] = useState<SearchResult[] | null>(
+    null
+  );
   const [isSearching, startSearching] = useTransition();
-  const [searchMethod, setSearchMethod] = useState<'local' | 'semantic'>('local');
+  const [searchMethod, setSearchMethod] = useState<'local' | 'semantic'>(
+    'local'
+  );
 
   // Local filtering for instant results
   const localFilteredTemplates = useMemo(() => {
@@ -54,7 +58,9 @@ export function TemplatesGallery({ className }: TemplatesGalleryProps) {
 
   const handleSemanticSearch = useCallback(async () => {
     if (!searchQuery.trim() || searchQuery.trim().length < 3) {
-      toast.error(t('semantic_search_min_chars') || 'Please enter at least 3 characters');
+      toast.error(
+        t('semantic_search_min_chars') || 'Please enter at least 3 characters'
+      );
       return;
     }
 
@@ -73,13 +79,18 @@ export function TemplatesGallery({ className }: TemplatesGalleryProps) {
 
         setSemanticResults(data.templates);
         setSearchMethod('semantic');
-        
+
         if (data.templates.length === 0) {
-          toast.info(t('no_semantic_results') || 'No matching templates found. Try different keywords.');
+          toast.info(
+            t('no_semantic_results') ||
+              'No matching templates found. Try different keywords.'
+          );
         }
       } catch (error) {
         console.error('Semantic search error:', error);
-        toast.error(t('semantic_search_error') || 'Search failed. Using local results.');
+        toast.error(
+          t('semantic_search_error') || 'Search failed. Using local results.'
+        );
       }
     });
   }, [searchQuery, t]);
@@ -109,20 +120,21 @@ export function TemplatesGallery({ className }: TemplatesGalleryProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl font-bold mb-4 md:text-4xl">
-            {t('title')}
-          </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+          <h1 className="mb-4 text-3xl font-bold md:text-4xl">{t('title')}</h1>
+          <p className="text-muted-foreground mx-auto mb-8 max-w-2xl">
             {t('description')}
           </p>
 
           {/* Search */}
-          <div className="max-w-lg mx-auto">
+          <div className="mx-auto max-w-lg">
             <div className="relative flex gap-2">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
                 <Input
-                  placeholder={t('semantic_search_placeholder') || 'Describe what you want to express... e.g. "feeling frustrated" or "celebrating a win"'}
+                  placeholder={
+                    t('semantic_search_placeholder') ||
+                    'Describe what you want to express... e.g. "feeling frustrated" or "celebrating a win"'
+                  }
                   value={searchQuery}
                   onChange={handleInputChange}
                   onKeyDown={handleKeyDown}
@@ -138,17 +150,21 @@ export function TemplatesGallery({ className }: TemplatesGalleryProps) {
                   <Loader2 className="h-4 w-4 animate-spin" />
                 ) : (
                   <>
-                    <Sparkles className="h-4 w-4 mr-1" />
+                    <Sparkles className="mr-1 h-4 w-4" />
                     {t('ai_search') || 'AI Search'}
                   </>
                 )}
               </Button>
             </div>
             {searchMethod === 'semantic' && semanticResults && (
-              <p className="text-xs text-muted-foreground mt-2 text-center">
+              <p className="text-muted-foreground mt-2 text-center text-xs">
                 {t('showing_ai_results') || 'Showing AI-matched results'} •{' '}
                 <button
-                  onClick={() => { setSearchMethod('local'); setSemanticResults(null); }}
+                  type="button"
+                  onClick={() => {
+                    setSearchMethod('local');
+                    setSemanticResults(null);
+                  }}
                   className="text-primary hover:underline"
                 >
                   {t('show_all') || 'Show all templates'}
@@ -159,7 +175,7 @@ export function TemplatesGallery({ className }: TemplatesGalleryProps) {
         </motion.div>
 
         {/* Templates Count */}
-        <div className="mb-6 text-sm text-muted-foreground">
+        <div className="text-muted-foreground mb-6 text-sm">
           {t('showing_templates', { count: filteredTemplates.length })}
         </div>
 
@@ -167,12 +183,16 @@ export function TemplatesGallery({ className }: TemplatesGalleryProps) {
         {filteredTemplates.length > 0 ? (
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
             {filteredTemplates.map((template, index) => (
-              <TemplateCard key={template.id} template={template} index={index} />
+              <TemplateCard
+                key={template.id}
+                template={template}
+                index={index}
+              />
             ))}
           </div>
         ) : (
           <motion.div
-            className="py-20 text-center text-muted-foreground"
+            className="text-muted-foreground py-20 text-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -200,7 +220,7 @@ function TemplateCard({
       transition={{ duration: 0.3, delay: index * 0.02 }}
     >
       <div className="group">
-        <div className="relative aspect-square overflow-hidden rounded-lg border bg-muted transition-all hover:border-primary hover:shadow-lg">
+        <div className="bg-muted hover:border-primary relative aspect-square overflow-hidden rounded-lg border transition-all hover:shadow-lg">
           <Image
             src={template.imageUrl}
             alt={template.name}
@@ -211,16 +231,20 @@ function TemplateCard({
           />
 
           {/* Hover Overlay */}
-          <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex flex-col items-center justify-center gap-2">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100">
             <Link href={`/meme-editor/${template.id}`}>
               <Button size="sm" variant="secondary">
-                <Edit3 className="h-4 w-4 mr-1" />
+                <Edit3 className="mr-1 h-4 w-4" />
                 {t('edit')}
               </Button>
             </Link>
             <Link href={`/templates/${template.id}`}>
-              <Button size="sm" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/30">
-                <Eye className="h-4 w-4 mr-1" />
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-white/30 bg-white/10 text-white hover:bg-white/20"
+              >
+                <Eye className="mr-1 h-4 w-4" />
                 {t('view_details') || 'Details'}
               </Button>
             </Link>
@@ -229,7 +253,7 @@ function TemplateCard({
 
         {/* Template Name */}
         <Link href={`/templates/${template.id}`}>
-          <p className="mt-2 text-sm font-medium line-clamp-1 hover:text-primary transition-colors">
+          <p className="hover:text-primary mt-2 line-clamp-1 text-sm font-medium transition-colors">
             {template.name}
           </p>
         </Link>

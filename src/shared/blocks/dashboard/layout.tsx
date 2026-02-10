@@ -24,7 +24,7 @@ export function DashboardLayout({
       {sidebar && (
         <Sidebar variant={sidebar.variant || 'inset'} sidebar={sidebar} />
       )}
-      <SidebarInset>{children}</SidebarInset>
+      <SidebarInset id="main-content">{children}</SidebarInset>
     </SidebarProvider>
   );
 }

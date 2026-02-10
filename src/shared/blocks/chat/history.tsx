@@ -279,7 +279,7 @@ export function ChatHistory() {
   const showFooter = user && !loading && chats.length > 0;
 
   return (
-    <div className="flex h-screen flex-col overflow-hidden">
+    <div className="flex min-h-dvh flex-col overflow-hidden">
       <header className="bg-background sticky top-0 z-10 flex w-full items-center gap-2 px-4 py-3">
         <SidebarTrigger className="size-7" />
         <div className="flex-1" />

@@ -133,6 +133,7 @@ export function SignInForm({
               <Input
                 id="email"
                 type="email"
+                autoComplete="email"
                 placeholder={t('email_placeholder')}
                 required
                 onChange={(e) => {
@@ -143,18 +144,13 @@ export function SignInForm({
             </div>
 
             <div className="grid gap-2">
-              {/* <div className="flex items-center">
-              <Label htmlFor="password">{t("password_title")}</Label>
-              <Link href="#" className="ml-auto inline-block text-sm underline">
-                Forgot your password?
-              </Link>
-            </div> */}
+              <Label htmlFor="password">{t('password_title')}</Label>
 
               <Input
                 id="password"
                 type="password"
                 placeholder={t('password_placeholder')}
-                autoComplete="password"
+                autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required

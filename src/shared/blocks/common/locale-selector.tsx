@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Check, Globe, Languages } from 'lucide-react';
 import { useLocale } from 'next-intl';
-import { useSearchParams } from 'next/navigation';
 
 import { usePathname, useRouter } from '@/core/i18n/navigation';
 import { localeNames } from '@/config/locale';
@@ -52,6 +52,7 @@ export function LocaleSelector({
         className={
           type === 'icon' ? 'h-auto w-auto p-0' : 'hover:bg-primary/10'
         }
+        aria-label={type === 'icon' ? 'Switch language' : undefined}
         disabled
       >
         {type === 'icon' ? (
@@ -70,7 +71,12 @@ export function LocaleSelector({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         {type === 'icon' ? (
-          <Button variant="ghost" size="icon" className="h-auto w-auto p-0">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-auto w-auto p-0"
+            aria-label="Switch language"
+          >
             <Languages size={18} />
           </Button>
         ) : (

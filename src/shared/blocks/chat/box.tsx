@@ -47,7 +47,7 @@ export function ChatBox({
   }, [initialChat]);
 
   return (
-    <div className="flex h-screen flex-col overflow-hidden">
+    <div className="flex min-h-dvh flex-col overflow-hidden">
       <ChatHeader />
       <div className="flex-1 overflow-y-auto">
         <div className="mx-auto w-full px-4 py-6 md:max-w-3xl">

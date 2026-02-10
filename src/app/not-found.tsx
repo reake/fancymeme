@@ -7,7 +7,10 @@ import { Button } from '@/shared/components/ui/button';
 
 export default function NotFoundPage() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-4">
+    <div
+      id="main-content"
+      className="flex min-h-dvh flex-col items-center justify-center gap-4"
+    >
       <Image
         src={envConfigs.app_logo}
         alt={envConfigs.app_name}

@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server';
 
 import { MemeEditor } from '@/shared/blocks/meme/editor';
 import { MEME_TEMPLATES } from '@/shared/blocks/meme/editor/templates-data';
+import { findMemeTemplateBySlug } from '@/shared/models/meme_template';
 
 export const generateMetadata = async ({
   params,
@@ -9,7 +10,9 @@ export const generateMetadata = async ({
   params: Promise<{ locale: string; slug: string }>;
 }) => {
   const { slug } = await params;
-  const template = MEME_TEMPLATES.find((t) => t.id === slug);
+  const template =
+    MEME_TEMPLATES.find((t) => t.id === slug) ||
+    (await findMemeTemplateBySlug(slug));
   
   return {
     title: template ? `${template.name} - Meme Editor` : 'Meme Editor',

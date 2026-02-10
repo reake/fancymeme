@@ -36,13 +36,12 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   public render() {
-    console.log('ErrorBoundary render', this.state);
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
       return (
-        <div className="flex h-screen flex-col items-center justify-center gap-4">
+        <div className="flex min-h-dvh flex-col items-center justify-center gap-4">
           <Image
             src={envConfigs.app_logo}
             alt={envConfigs.app_name}

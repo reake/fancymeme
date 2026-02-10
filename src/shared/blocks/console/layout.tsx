@@ -57,7 +57,7 @@ export function ConsoleLayout({
   );
 
   return (
-    <div className={`bg-background min-h-screen ${className}`}>
+    <div className={`bg-background min-h-dvh ${className}`}>
       {/* Top Navigation */}
       {topNav && (
         <div className="border-border border-b">
@@ -91,7 +91,12 @@ export function ConsoleLayout({
             {/* Mobile Menu Trigger */}
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="md:hidden">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="md:hidden"
+                  aria-label="Open menu"
+                >
                   <SmartIcon name="Menu" size={20} />
                 </Button>
               </SheetTrigger>

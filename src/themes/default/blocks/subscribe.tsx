@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { Loader2, Mail, SendHorizonal } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -18,9 +18,13 @@ export function Subscribe({
 }) {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
+  const subscribeInputId = `${section.id || 'subscribe'}-email`;
 
-  const handleSubscribe = async () => {
-    if (!email) {
+  const handleSubscribe = async (event?: FormEvent<HTMLFormElement>) => {
+    event?.preventDefault();
+
+    const trimmedEmail = email.trim();
+    if (!trimmedEmail) {
       return;
     }
 
@@ -32,14 +36,14 @@ export function Subscribe({
       setLoading(true);
       const resp = await fetch(section.submit.action, {
         method: 'POST',
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email: trimmedEmail }),
       });
 
       if (!resp.ok) {
         throw new Error(`request failed with status ${resp.status}`);
       }
 
-      const { code, message, data } = await resp.json();
+      const { code, message } = await resp.json();
       if (code !== 0) {
         throw new Error(message);
       }
@@ -75,44 +79,53 @@ export function Subscribe({
             <div className="mx-auto mt-10 max-w-xl overflow-hidden lg:mt-12">
               <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center overflow-hidden rounded-[calc(var(--radius)+0.75rem)] border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
                 <Mail className="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5" />
+                <form
+                  className="contents"
+                  onSubmit={(event) => {
+                    void handleSubscribe(event);
+                  }}
+                >
+                  <label htmlFor={subscribeInputId} className="sr-only">
+                    {section.submit?.input?.placeholder || 'Email address'}
+                  </label>
+                  <input
+                    id={subscribeInputId}
+                    name="email"
+                    placeholder={
+                      section.submit?.input?.placeholder || 'Enter your email'
+                    }
+                    className="h-14 w-full bg-transparent pl-12 focus:outline-none"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    aria-required="true"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
 
-                <input
-                  placeholder={
-                    section.submit?.input?.placeholder || 'Enter your email'
-                  }
-                  className="h-14 w-full bg-transparent pl-12 focus:outline-none"
-                  type="email"
-                  required
-                  aria-required="true"
-                  aria-invalid={!email}
-                  aria-describedby="email-error"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-
-                {section.submit?.button && (
-                  <div className="md:pr-1.5 lg:pr-0">
-                    <Button
-                      aria-label="submit"
-                      className="rounded-(--radius)"
-                      onClick={handleSubscribe}
-                      disabled={loading}
-                      type="submit"
-                    >
-                      {loading ? (
-                        <Loader2 className="animate-spin" />
-                      ) : (
-                        <span className="hidden md:block">
-                          {section.submit.button.title}
-                        </span>
-                      )}
-                      <SendHorizonal
-                        className="relative mx-auto size-5 md:hidden"
-                        strokeWidth={2}
-                      />
-                    </Button>
-                  </div>
-                )}
+                  {section.submit?.button && (
+                    <div className="md:pr-1.5 lg:pr-0">
+                      <Button
+                        aria-label={section.submit.button.title || 'Subscribe'}
+                        className="rounded-(--radius)"
+                        disabled={loading}
+                        type="submit"
+                      >
+                        {loading ? (
+                          <Loader2 className="animate-spin" />
+                        ) : (
+                          <span className="hidden md:block">
+                            {section.submit.button.title}
+                          </span>
+                        )}
+                        <SendHorizonal
+                          className="relative mx-auto size-5 md:hidden"
+                          strokeWidth={2}
+                        />
+                      </Button>
+                    </div>
+                  )}
+                </form>
               </div>
             </div>
           </ScrollAnimation>

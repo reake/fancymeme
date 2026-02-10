@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { Copy, Download, Home, Save, Trash2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
@@ -35,7 +35,6 @@ interface MemeEditorProps {
 export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
   const t = useTranslations('meme.editor');
   const router = useRouter();
-  const searchParams = useSearchParams();
   const { user, setIsShowSignModal } = useAppContext();
 
   const {
@@ -66,25 +65,45 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
 
   // Load template from URL slug
   useEffect(() => {
-    if (templateSlug) {
-      const template = MEME_TEMPLATES.find((t) => t.id === templateSlug);
-      if (template) {
-        setTemplate(template);
-        setActiveTab('customize');
-      }
-    }
-  }, [templateSlug, setTemplate]);
+    if (!templateSlug) return;
 
-  // Load custom image from query param (?imageUrl=...)
-  useEffect(() => {
-    if (templateSlug) return;
-    const imageUrl =
-      searchParams.get('imageUrl') || searchParams.get('image');
-    if (imageUrl) {
-      setCustomImage(imageUrl);
+    const template = MEME_TEMPLATES.find((t) => t.id === templateSlug);
+    if (template) {
+      setTemplate(template);
       setActiveTab('customize');
+      return;
     }
-  }, [templateSlug, searchParams, setCustomImage]);
+
+    let cancelled = false;
+
+    const fetchTemplate = async () => {
+      try {
+        const resp = await fetch(`/api/meme/templates/${templateSlug}`);
+        const { code, data } = await resp.json();
+        if (code !== 0 || !data) throw new Error('Template not found');
+
+        if (cancelled) return;
+
+        setTemplate({
+          id: data.slug || templateSlug,
+          templateId: data.id,
+          name: data.name,
+          imageUrl: data.imageUrl,
+          thumbnailUrl: data.thumbnailUrl || undefined,
+          defaultTextBoxes: data.defaultTextBoxes || undefined,
+        });
+        setActiveTab('customize');
+      } catch (error) {
+        console.error('Failed to load template:', error);
+      }
+    };
+
+    fetchTemplate();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [templateSlug, setTemplate]);
 
   const handleSelectTemplate = useCallback(
     (template: MemeTemplate) => {
@@ -97,11 +116,31 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
   );
 
   const handleUploadImage = useCallback(
-    (uploadedImageUrl: string) => {
-      setCustomImage(uploadedImageUrl);
-      setActiveTab('customize');
+    async (uploadedImageUrl: string) => {
+      try {
+        const resp = await fetch('/api/meme/templates/create', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            imageUrl: uploadedImageUrl,
+            source: 'user',
+          }),
+        });
+
+        const { code, data, message } = await resp.json();
+        if (code !== 0 || !data?.slug) {
+          throw new Error(message || 'Failed to create template');
+        }
+
+        router.push(`/meme-editor/${data.slug}`, { scroll: false });
+      } catch (error) {
+        console.error('Failed to create template from upload:', error);
+        toast.error('Failed to save template. Editing locally.');
+        setCustomImage(uploadedImageUrl);
+        setActiveTab('customize');
+      }
     },
-    [setCustomImage]
+    [router, setCustomImage]
   );
 
   const handleUploadClick = useCallback(() => {
@@ -300,7 +339,7 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
         body: JSON.stringify({
           imageUrl: uploadData.data.url,
           generationType: 'template',
-          templateId: state.template?.id,
+          templateId: state.template?.templateId || null,
           textContent: state.textBoxes,
           isPublic: true,
         }),
@@ -327,7 +366,7 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
   }, [reset, router]);
 
   return (
-    <div className={cn('flex h-screen flex-col overflow-hidden', className)}>
+    <div className={cn('flex min-h-dvh flex-col overflow-hidden', className)}>
       <input
         ref={fileInputRef}
         type="file"
@@ -451,39 +490,31 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
                         )}
                       >
                         {/* Text Item Header */}
-                        <div
-                          role="button"
-                          tabIndex={0}
-                          aria-expanded={state.selectedTextBoxId === textBox.id}
-                          className="flex w-full items-center justify-between px-3 py-2.5 text-left"
-                          onClick={() =>
-                            selectTextBox(
+                        <div className="flex w-full items-center justify-between px-3 py-2.5 text-left">
+                          <button
+                            type="button"
+                            aria-expanded={
                               state.selectedTextBoxId === textBox.id
-                                ? null
-                                : textBox.id
-                            )
-                          }
-                          onKeyDown={(event) => {
-                            if (event.key === 'Enter' || event.key === ' ') {
-                              event.preventDefault();
+                            }
+                            aria-controls={`text-box-panel-${textBox.id}`}
+                            className="min-w-0 flex-1 truncate text-left text-sm font-medium"
+                            onClick={() =>
                               selectTextBox(
                                 state.selectedTextBoxId === textBox.id
                                   ? null
                                   : textBox.id
-                              );
+                              )
                             }
-                          }}
-                        >
-                          <span className="flex-1 truncate text-sm font-medium">
+                          >
                             {textBox.text || `${t('text')} #${index + 1}`}
-                          </span>
+                          </button>
                           <div className="ml-2 flex items-center gap-1">
                             <Button
                               variant="ghost"
                               size="icon"
+                              aria-label={t('duplicate')}
                               className="h-7 w-7"
-                              onClick={(e) => {
-                                e.stopPropagation();
+                              onClick={() => {
                                 duplicateTextBox(textBox.id);
                               }}
                             >
@@ -492,9 +523,9 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
                             <Button
                               variant="ghost"
                               size="icon"
+                              aria-label={t('remove')}
                               className="text-destructive hover:text-destructive h-7 w-7"
-                              onClick={(e) => {
-                                e.stopPropagation();
+                              onClick={() => {
                                 removeTextBox(textBox.id);
                               }}
                             >
@@ -505,7 +536,10 @@ export function MemeEditor({ templateSlug, className }: MemeEditorProps) {
 
                         {/* Expanded Content */}
                         {state.selectedTextBoxId === textBox.id && (
-                          <div className="border-t px-3 pb-3">
+                          <div
+                            id={`text-box-panel-${textBox.id}`}
+                            className="border-t px-3 pb-3"
+                          >
                             <TextCustomization
                               textBox={textBox}
                               onUpdate={(updates) =>

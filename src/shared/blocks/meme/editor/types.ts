@@ -19,6 +19,7 @@ export interface TextBox {
 
 export interface MemeTemplate {
   id: string;
+  templateId?: string;
   name: string;
   imageUrl: string;
   thumbnailUrl?: string;

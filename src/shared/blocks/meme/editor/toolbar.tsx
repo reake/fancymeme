@@ -101,17 +101,18 @@ export function EditorToolbar({
     <TooltipProvider>
       <div
         className={cn(
-          'flex items-center gap-1 p-2 bg-card border rounded-lg',
+          'bg-card flex items-center gap-1 rounded-lg border p-2',
           className
         )}
       >
-        <div className="flex items-center gap-1 flex-1">
+        <div className="flex flex-1 items-center gap-1">
           {tools.map((tool, index) => (
             <Tooltip key={index}>
               <TooltipTrigger asChild>
                 <Button
                   variant="ghost"
                   size="icon"
+                  aria-label={tool.label}
                   onClick={tool.onClick}
                   disabled={tool.disabled}
                   className="h-9 w-9"
@@ -126,22 +127,18 @@ export function EditorToolbar({
           ))}
         </div>
 
-        <div className="flex items-center gap-2 border-l pl-2 ml-2">
+        <div className="ml-2 flex items-center gap-2 border-l pl-2">
           <Button
             variant="outline"
             size="sm"
             onClick={onExport}
             disabled={!hasImage || isExporting}
           >
-            <Download className="h-4 w-4 mr-1" />
+            <Download className="mr-1 h-4 w-4" />
             {isExporting ? t('exporting') : t('download')}
           </Button>
-          <Button
-            size="sm"
-            onClick={onSave}
-            disabled={!hasImage || isSaving}
-          >
-            <Save className="h-4 w-4 mr-1" />
+          <Button size="sm" onClick={onSave} disabled={!hasImage || isSaving}>
+            <Save className="mr-1 h-4 w-4" />
             {isSaving ? t('saving') : t('share')}
           </Button>
         </div>

@@ -245,6 +245,8 @@ export function ShowcasesFlow({
               onClick={() => setSelectedIndex(null)}
             >
               <button
+                type="button"
+                aria-label="Close preview"
                 className="absolute top-4 right-4 z-50 text-white/70 transition-colors hover:text-white"
                 onClick={() => setSelectedIndex(null)}
               >
@@ -252,6 +254,8 @@ export function ShowcasesFlow({
               </button>
 
               <button
+                type="button"
+                aria-label="Previous image"
                 className="absolute top-1/2 left-4 z-50 -translate-y-1/2 rounded-full bg-black/20 p-2 text-white/70 transition-colors hover:bg-black/40 hover:text-white"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -262,6 +266,8 @@ export function ShowcasesFlow({
               </button>
 
               <button
+                type="button"
+                aria-label="Next image"
                 className="absolute top-1/2 right-4 z-50 -translate-y-1/2 rounded-full bg-black/20 p-2 text-white/70 transition-colors hover:bg-black/40 hover:text-white"
                 onClick={(e) => {
                   e.stopPropagation();

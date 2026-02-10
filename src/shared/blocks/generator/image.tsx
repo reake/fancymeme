@@ -52,6 +52,7 @@ interface ImageGeneratorProps {
 interface GeneratedImage {
   id: string;
   url: string;
+  templateSlug?: string;
   provider?: string;
   model?: string;
   prompt?: string;
@@ -337,6 +338,39 @@ export function ImageGenerator({
     setTaskStatus(null);
   }, []);
 
+  const createTemplatesFromUrls = useCallback(
+    async (urls: string[]) => {
+      if (urls.length === 0) return [];
+      const baseName = prompt.trim().slice(0, 60);
+
+      const results = await Promise.all(
+        urls.map(async (url) => {
+          try {
+            const resp = await fetch('/api/meme/templates/create', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                imageUrl: url,
+                source: 'ai',
+                name: baseName || undefined,
+              }),
+            });
+
+            const { code, data } = await resp.json();
+            if (code !== 0) throw new Error('create template failed');
+            return data;
+          } catch (error) {
+            console.error('Failed to create template from AI image:', error);
+            return null;
+          }
+        })
+      );
+
+      return results;
+    },
+    [prompt]
+  );
+
   const pollTaskStatus = useCallback(
     async (id: string) => {
       try {
@@ -400,10 +434,12 @@ export function ImageGenerator({
           if (imageUrls.length === 0) {
             toast.error('The provider returned no images. Please retry.');
           } else {
+            const templates = await createTemplatesFromUrls(imageUrls);
             setGeneratedImages(
               imageUrls.map((url, index) => ({
                 id: `${task.id}-${index}`,
                 url,
+                templateSlug: templates[index]?.slug,
                 provider: task.provider,
                 model: task.model,
                 prompt: task.prompt ?? undefined,
@@ -440,7 +476,7 @@ export function ImageGenerator({
         return true;
       }
     },
-    [generationStartTime, resetTaskState]
+    [generationStartTime, resetTaskState, createTemplatesFromUrls]
   );
 
   useEffect(() => {
@@ -553,10 +589,12 @@ export function ImageGenerator({
         const imageUrls = extractImageUrls(parsedResult);
 
         if (imageUrls.length > 0) {
+          const templates = await createTemplatesFromUrls(imageUrls);
           setGeneratedImages(
             imageUrls.map((url, index) => ({
               id: `${newTaskId}-${index}`,
               url,
+              templateSlug: templates[index]?.slug,
               provider,
               model,
               prompt: trimmedPrompt,
@@ -872,20 +910,28 @@ export function ImageGenerator({
                             </Button>
                           </div>
                         </div>
-                        <Link
-                          href={`/meme-editor?imageUrl=${encodeURIComponent(
-                            image.url
-                          )}`}
-                        >
+                        {image.templateSlug ? (
+                          <Link href={`/meme-editor/${image.templateSlug}`}>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="w-full"
+                            >
+                              <Edit3 className="mr-2 h-4 w-4" />
+                              {t('edit_in_meme_editor')}
+                            </Button>
+                          </Link>
+                        ) : (
                           <Button
                             size="sm"
                             variant="outline"
                             className="w-full"
+                            disabled
                           >
                             <Edit3 className="mr-2 h-4 w-4" />
                             {t('edit_in_meme_editor')}
                           </Button>
-                        </Link>
+                        )}
                       </div>
                     ))}
                   </div>

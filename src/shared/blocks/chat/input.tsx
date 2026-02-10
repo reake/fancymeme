@@ -104,6 +104,7 @@ export function ChatInput({
           <PromptInputTextarea
             className="overflow-hidden p-4 ring-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             placeholder={t('input_placeholder')}
+            aria-label={t('input_placeholder')}
             onChange={(e) => {
               const value = e.target.value;
               setInput(value);

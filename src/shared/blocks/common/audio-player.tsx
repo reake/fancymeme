@@ -100,6 +100,7 @@ export function AudioPlayer({ src, title, className }: AudioPlayerProps) {
 
       {/* Play/Pause Button */}
       <button
+        type="button"
         onClick={togglePlay}
         className="bg-primary text-primary-foreground hover:bg-primary/90 flex h-10 w-10 items-center justify-center rounded-full transition-colors"
         aria-label={isPlaying ? 'Pause' : 'Play'}
@@ -138,6 +139,7 @@ export function AudioPlayer({ src, title, className }: AudioPlayerProps) {
       {/* Volume Control */}
       {/* <div className="hidden sm:flex items-center gap-2">
         <button
+          type="button"
           onClick={toggleMute}
           className="text-muted-foreground hover:text-foreground transition-colors"
           aria-label={isMuted ? 'Unmute' : 'Mute'}

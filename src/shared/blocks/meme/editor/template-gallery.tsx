@@ -78,10 +78,10 @@ export function TemplateGallery({
   );
 
   return (
-    <div className={cn('flex flex-col h-full', className)}>
-      <div className="p-4 space-y-3 border-b">
+    <div className={cn('flex h-full flex-col', className)}>
+      <div className="space-y-3 border-b p-4">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
           <Input
             placeholder={t('search_templates')}
             value={searchQuery}
@@ -94,9 +94,9 @@ export function TemplateGallery({
           <Label
             htmlFor="image-upload"
             className={cn(
-              'flex items-center justify-center gap-2 p-3 border-2 border-dashed rounded-lg cursor-pointer transition-colors',
+              'flex cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-dashed p-3 transition-colors',
               'hover:border-primary hover:bg-primary/5',
-              isUploading && 'opacity-50 cursor-not-allowed'
+              isUploading && 'cursor-not-allowed opacity-50'
             )}
           >
             {isUploading ? (
@@ -121,17 +121,19 @@ export function TemplateGallery({
 
       <ScrollArea className="flex-1">
         <div className="p-4">
-          <h3 className="text-sm font-medium mb-3">{t('popular_templates')}</h3>
+          <h3 className="mb-3 text-sm font-medium">{t('popular_templates')}</h3>
           <div className="grid grid-cols-2 gap-3">
             {filteredTemplates.map((template) => (
               <button
                 key={template.id}
+                type="button"
+                aria-label={`Select template ${template.name}`}
                 onClick={() => onSelectTemplate(template)}
                 className={cn(
-                  'relative aspect-square rounded-lg overflow-hidden border-2 transition-all',
+                  'relative aspect-square overflow-hidden rounded-lg border-2 transition-all',
                   'hover:border-primary hover:shadow-md',
                   selectedTemplateId === template.id
-                    ? 'border-primary ring-2 ring-primary/20'
+                    ? 'border-primary ring-primary/20 ring-2'
                     : 'border-transparent'
                 )}
               >
@@ -144,7 +146,7 @@ export function TemplateGallery({
                   unoptimized
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-2">
-                  <p className="text-white text-xs font-medium truncate">
+                  <p className="truncate text-xs font-medium text-white">
                     {template.name}
                   </p>
                 </div>
@@ -153,7 +155,7 @@ export function TemplateGallery({
           </div>
 
           {filteredTemplates.length === 0 && (
-            <p className="text-center text-muted-foreground py-8">
+            <p className="text-muted-foreground py-8 text-center">
               {t('no_templates_found')}
             </p>
           )}
