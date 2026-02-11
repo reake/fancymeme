@@ -1,7 +1,8 @@
 {
   "metadata": {
-    "title": "FancyMeme - AI Meme Generator | Turn Any Idea Into Viral Memes",
-    "description": "Create hilarious memes with AI. Just describe your idea - FancyMeme picks the perfect template and writes the caption. Free to start, no design skills needed."
+    "title": "AI Meme Generator: Create Viral Memes Fast | FancyMeme",
+    "description": "Create hilarious memes with AI. Just describe your idea - FancyMeme picks the perfect template and writes the caption. Free to start, no design skills needed.",
+    "keywords": "ai meme generator, meme generator online, text to meme ai, viral meme maker, funny meme creator, meme captions ai, meme maker free"
   },
   "hero": {
     "title": "Turn Any Idea Into Viral Memes — Instantly",
@@ -152,23 +153,25 @@
     "confirm_delete": "Are you sure you want to delete this meme?"
   },
   "templates": {
-    "title": "Meme Templates",
-    "description": "Browse our collection of popular meme templates. Click any template to start editing and create your own viral memes.",
+    "title": "Free Meme Templates (60+)",
+    "description": "Browse 60+ popular meme templates, edit online, and create share-ready memes in minutes.",
+    "helper_text": "Pick a template, click Edit Template, then export your meme in seconds.",
     "search_placeholder": "Search templates...",
-    "semantic_search_placeholder": "Describe what you want to express... e.g. \"feeling frustrated\" or \"celebrating a win\"",
-    "ai_search": "AI Search",
-    "showing_templates": "Showing {count} templates",
-    "showing_ai_results": "Showing AI-matched results",
+    "semantic_search_placeholder": "Describe what you want to express... e.g. \"hard choice\" or \"unexpected result\"",
+    "ai_search": "Find Templates",
+    "showing_templates": "{count} templates found",
+    "showing_ai_results": "Showing intent-matched templates",
     "show_all": "Show all templates",
-    "no_results": "No templates found. Try a different search term.",
+    "no_results": "No templates found. Try another keyword or phrase.",
     "no_semantic_results": "No matching templates found. Try different keywords.",
-    "semantic_search_error": "Search failed. Using local results.",
+    "semantic_search_error": "Search failed. Showing local results.",
     "semantic_search_min_chars": "Please enter at least 3 characters",
-    "edit": "Edit",
-    "view_details": "Details",
+    "edit": "Edit Template",
+    "view_details": "View Template",
     "metadata": {
-      "title": "Meme Templates - Popular Meme Generator Templates",
-      "description": "Browse 60+ popular meme templates including Drake, Distracted Boyfriend, and more. Start creating your own memes now!"
+      "title": "Free Meme Templates (60+) Online | FancyMeme",
+      "description": "Explore 60+ free meme templates including Drake, Distracted Boyfriend, and Two Buttons. Edit online or generate captions with AI instantly.",
+      "keywords": "free meme templates, meme templates online, blank meme templates, meme template library, drake hotline bling template, distracted boyfriend template, two buttons meme template, funny meme templates"
     }
   },
   "textToMeme": {
@@ -217,8 +220,9 @@
     }
   },
   "editor": {
-    "title": "Meme Editor",
+    "title": "Meme Editor Online: Add Text & Customize | FancyMeme",
     "description": "Create custom memes with our easy-to-use editor",
+    "keywords": "meme editor, edit meme online, add text to meme, customize meme template, meme text editor, meme design tool",
     "templates": "Templates",
     "customize": "Customize",
     "search_templates": "Search templates...",

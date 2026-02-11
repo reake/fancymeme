@@ -30,10 +30,16 @@ export async function generateMetadata({
 }) {
   const { locale, slug } = await params;
   const t = await getTranslations('pages.blog.metadata');
+  const categoryData = await findTaxonomy({
+    slug,
+    status: TaxonomyStatus.PUBLISHED,
+  });
+  const categoryTitle = categoryData?.title || slug.replace(/-/g, ' ');
 
   return {
-    title: `${slug} | ${t('title')}`,
+    title: `${categoryTitle} Articles | FancyMeme Blog`,
     description: t('description'),
+    keywords: `${categoryTitle}, meme marketing, social media content, FancyMeme blog`,
     alternates: {
       canonical:
         locale !== envConfigs.locale

@@ -124,6 +124,9 @@ export function TemplatesGallery({ className }: TemplatesGalleryProps) {
           <p className="text-muted-foreground mx-auto mb-8 max-w-2xl">
             {t('description')}
           </p>
+          <p className="text-muted-foreground/90 mx-auto mb-8 max-w-2xl text-sm">
+            {t('helper_text')}
+          </p>
 
           {/* Search */}
           <div className="mx-auto max-w-lg">

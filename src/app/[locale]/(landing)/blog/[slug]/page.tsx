@@ -26,6 +26,8 @@ export async function generateMetadata({
     return {
       title: `${slug} | ${t('title')}`,
       description: t('description'),
+      keywords:
+        'meme marketing, ai meme generator, social content strategy, FancyMeme blog',
       alternates: {
         canonical: canonicalUrl,
       },
@@ -35,6 +37,7 @@ export async function generateMetadata({
   return {
     title: `${post.title} | ${t('title')}`,
     description: post.description,
+    keywords: `${post.title}, meme marketing, ai meme generator, social content strategy, FancyMeme blog`,
     alternates: {
       canonical: canonicalUrl,
     },

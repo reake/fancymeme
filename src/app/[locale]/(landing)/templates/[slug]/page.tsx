@@ -12,7 +12,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { Link } from '@/core/i18n/navigation';
 import { envConfigs } from '@/config';
-import { defaultLocale } from '@/config/locale';
+import { defaultLocale, locales } from '@/config/locale';
 import { MEME_TEMPLATES } from '@/shared/blocks/meme/editor/templates-data';
 import { Button } from '@/shared/components/ui/button';
 import { Card, CardContent } from '@/shared/components/ui/card';
@@ -23,9 +23,12 @@ interface PageProps {
 
 // Generate static params for all templates
 export async function generateStaticParams() {
-  return MEME_TEMPLATES.map((template) => ({
-    slug: template.id,
-  }));
+  return locales.flatMap((locale) =>
+    MEME_TEMPLATES.map((template) => ({
+      locale,
+      slug: template.id,
+    }))
+  );
 }
 
 // Generate metadata for SEO
@@ -43,7 +46,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${template.name} Meme Template | FancyMeme`;
+  const title = `${template.name} Meme Template & Generator | FancyMeme`;
   const description = `Create ${template.name} memes with AI. Customize text, download in high quality, and share on social media. Free online meme generator.`;
 
   const canonicalUrl = `${envConfigs.app_url}${locale !== defaultLocale ? `/${locale}` : ''}/templates/${slug}`;
@@ -51,7 +54,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: `${template.name}, meme template, ${template.name} meme, meme generator, create meme, funny memes`,
+    keywords: `${template.name} meme template, ${template.name} meme generator, blank ${template.name} template, meme template online, FancyMeme`,
     alternates: {
       canonical: canonicalUrl,
     },

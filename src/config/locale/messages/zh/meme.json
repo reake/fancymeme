@@ -152,12 +152,13 @@
     "confirm_delete": "确定要删除这个 Meme 吗？"
   },
   "templates": {
-    "title": "Meme 模板库",
-    "description": "浏览我们的热门 Meme 模板合集。点击任意模板开始编辑，创建你自己的爆款表情包。",
+    "title": "免费 Meme 模板（60+）",
+    "description": "浏览 60+ 热门 Meme 模板，在线编辑并快速生成可分享表情包。",
+    "helper_text": "先选模板，再点击「编辑模板」，几秒即可导出成图。",
     "search_placeholder": "搜索模板...",
-    "semantic_search_placeholder": "描述你想表达的内容... 例如「感到沮丧」或「庆祝胜利」",
-    "ai_search": "AI 搜索",
-    "showing_templates": "共 {count} 个模板",
+    "semantic_search_placeholder": "描述你想表达的场景... 例如「两难选择」或「意料之外」",
+    "ai_search": "查找模板",
+    "showing_templates": "找到 {count} 个模板",
     "showing_ai_results": "正在显示 AI 匹配结果",
     "show_all": "显示所有模板",
     "no_results": "未找到模板，请尝试其他关键词。",
@@ -167,8 +168,9 @@
     "edit": "编辑",
     "view_details": "查看详情",
     "metadata": {
-      "title": "Meme 模板库 - 热门表情包模板",
-      "description": "浏览 60+ 热门 Meme 模板，包括 Drake、男友偷看等经典模板。立即开始制作你的表情包！"
+      "title": "免费 Meme 模板（60+）在线使用 | FancyMeme",
+      "description": "浏览 60+ 热门 Meme 模板，包括 Drake、男友偷看、Two Buttons 等，支持在线编辑与 AI 文案生成。",
+      "keywords": "免费meme模板, meme模板在线, 表情包模板, 空白meme模板, drake模板, 男友偷看模板, two buttons模板"
     }
   },
   "textToMeme": {

@@ -4,7 +4,7 @@ import { TemplatesGallery } from '@/shared/blocks/meme/templates-gallery';
 import { getMetadata } from '@/shared/lib/seo';
 
 export const generateMetadata = getMetadata({
-  metadataKey: 'meme.templates',
+  metadataKey: 'meme.templates.metadata',
   canonicalUrl: '/templates',
 });
 

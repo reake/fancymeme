@@ -1,7 +1,8 @@
 {
   "metadata": {
-    "title": "AI Video Generator",
-    "description": "Generate videos with AI models, support text-to-video, image-to-video and video-to-video."
+    "title": "AI Video Generator Online (Text/Image-to-Video) | FancyMeme",
+    "description": "Generate videos with AI models, support text-to-video, image-to-video and video-to-video.",
+    "keywords": "ai video generator, text to video ai, image to video ai, video to video ai, online ai video creator"
   },
   "page": {
     "title": "AI Video Generator",
@@ -44,4 +45,3 @@
     "no_videos_generated": "No Videos Generated"
   }
 }
-
